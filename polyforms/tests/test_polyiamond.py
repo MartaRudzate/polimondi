@@ -94,10 +94,10 @@ def test_polyiamond_isvalid():
 
 
 def test_polyseq6_isvalid():
-    storage = PerfectSeq()
-    sequences = storage.get_series('SEQ_6_5_B')
-    for seq in sequences:
-        p = Polyiamond(list(zip(range(len(seq), 0, -1), list(seq))))
+    perfectSeq = PerfectSeq()
+    pSequence = perfectSeq.pseq['SEQ_6_5_B']
+    for n in range(0, 6):
+        p = Polyiamond(pSequence.get(n))
         assert p.is_valid()
 
 def test_list_inside():
@@ -106,7 +106,8 @@ def test_list_inside():
     assert len(result) == 18
 
 def test_list_triangles():
-    pp = Polyiamond('ACDCEAEACAEAECEAEAC')
+    # pp = Polyiamond('ACDCEAEACAEAECEAEAC')
+    pp = Polyiamond('ACEDF')
     area = pp.get_area()
     triangles = pp.list_triangles()
     assert len(triangles) == area

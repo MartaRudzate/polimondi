@@ -44,7 +44,8 @@ SEQ_8_7_A = [
 SEQ_8_7_B = [
     'ACBCDEFEAEFEACB',
     'ACBCBCDEFEFEAEFEFEACBCB',
-    'ACBCBCBCDEFEFEFEAEFEFEFEACBCBCB'
+    'ACBCBCBCDEFEFEFEAEFEFEFEACBCBCB',
+    'ACBCBCBCBCDEFEFEFEFEAEFEFEFEFEACBCBCBCB'
 ]
 
 # k --> k+8 (where k mod 8 = 7)
@@ -52,7 +53,8 @@ SEQ_8_7_B = [
 SEQ_8_7_C = [
     'ACBCDFEFDFEFACB',
     'ACBCBCDFEFEFDFEFEFACBCB',
-    'ACBCBCBCDFEFEFEFDFEFEFEFACBCBCB'
+    'ACBCBCBCDFEFEFEFDFEFEFEFACBCBCB',
+    'ACBCBCBCBCDFEFEFEFEFDFEFEFEFEFACBCBCBCB'
 ]
 
 # k --> k+8 (where k mod 8 = 7)
@@ -60,13 +62,13 @@ SEQ_8_7_C = [
 SEQ_8_7_D = [
     'ABCBDEFEDEFEABC',
     'ABCBCBDEFEFEDEFEFEABCBC',
-    'ABCBCBCBDEFEFEFEDEFEFEFEABCBCBC'
+    'ABCBCBCBDEFEFEFEDEFEFEFEABCBCBC',
+    'ABCBCBCBCBDEFEFEFEFEDEFEFEFEFEABCBCBCBC'
 ]
 
 # k --> k+8 (where k mod 8 = 5)
 # 5, 13, 21, ...
 SEQ_8_5_A = [
-    'ACEDF',
     'ACACDEFDFDFAB',
     'ACACACDFDEFDFDFDFACAB',
     'ACACACACDFDFDEFDFDFDFDFACACAB'
@@ -77,7 +79,8 @@ SEQ_8_5_A = [
 SEQ_8_5_B = [
     'ABCBCDEAEFEDEFEFABDBC',
     'ABCBCBCDEAEFEFEDEFEFEFABDBCBC',
-    'ABCBCBCBCDEAEFEFEFEDEFEFEFEFABDBCBCBC'
+    'ABCBCBCBCDEAEFEFEFEDEFEFEFEFABDBCBCBC',
+    'ABCBCBCBCBCDEAEFEFEFEFEDEFEFEFEFEFABDBCBCBCBC'
 ]
 
 # k --> k+8 (where k mod 8 = 3)
@@ -131,7 +134,8 @@ SEQ_8_3_E = [
 SEQ_8_1_A = [
     'ACACEDFDFEACACDBF',
     'ACACACEDFDFDFDFEACACACDBF',
-    'ACACACACEDFDFDFDFDFDFEACACACACDBF'
+    'ACACACACEDFDFDFDFDFDFEACACACACDBF',
+    'ACACACACACEDFDFDFDFDFDFDFDFEACACACACACDBF'
 ]
 
 # k --> k+8 (where k mod 8 = 1)
@@ -139,7 +143,8 @@ SEQ_8_1_A = [
 SEQ_8_1_B = [
     'ACBCDEAFEDFEFABDC',
     'ACBCBCDEAFEFEDFEFEFABDCBC',
-    'ACBCBCBCDEAFEFEFEDFEFEFEFABDCBCBC'
+    'ACBCBCBCDEAFEFEFEDFEFEFEFABDCBCBC',
+    'ACBCBCBCBCDEAFEFEFEFEDFEFEFEFEFABDCBCBCBC'
 ]
 
 # k --> k+6 (where k mod 6 = 5)
@@ -163,44 +168,64 @@ SEQ_6_5_B = [
 ]
 
 
+class PSequence:
+    def __init__(self, template, rules):
+        self.template = template
+        self.rules = rules
+        # if param is not None:
+
+    # Izrēķina un atgriež polimondu virknes n-to locekli
+    # Pašu pirmo (self.template) uzskatām par 0-to virknes locekli
+    def get(self, n):
+        # Sākumstāvoklis - īsākais polimonds ar punktiņiem
+        current = self.template
+        # Ievietojamie fragmenti var būt ikreiz tie paši vai arī veidot 2 gājienu ciklu
+        cycle = len(self.rules)
+        # Atkārto n reizes
+        for i in range(0, n):
+            current_rulelist = self.rules[i % cycle]
+            list_s = current.split('.')
+            next = [list_s[0]]
+            for idx,seq in enumerate(current_rulelist):
+                next.append(seq + list_s[idx+1])
+            current = ''.join(next)
+        return current.replace('.', '')
+
+
+
+
+
 # This class returns known inductive sequences of perfect polyiamonds
 class PerfectSeq:
-    all_sequences = None
+    # all_sequences = None
+    pseq = {}
 
     @classmethod
     def dict_init(cls):
-        if not cls.all_sequences:
-            cls.all_sequences = {}
-            cls.all_sequences['SEQ_4_3_A'] = SEQ_4_3_A
-            cls.all_sequences['SEQ_4_3_B'] = SEQ_4_3_B
-            cls.all_sequences['SEQ_4_1_A'] = SEQ_4_1_A
-            cls.all_sequences['SEQ_8_7_A'] = SEQ_8_7_A
-            cls.all_sequences['SEQ_8_7_B'] = SEQ_8_7_B
-            cls.all_sequences['SEQ_8_7_C'] = SEQ_8_7_C
-            cls.all_sequences['SEQ_8_7_D'] = SEQ_8_7_D
-            cls.all_sequences['SEQ_8_5_A'] = SEQ_8_5_A
-            cls.all_sequences['SEQ_8_5_B'] = SEQ_8_5_B
-            cls.all_sequences['SEQ_8_3_A'] = SEQ_8_3_A
-            cls.all_sequences['SEQ_8_3_B'] = SEQ_8_3_B
-            cls.all_sequences['SEQ_8_3_C'] = SEQ_8_3_C
-            cls.all_sequences['SEQ_8_3_D'] = SEQ_8_3_D
-            cls.all_sequences['SEQ_8_3_E'] = SEQ_8_3_E
-            cls.all_sequences['SEQ_8_1_A'] = SEQ_8_1_A
-            cls.all_sequences['SEQ_8_1_B'] = SEQ_8_1_B
-            cls.all_sequences['SEQ_6_5_A'] = SEQ_6_5_A
-            cls.all_sequences['SEQ_6_5_B'] = SEQ_6_5_B
-
+        if len(cls.pseq) > 0:
+            return # already initialized
+        cls.pseq['SEQ_4_3_A'] = PSequence('ACB.DFE.DFE.AC.',[['C.','F.','F.','B.'],['B.','E.','E.','C.']])
+        cls.pseq['SEQ_4_3_B'] = PSequence('ABCB.DEFE.DEFE.ABC.',[['C.','F.','F.','B.'],['B.','E.','E.','C.']])
+        cls.pseq['SEQ_4_1_A'] = PSequence('ACBC.DEAEF.DFEF.ABDB.',[['B.','E.','E.','C.'],['C.','F.','F.','B.']])
+        cls.pseq['SEQ_8_7_A'] = PSequence('ACD..EF.AC.',[['CD.','FA.','AF.','DC.']])
+        cls.pseq['SEQ_8_7_B'] = PSequence('ACBC.DEFE.AEFE.ACB.',[['BC.','FE.','FE.','CB.']])
+        cls.pseq['SEQ_8_7_C'] = PSequence('ACBC.DFEF.DFEF.ACB.',[['BC.','EF.','EF.','CB.']])
+        cls.pseq['SEQ_8_7_D'] = PSequence('ABCB.DEFE.DEFE.ABC.',[['CB.','FE.','FE.','BC.']])
+        cls.pseq['SEQ_8_5_A'] = PSequence('ACAC..DEFDFD.F.AB',[['AC.','DF.','FD.','AC.']])
+        cls.pseq['SEQ_8_5_B'] = PSequence('ABCBC.DEAEFE.DEFEF.ABDBC.',[['BC.','FE.','EF.','BC.']])
+        cls.pseq['SEQ_8_3_A'] = PSequence('ABDBD.CEAE.FDFDFA.FBDB.',[['BD.','AE.','EA.','DB.']])
+        cls.pseq['SEQ_8_3_B'] = PSequence('ABC.DFE.DEF.AC.',[['BC.','FE.','EF.','BC.']])
+        cls.pseq['SEQ_8_3_C'] = PSequence('ABC.DEF.DFE.AC.',[['BC.','EF.','FE.','BC.']])
+        cls.pseq['SEQ_8_3_D'] = PSequence('ACB.DFE.DEF.AB.',[['CB.','FE.','EF.','CB.']])
+        cls.pseq['SEQ_8_3_E'] = PSequence('ACB.DEF.DFE.AB.',[['CB.','EF.','FE.','CB.']])
+        cls.pseq['SEQ_8_1_A'] = PSequence('ACAC.EDFDF.EACAC.DBF',[['AC.','DFDF.','AC.']])
+        cls.pseq['SEQ_8_1_B'] = PSequence('ACBC.DEAFE.DFEF.ABDC.',[['BC.','FE.','EF.','BC.']])
+        cls.pseq['SEQ_6_5_B'] = PSequence('ACBA.B.CBDFEDFD.FEDFED.E.FEACBACA.C',[['.C','A','.E.','.F','D','.B.'],['.B.','.F','D','.E.','.C','A']])
 
     def __init__(self):
         self.dict_init()
 
     # Get the names of all sequences
     def get_names(self):
-        return self.all_sequences.keys()
+        return self.pseq.keys()
 
-    # Get the polyiamonds corresponding to the given sequence name.
-    def get_series(self, name):
-        if name in self.all_sequences:
-            return self.all_sequences[name]
-        else:
-            return None

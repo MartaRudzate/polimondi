@@ -9,6 +9,96 @@
 * Static data representing some useful families of polyiamonds.
 
 
+# Some 3.8 Python notes
+
+```buildoutcfg
+cd konstrukcijas/editing_distance
+export PYTHONPATH="../../polyforms/src"
+python poly_perfect_lists.py 13
+
+nohup python perfect_extremes_parallel.py perfect 25 width
+
+ps -ef | grep parallel
+jobs
+
+
+du -sh /home/kalvis
+df 
+```
+
+```
+Total polyiamonds found: 56952411
+[231066, 1149921, 1322751, 431525, 561253, 1038368, 1742350, 1133745, 792906, 262534, 935755, 1292195, 399366, 503442, 999463, 1331226, 719466, 1351249, 468769, 688898, 345863, 1419059, 1930196, 281643, 1230568, 1873405, 1368990, 864119, 182422, 1693176, 1320225, 293132, 700911, 1682889, 1732279, 440139, 658194, 1139313, 1802006, 1308603, 0, 1194545, 600358, 0, 0, 0, 778634, 0, 565124, 748974, 1394342, 903922, 615710, 1236718, 1019789, 872725, 0, 0, 1347854, 1607984, 1000243, 532220, 1427837, 1482052]
+
+Total polyiamonds found: 45896039
+[579290, 1343745, 1403015, 815835, 845800, 1171081, 1619215, 1076982, 1254196, 0, 0, 1516904, 902088, 910160, 486532, 1362967, 577150, 1157715, 570263, 719828, 482524, 733862, 1944500, 1703932, 1173485, 1776782, 1319877, 766000, 798047, 832915, 158099, 842718, 619982, 1205461, 1472335, 356900, 380995, 645330, 1573482, 1522188, 41411, 934483, 1109052, 477647, 0, 0, 592702, 0, 0, 0, 0, 0, 457783, 739348, 1059446, 740458, 213720, 309471, 383461, 214877, 0, 0, 0, 0]
+
+
+```
+
+
+```buildoutcfg
+[231066, 1149921, 1322751, 431525, 561253, 1038368, 1742350, 1133745, 792906, 262534, 935755, 1292195, 399366, 503442, 999463, 1331226, 719466, 1351249, 468769, 688898, 345863, 1419059, 1930196, 281643, 1230568, 1873405, 1368990, 864119, 182422, 1693176, 1320225, 293132, 700911, 1682889, 1732279, 440139, 658194, 1139313, 1802006, 1308603, 0, 1194545, 600358, 0, 0, 0, 778634, 0, 565124, 748974, 1394342, 903922, 615710, 1236718, 1019789, 872725, 0, 0, 1347854, 1607984, 1000243, 532220, 1427837, 1482052, 579290, 1343745, 1403015, 815835, 845800, 1171081, 1619215, 1076982, 1254196, 0, 0, 1516904, 902088, 910160, 486532, 1362967, 577150, 1157715, 570263, 719828, 482524, 733862, 1944500, 1703932, 1173485, 1776782, 1319877, 766000, 798047, 832915, 158099, 842718, 619982, 1205461, 1472335, 356900, 380995, 645330, 1573482, 1522188, 41411, 934483, 1109052, 477647, 0, 0, 592702, 0, 0, 0, 0, 0, 457783, 739348, 1059446, 740458, 213720, 309471, 383461, 214877, 0, 0, 0, 0]
+
+
+
+```
+
+
+
+ 
+
+# Pastmarka - 1
+
+```
+grep -Er "^A(CA)*(EA)*(EC)*(AC)*$" --include="acute_*.txt"
+acute_27.txt:ACAEAEAECECECECECACACACACAC
+acute_35.txt:ACACAEAEAEAECECECECECECECACACACACAC
+```
+
+# Pastmarka - 2
+
+```
+grep -Er "^A(CA)*(CE)*(AE)*(AC)*$" --include="acute_*.txt"
+./acute_9.txt:ACECEAEAC
+```
+
+# Gandrīz Pastmarka - 2b
+
+```
+grep -Er "^A(CA)*(CE)*(AE)*CE(AE)*(AC)*$" --include="acute_*.txt"
+./acute_33.txt:ACACACECECECEAEAECEAEAEAEAEACACAC
+./acute_39.txt:ACACECECECEAECEAEAEAEAEACACACACACACACAC
+./acute_57.txt:ACACACACACECECECECECECEAEAEAEAEAEAEAECEAEAEAEAEACACACACAC
+```
+
+# Gandrīz Pastmarka - 2bc
+
+```
+grep -Er "^A(CA)*(CE)*(AE)*CE(AE)*(AC)*AE(AC)*$" --include="acute_*.txt"
+```
+
+
+
+
+
+
+```
+def main(n):
+    prefixes = ['ABA', 'ABC', 'ABD', 'ABE', 'ACA', 'ACB', 'ACD', 'ACE']
+    for prefix in prefixes:
+        q = NGonProblem(n, list(range(n, 0, -1)), prefix, Format.COMPACT, FileWriter(f'perfect_{n}_{prefix}.txt'))
+        b = Backtrackk(q)
+        while b.attempt(0):
+            q.display()
+        print(f'Found {q.solution_count} polyiamonds')
+```
+
+
+
+
+
+
 # Setting up the environment
 
 It seems that `base` is already installed as you install Conda.

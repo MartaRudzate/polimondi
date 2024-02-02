@@ -1,0 +1,34 @@
+5-polyiamonds max array is 19
+ACEDF
+6-polyiamonds max array is 31
+ACEDFB
+7-polyiamonds max array is 96
+ACDEFAC
+8-polyiamonds max array is 120
+ACDEAEAC
+9-polyiamonds max array is 111
+ACEDEABAC
+10-polyiamonds max array is 381
+ABCDEFDFEF
+11-polyiamonds max array is 518
+ABCDEFDEFAB
+12-polyiamonds max array is 820
+ABCDEDEFAFAB
+13-polyiamonds max array is 1029
+ABCDEDEFAFACB
+14-polyiamonds max array is 1229
+ABCDEDEAEFABAB
+15-polyiamonds max array is 1568
+ABCBDEDEFEAEFAF
+16-polyiamonds max array is 2174
+ABCDCDEFEAFAFEAF
+17-polyiamonds max array is 2775
+ABCDCDEFEFAFAFBDC
+18-polyiamonds max array is 3321
+ABCDCDEFEFEABAFABF
+19-polyiamonds max array is 4406
+ABCBCDEDEFEFAEFAFAE
+20-polyiamonds max array is 5294
+ABCBCDEDEFEFEFABAFAE
+
+

@@ -3,10 +3,14 @@
 backtracking/*.txt
 __pycache__
 puzzle_cross/images/cross-duboux.png
-konstrukcijas/editing_distance/perfect_21.txt
-konstrukcijas/editing_distance/perfect_23.txt
-konstrukcijas/editing_distance/sort_file
+konstrukcijas/editing_distance/*.txt
 poetry.lock
 polyforms/tests/*.txt
 polyforms/dist/
 **/.ipynb_checkpoints/
+source-material/
+docs/polimondi
+konstrukcijas/aaa
+konstrukcijas/bbb
+konstrukcijas/ccc
+

@@ -1,0 +1,45 @@
+5-polyiamond(s) with max diameter 5.5677643628300215:
+ACEDF
+6-polyiamond(s) with max diameter 7.54983443527075:
+ACEDFB
+7-polyiamond(s) with max diameter 10.14889156509222:
+ACDEFAC
+ACDEFBF
+8-polyiamond(s) with max diameter 15.620499351813308:
+ABDEDEAB
+9-polyiamond(s) with max diameter 16.522711641858304:
+ABFDEDCDC
+10-polyiamond(s) with max diameter 20.074859899884732:
+ABFDEDCDBF
+11-polyiamond(s) with max diameter 23.811761799581316:
+ACDCEAFEFAB
+ACDCEFAEAFB
+12-polyiamond(s) with max diameter 29.866369046136157:
+ABDEDEFBACBC
+13-polyiamond(s) with max diameter 36.38681079732051:
+ACDCDFAFAFEDF
+ACDCDFAFEFABF
+14-polyiamond(s) with max diameter 40.63249930782009:
+ACDCDEFAFAFABC
+15-polyiamond(s) with max diameter 49.38623289946298:
+ABAEDEDEDBACBCB
+ABAEDEDEDBCBABF
+16-polyiamond(s) with max diameter 58.92367945062494:
+ABABDEDEDEDEABAB
+17-polyiamond(s) with max diameter 61.02458520956943:
+ACDCDCEFAFAFAFAEF
+18-polyiamond(s) with max diameter 67.08949247087803:
+ABABDEDEDECDFAFABC
+19-polyiamond(s) with max diameter 75.82216034906945:
+ABABAEDEDEDECECDCAC
+ABABAEDEDEDECECDCBF
+20-polyiamond(s) with max diameter 86.62563131083085:
+ABABDEDEDEDEABFBACBC
+21-polyiamond(s) with max diameter 93.72299611087985:
+ABABAEDEDEDEDECBCACAB
+22-polyiamond(s) with max diameter 103.40696301506973:
+ABDEDEDEDFBABABABABACB
+23-polyiamond(s) with max diameter 114.5949388062143:
+ABABAEDEDEDECDEDBABABAC
+24-polyiamond(s) with max diameter 129.9384469662463:
+ABABABDEDEDEDEDEDEABABAB

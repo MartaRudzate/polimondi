@@ -1,0 +1,40 @@
+5-polyiamond(s) with min array 19:
+ACEDF
+6-polyiamond(s) with min array 31:
+ACEDFB
+7-polyiamond(s) with min array 92:
+ACDEFBF
+8-polyiamond(s) with min array 80:
+ACECEFBF
+9-polyiamond(s) with min array 99:
+ACECEAEAC
+10-polyiamond(s) with min array 147:
+ABFDEDCDBF
+11-polyiamond(s) with min array 148:
+ABDFDBDFEDE
+12-polyiamond(s) with min array 198:
+ABDFDBDFDFDF
+13-polyiamond(s) with min array 281:
+ACEDEACAEABCB
+14-polyiamond(s) with min array 311:
+ABFDFDBDECDCAF
+15-polyiamond(s) with min array 360:
+ABDFDCDFBFEFBDB
+16-polyiamond(s) with min array 412:
+ACBDFDFBFEDCEFBF
+17-polyiamond(s) with min array 495:
+ABDFDBCEAECEAEFDE
+18-polyiamond(s) with min array 569:
+ABCEAECDFBFEDCDFEF
+19-polyiamond(s) with min array 664:
+ABDFDCDFBFEDFBABDBF
+20-polyiamond(s) with min array 768:
+ABAECEFECACDECDECBAC
+21-polyiamond(s) with min array 863:
+ABDFDCDFBFEFACECBDBAC
+22-polyiamond(s) with min array 975:
+ABAECEFECACDECDFDBCABF
+23-polyiamond(s) with min array 1084:
+ABDFDBCDFBFDEACAFEDFEDF
+24-polyiamond(s) with min array 1208:
+ABAFDBDEFECACDECDFDBDCAB

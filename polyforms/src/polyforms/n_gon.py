@@ -27,13 +27,14 @@ class FileWriter:
 
 class NGonProblem:
 
-    def __init__(self, n, perm, format, file_writer):
+    def __init__(self, n, perm, prefix, format, file_writer):
         print("creating NGonProblem({},{})".format(n,perm))
         self.N = n
         self.directions = []
         self.perm = perm
         self.format = format
         self.file_writer = file_writer
+        self.prefix = prefix
 
         # Record the min/max area; and the min/max count of acute angles 
         self.minArea = n**4
@@ -199,23 +200,25 @@ class NGonProblem:
     # Ja direction=='1', tad drīkst pagriezties pa kreisi šaurā 60 grādu leņķī ('C') vai 120 grādu leņķī ('B')
     # Visos citos gadījumos nākamie gājieni ir četri (nevar sakrist ar "direction" vai tam pretējo).
     def moves(self, level):
-        if level == 0:
-            direction = '0'
-        elif level == 1:
-            direction = '1'
+        if (level < len(self.prefix)):
+            return self.prefix[level]
         else:
-            direction = self.directions[level-1]
-
-        return PointTg.NEXT_MOVES[direction]
+            if level == 0:
+                direction = '0'
+            elif level == 1:
+                direction = '1'
+            else:
+                direction = self.directions[level-1]
+            return PointTg.NEXT_MOVES[direction]
 
 
  
 
-def findFirstSolution(n):
-    q = NGonProblem(n, list(range(1,n+1)))
-    b = Backtrackk(q)
-    if b.attempt(0):
-        q.display(Format.COMPACT)
+# def findFirstSolution(n):
+#     q = NGonProblem(n, list(range(1,n+1)))
+#     b = Backtrackk(q)
+#     if b.attempt(0):
+#         q.display(Format.COMPACT)
 
 def print_all_solutions(perm, format, file_name):
     if file_name == '__list__':
@@ -227,7 +230,7 @@ def print_all_solutions(perm, format, file_name):
     else:
         file_writer = None
         out_func = print
-    q = NGonProblem(len(perm), perm, format, file_writer)
+    q = NGonProblem(len(perm), perm, "", format, file_writer)
     b = Backtrackk(q)
     # total = 0
     try:
@@ -244,7 +247,7 @@ def print_all_solutions(perm, format, file_name):
 
 
 def get_all_solutions(perm, format):
-    q = NGonProblem(len(perm), perm, format, '__list__')
+    q = NGonProblem(len(perm), perm, "", format, '__list__')
     b = Backtrackk(q)
     while b.attempt(0):
         q.display()

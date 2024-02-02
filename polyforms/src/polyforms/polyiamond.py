@@ -2,7 +2,8 @@ import math
 from .point_tg import PointTg
 from .point_tg import DIRECTIONS
 from .point_tg import AA,BB,CC,DD,EE,FF
-from .geom_utilities import L2_dist
+from .geom_utilities import *
+from .inductive_splits import InductiveSplits
 
 from shapely.geometry import Point, Polygon, LineString
 # from shapely.ops import rotate
@@ -10,6 +11,7 @@ from shapely import affinity
 from scipy.spatial import ConvexHull
 import numpy as np
 import copy as cp
+
 
 
 #DIRECTIONS = {'A': PointTg(1,0,-1), 'B': PointTg(1,-1,0), 'C': PointTg(0,-1,1),
@@ -26,11 +28,12 @@ class Polyiamond:
     # It does not need to be perfect or even magic, so the side lengths can be any integers.
     # Side directions are always one of the following: 'A', 'B', 'C', 'D', 'E', 'F'.
     def __init__(self, sides):
+        self.compact_sides = sides
         if isinstance(sides, str):
             sides = list(zip(range(len(sides), 0, -1), list(sides)))
         self.sides = sides
         if not self.is_valid():
-            print("WARNING: Polyiamond is not valid - line segments do not close!")
+            print(f"WARNING: Polyiamond {self.compact_sides} is not valid - line segments do not close!")
             pass
             # raise ValueError("Polyiamond {} cannot exist".format(sides))
         else:
@@ -42,7 +45,21 @@ class Polyiamond:
         self.get_vertices()
         (side_length, direction) = self.sides[-1]
         new_vertex = self.vertices[-1] + side_length * PointTg.get_direction(direction)
-        return new_vertex == PointTg(0,0,0)
+        check1 = (new_vertex == PointTg(0,0,0))
+
+        currVertex = PointTg(0,0,0)
+        check2 = True  # assume the sides do not intersect
+        points = set()
+        for (sidelen,dir) in self.sides:
+            for i in range(1, sidelen+1):
+                currPoint = currVertex + i*DIRECTIONS[dir]
+                if currPoint in points:
+                    check2 = False
+                else:
+                    points.add(currPoint)
+            nextSide = sidelen*DIRECTIONS[dir]
+            currVertex = currVertex + nextSide
+        return check1 and check2
 
     # This method will do custom initializations
     def setup(self):
@@ -284,6 +301,11 @@ class Polyiamond:
 
         return min_width, seg_min_width
 
+    def width(self):
+        vertices = [vv.get_xy() for vv in self.vertices]
+        vertice_lists = [[x,y] for (x,y) in vertices]
+        return minimum_width(np.array(vertice_lists))
+
     # Return all internal+perimeter points as [PointTg, PointTg, ...]
     def list_inside(self):
         # Cache answers to avoid computing anything twice
@@ -351,6 +373,60 @@ class Polyiamond:
             else:
                 a300 += 1
         return (a60, a120, a240, a300)
+
+    @staticmethod
+    def find_fragments_cfg(sides):
+        n = len(sides)
+        D = dict()
+        result = []
+        for i in range(n, 0, -1):
+            for j in range(i-1, -1, -1):
+                x = sides[j:i]
+                # result.append(x)
+                px = InductiveSplits.p(x)
+
+                # skip zero-sequences
+                if (px == PointTg(0,0,0)):
+                    continue
+                # skip sequences that cannot concatenate as polyiamonds:
+                if x[0] == x[-1]:
+                    continue
+                if DIRECTIONS[x[0]] + DIRECTIONS[x[-1]] == PointTg(0,0,0):
+                    continue
+
+                x_px = abs(i-j)*px
+                if x_px in D:
+                    D[x_px].append((x,j,i))
+                else:
+                    D[x_px] = [(x, i, j)]
+                pv = px
+                for xlen in range(1, n):
+                    searchkey = (-2*xlen - abs(i-j))*px
+                    if not searchkey in D:
+                        continue
+                    for (x2, j2, i2) in D[searchkey]:
+                        if xlen == (i2-j2) and j2 >= i:
+                            u2 = sides[0:j]
+                            v2 = x
+                            w2 = sides[i:j2]
+                            y2 = sides[i2:]
+
+                            AA = InductiveSplits.g(y2) + InductiveSplits.g(w2) + InductiveSplits.g(u2)
+                            AA += len(y2)*InductiveSplits.p(w2)
+                            AA += (len(y2) + len(w2))*InductiveSplits.p(u2)
+                            # (A) g(y) + g(w) + g(u) + |y| * p(w) + (|y|+|w|) * p(u) = (0,0,0)
+                            BB = InductiveSplits.g(x2)  +  InductiveSplits.g(v2)
+                            BB += len(y2)*InductiveSplits.p(x2)
+                            BB += len(x2)*InductiveSplits.p(w2)
+                            BB += (len(y2) + len(x2) + len(w2))*InductiveSplits.p(v2)
+                            BB += (len(x2) + len(v2))*InductiveSplits.p(u2)
+                            # (B) g(x) + g(v) + | y | *p(x) + | x |*p(w) + (| y | + | x | + | w |) * p(v) + (| x | + | v |) * p(u) = (0, 0, 0)
+                            if AA == PointTg(0,0,0) and BB == PointTg(0,0,0):
+                                result.append((u2, v2, w2, x2, y2))
+        return result
+
+
+
 
 # A function that returns those polygons which have minimal-size bounding hexagons from polylist.
 def get_minimal_bounding_sizes(polylist):

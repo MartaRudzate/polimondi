@@ -1,0 +1,40 @@
+5-polyiamond(s) with max array 19:
+ACEDF
+6-polyiamond(s) with max array 31:
+ACEDFB
+7-polyiamond(s) with max array 96:
+ACDEFAC
+8-polyiamond(s) with max array 120:
+ACDEAEAC
+9-polyiamond(s) with max array 111:
+ACEDEABAC
+10-polyiamond(s) with max array 381:
+ABCDEFDFEF
+11-polyiamond(s) with max array 518:
+ABCDEFDEFAB
+12-polyiamond(s) with max array 820:
+ABCDEDEFAFAB
+13-polyiamond(s) with max array 1029:
+ABCDEDEFAFACB
+14-polyiamond(s) with max array 1229:
+ABCDEDEAEFABAB
+15-polyiamond(s) with max array 1568:
+ABCBDEDEFEAEFAF
+16-polyiamond(s) with max array 2174:
+ABCDCDEFEAFAFEAF
+17-polyiamond(s) with max array 2775:
+ABCDCDEFEFAFAFBDC
+18-polyiamond(s) with max array 3321:
+ABCDCDEFEFEABAFABF
+19-polyiamond(s) with max array 4406:
+ABCBCDEDEFEFAEFAFAE
+20-polyiamond(s) with max array 5294:
+ABCBCDEDEFEFEFABAFAE
+21-polyiamond(s) with max array 6429:
+ABABCDCDEDEFEFEFAEFAB
+22-polyiamond(s) with max array 7805:
+ABCBDCDEDEFEFAFAFAFBFB
+23-polyiamond(s) with max array 9318:
+ABCBCDCEDEFEFEFAFAFAFAC
+24-polyiamond(s) with max array 10494:
+ABCBCDEDEDEFEAFAFABFABAB
