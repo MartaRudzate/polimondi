@@ -13,4 +13,6 @@ docs/polimondi
 konstrukcijas/aaa
 konstrukcijas/bbb
 konstrukcijas/ccc
-
+**/build/
+*.aux
+*.log

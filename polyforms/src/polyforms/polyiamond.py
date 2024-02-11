@@ -54,6 +54,7 @@ class Polyiamond:
             for i in range(1, sidelen+1):
                 currPoint = currVertex + i*DIRECTIONS[dir]
                 if currPoint in points:
+                    # print('Intersecting STUFF!')
                     check2 = False
                 else:
                     points.add(currPoint)
