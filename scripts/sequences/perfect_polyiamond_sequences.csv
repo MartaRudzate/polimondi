@@ -1,0 +1,2080 @@
+SeqName,Expression,InitialValue,Step,Locations
+PP24_perfect_cfg_b,abaede(abaede)^k fececbdb(cecbdb)^k cbcac,19,12,2
+KD_cfgA_8kp6,(ab)^k ace(dede)^k dfb(ab)^k,6,8,3
+KD_cfgB_8kp8a,ab(ab)^k dede(dede)^k ab(ab)^k,8,8,3
+KD_cfgB_8kp8b,ac(ac)^k dfdf(dfdf)^k ac(ac)^k,8,8,3
+KD_cfgC_8kp18,ab(ab)^k fbcdfdede(dede)^k cefacab(ab)^k,18,8,3
+KD_cfgD_8kp20,ab(ab)^k fbdbdfdede(dede)^k ceaeacab(ab)^k,20,8,3
+KD_cfg_8kp1,acececea(ecea)^k eafabcb(abcb)^k db,17,8,2
+KD_pcg_8km3_main,a(ca)^k cacd(fd)^k e(fd)^k fdfdfa(ca)^k b,13,8,4
+KD_pcg_8km1_87a,a(cd)^k cd(fa)^k efa(fa)^k (cd)^k c,7,8,4
+KD_pcg_8km1_87b,a(cb)^k cbcdefe(fe)^k aefe(fe)^k a(cb)^k cb,15,8,4
+KD_pcg_8km3_85b,a(bc)^k bcbcdea(ef)^k efed(ef)^k efefabd(bc)^k bc,21,8,4
+KD_pcg_8km5_83a,a(bd)^k bdbdcea(ea)^k efdfdfa(ea)^k f(bd)^k bdb,19,8,4
+KD_pcg_8km5_83b,a(bc)^k bcdf(ef)^k ed(ef)^k efac(bc)^k,11,8,4
+KD_pcg_8km5_83c,a(bc)^k bcde(fe)^k fd(fe)^k feac(bc)^k,11,8,4
+KD_pcg_8km5_83d,a(cb)^k cbdf(ef)^k ed(ef)^k efab(cb)^k,11,8,4
+KD_pcg_8km5_83e,a(cb)^k cbde(fe)^k fd(fe)^k feab(cb)^k,11,8,4
+KD_pcg_8km7_81a,a(ca)^k cace(dfdf)^k dfdfea(ca)^k cacdbf,17,8,3
+KD_pcg_8km7_81b,a(cb)^k cbcdea(fe)^k fed(fe)^k fefabd(cb)^k c,17,8,4
+KD_pcg_4km1_43a_even,acb(cb)^k dfe(fe)^k dfe(fe)^k ac(bc)^k,11,8,4
+KD_pcg_4km1_43a_odd,acb(cb)^k c dfe(fe)^k f dfe(fe)^k f ac(bc)^k b,15,8,4
+KD_pcg_4km1_43b_even,abc(bc)^k def(ef)^k def(ef)^k ab(cb)^k,11,8,4
+KD_pcg_4km1_43b_odd,abc(bc)^k b def(ef)^k e def(ef)^k e ab(cb)^k c,15,8,4
+KD_pcg_4km3_41a_even,acbc(bc)^k deaef(ef)^k dfef(ef)^k abdb(cb)^k,17,8,4
+KD_pcg_4km3_41a_odd,acbc(bc)^k b deaef(ef)^k e dfef(ef)^k e abdb(cb)^k c,21,8,4
+BD_cfg_8kp1,abfbfdf(bfdf)^k dedcd(cdcb)^k cdcbc,17,8,2
+BD_pcg_8km3,a(ca)^k cacd(fd)^k e(fd)^k fdfdfa(ca)^k b,13,8,4
+BD_obtuse_12kp12,(ab)^k abc(de)^k de(dc)^k de(fa)^k fa(fe)^k fa(bc)^k b,12,12,6
+BD_obtuse_12kp18,(ab)^k abaf(ed)^k eded(ef)^k ed(cb)^k cbcb(cd)^k cb(af)^k ab,18,12,6
+NEW_n5_1,a (cb)^k c (ef)^k ed (fe)^k f (bc)^k,5,8,4
+NEW_n5_2,a (cb)^k c (ef)^k e (df)^k d (fa)^k f,5,8,4
+NEW_n5_3,ac (bdfd)^k edf (afab)^k,5,8,2
+NEW_n5_4,ac (bd)^k (fd)^k ed (fa)^k f (ab)^k,5,8,4
+NEW_n6_5,a (cd)^k ce (af)^k d (fa)^k fb (dc)^k,6,8,4
+NEW_n6_6,a (bf)^k (ed)^k ced (cb)^k fb (ae)^k,6,8,4
+NEW_n6_7,ac (bd)^k (ea)^k edf (ea)^k (bd)^k b,6,8,4
+NEW_n6_8,a (bd)^k c (ea)^k ed (ea)^k f (bd)^k b,6,8,4
+NEW_n6_9,a (bd)^k ce (df)^k d (fa)^k f (ba)^k b,6,8,4
+NEW_n6_10,a (cb)^k c (ef)^k ed (fe)^k f (bc)^k b,6,8,4
+NEW_n7_11,a (cb)^k c (ef)^k d (ef)^k ef (bc)^k ac,7,8,4
+NEW_n7_12,a (cb)^k cd (fe)^k (df)^k e (fa)^k fac,7,8,4
+NEW_n7_13,(ac)^k ac (df)^k de (fd)^k f (ac)^k ac,7,8,4
+NEW_n7_14,a (cb)^k c (ef)^k de (fd)^k fac (af)^k,7,8,4
+NEW_n7_15,acd (bc)^k (ef)^k (df)^k (af)^k efac,7,8,4
+NEW_n7_16,a (cd)^k cd (fa)^k ef (ae)^k ac (ab)^k,7,8,4
+NEW_n7_17,ac (db)^k d (ea)^k ef (ae)^k a (bd)^k c,7,8,4
+NEW_n7_18,a (cb)^k cd (fe)^k (df)^k e (fa)^k fbf,7,8,4
+NEW_n7_19,a (cb)^k c (ef)^k d (ef)^k ef (bc)^k bf,7,8,4
+NEW_n7_20,acd (bc)^k (ef)^k (df)^k (af)^k efbf,7,8,4
+NEW_n7_21,acd (ec)^k (ea)^k e (ab)^k fbf (bc)^k,7,8,4
+NEW_n7_22,a (cd)^k cd (fa)^k e (fb)^k fb (fe)^k f,7,8,4
+NEW_n7_23,a (cd)^k cd (fa)^k ef (ea)^k (ba)^k bf,7,8,4
+NEW_n7_24,a (bf)^k (ed)^k cde (cb)^k fb (ae)^k f,7,8,4
+NEW_n7_25,ac (db)^k de (fd)^k (fa)^k f (ba)^k bf,7,8,4
+NEW_n8_26,abd (bc)^k (ef)^k ec (df)^k e (fa)^k fe,8,8,4
+NEW_n8_27,ab (ac)^k dec (df)^k e (fd)^k fe (ac)^k,8,8,4
+NEW_n8_28,a (bf)^k b (dc)^k dec (ef)^k efe (ac)^k,8,8,4
+NEW_n8_29,(ab)^k abdec (eded)^k efe (ab)^k,8,8,3
+NEW_n8_30,ab (ac)^k d (ec)^k ec (ef)^k efe (af)^k,8,8,4
+NEW_n8_31,a (bc)^k bd (ef)^k (ea)^k ec (ed)^k efe,8,8,4
+NEW_n8_32,(ab)^k ab (de)^k d (ec)^k ec (ef)^k efe,8,8,4
+NEW_n8_33,a (bd)^k bde (fd)^k ce (fa)^k f (ba)^k e,8,8,4
+NEW_n8_34,a (bf)^k (bd)^k b (de)^k dec (ef)^k efe,8,8,4
+NEW_n8_35,a (bc)^k bd (ef)^k ec (ea)^k ef (ed)^k e,8,8,4
+NEW_n8_36,ab (dc)^k de (af)^k de (fb)^k ab (fe)^k,8,8,4
+NEW_n8_37,ab (ac)^k (de)^k dede (af)^k a (bd)^k b,8,8,4
+NEW_n8_38,a (bd)^k bdedea (fd)^k (fa)^k (ba)^k b,8,8,4
+NEW_n8_39,(ac)^k ab (de)^k ded (fa)^k ea (bd)^k b,8,8,4
+NEW_n8_40,abd (bc)^k (ef)^k e (df)^k deab (af)^k,8,8,4
+NEW_n8_41,a (bd)^k bd (ea)^k ed (ea)^k ea (bd)^k b,8,8,4
+NEW_n8_42,(ac)^k ab (ce)^k ded (ef)^k e (af)^k ab,8,8,4
+NEW_n8_43,ab (fe)^k de (cb)^k de (cb)^k ab (fe)^k,8,8,4
+NEW_n8_44,a (bd)^k (fd)^k bdedeab (af)^k (ab)^k,8,8,4
+NEW_n8_45,(ab)^k ab (de)^k (ce)^k ded (ef)^k eab,8,8,4
+NEW_n8_46,ab (ac)^k ded (ec)^k (ef)^k eab (af)^k,8,8,4
+NEW_n8_47,abd (bc)^k (ef)^k edea (ef)^k (bc)^k b,8,8,4
+NEW_n8_48,a (bd)^k bde (df)^k d (fa)^k e (ab)^k ab,8,8,4
+NEW_n8_49,ab (dc)^k de (af)^k d (ea)^k e (ab)^k ab,8,8,4
+NEW_n8_50,ab (dc)^k d (fa)^k ede (af)^k a (cd)^k b,8,8,4
+NEW_n8_51,ab (ac)^k (df)^k dede (df)^k (ac)^k ab,8,8,4
+NEW_n8_52,a (bc)^k bded (ef)^k ea (fd)^k (fa)^k b,8,8,4
+NEW_n8_53,(ab)^k ab (de)^k d (ec)^k edea (ef)^k b,8,8,4
+NEW_n8_54,ab (ac)^k de (df)^k de (df)^k ab (ac)^k,8,8,4
+NEW_n8_55,a (bf)^k (bd)^k b (de)^k dedea (ef)^k b,8,8,4
+NEW_n8_56,a (bc)^k bd (ef)^k ed (ef)^k ea (bc)^k b,8,8,4
+NEW_n8_57,ab (dc)^k de (af)^k de (af)^k ab (dc)^k,8,8,4
+NEW_n8_58,ab (dbdf)^k dede (afab)^k ab,8,8,2
+NEW_n8_59,a (bd)^k b (df)^k dede (af)^k (ab)^k ab,8,8,4
+NEW_n8_60,a (cb)^k c (ef)^k (df)^k deaeac (af)^k,8,8,4
+NEW_n8_61,a (bd)^k cdeae (df)^k (af)^k ac (ab)^k,8,8,4
+NEW_n8_62,ac (dbdf)^k deae (afab)^k ac,8,8,2
+NEW_n8_63,ac (db)^k (df)^k deae (af)^k (ab)^k ac,8,8,4
+NEW_n8_64,ac (db)^k d (eaea)^k eaea (bd)^k c,8,8,3
+NEW_n8_65,a (cd)^k cde (af)^k (ae)^k ae (ab)^k ac,8,8,4
+NEW_n8_66,ac (db)^k dea (efbf)^k ea (bd)^k c,8,8,3
+NEW_n8_67,a (bd)^k cde (df)^k ae (af)^k (ab)^k ac,8,8,4
+NEW_n8_68,ac (db)^k d (efbf)^k eaea (bd)^k c,8,8,3
+NEW_n8_69,a (bd)^k c (df)^k deae (af)^k ac (ab)^k,8,8,4
+NEW_n8_70,(ac)^k ac (de)^k deae (af)^k a (bd)^k c,8,8,4
+NEW_n8_71,(ac)^k ac (dfdf)^k deae (ac)^k ac,8,8,3
+NEW_n8_72,a (cd)^k cd (fa)^k eae (af)^k a (cd)^k c,8,8,4
+NEW_n8_73,a (cb)^k c (ef)^k deae (df)^k ac (af)^k,8,8,4
+NEW_n8_74,(ac)^k acdeae (dfdf)^k (ac)^k ac,8,8,3
+NEW_n8_75,a (cb)^k cd (ef)^k ea (ef)^k ea (cb)^k c,8,8,4
+NEW_n8_76,ac (db)^k deae (df)^k (af)^k (ab)^k ac,8,8,4
+NEW_n8_77,(ac)^k ac (df)^k deae (df)^k (ac)^k ac,8,8,4
+NEW_n8_78,ac (db)^k deaea (efbf)^k (bd)^k c,8,8,3
+NEW_n8_79,a (cd)^k cd (fa)^k (ea)^k eaeac (ab)^k,8,8,4
+NEW_n8_80,ac (db)^k de (df)^k (af)^k ae (ab)^k ac,8,8,4
+NEW_n8_81,ac (db)^k (df)^k de (af)^k aeac (ab)^k,8,8,4
+NEW_n8_82,a (bd)^k (fd)^k cdeaeac (af)^k (ab)^k,8,8,4
+NEW_n8_83,a (bd)^k cde (df)^k (af)^k aeac (ab)^k,8,8,4
+NEW_n8_84,(ac)^k ac (deae)^k deae (ac)^k ac,8,8,3
+NEW_n8_85,ac (dbdf)^k dfdf (afab)^k ac,8,8,2
+NEW_n8_86,ac (db)^k (df)^k dfd (fa)^k f (ab)^k ac,8,8,4
+NEW_n8_87,(ac)^k acd (ce)^k fd (fe)^k (fa)^k fac,8,8,4
+NEW_n8_88,a (cb)^k cd (fe)^k fd (fe)^k fa (cb)^k c,8,8,4
+NEW_n8_89,a (cd)^k cd (fa)^k (ea)^k fdfac (ab)^k,8,8,4
+NEW_n8_90,a (cb)^k cdfd (fe)^k (fd)^k (fa)^k fac,8,8,4
+NEW_n8_91,a (cb)^k c (ef)^k dfd (fe)^k f (bc)^k ac,8,8,4
+NEW_n8_92,a (cd)^k cd (fa)^k fd (fa)^k fa (cd)^k c,8,8,4
+NEW_n8_93,(ac)^k acdf (de)^k d (fa)^k fac (db)^k,8,8,4
+NEW_n8_94,a (cd)^k cd (fa)^k fd (ea)^k f (ab)^k ac,8,8,4
+NEW_n8_95,(ac)^k ac (de)^k dfd (fa)^k fa (bd)^k c,8,8,4
+NEW_n8_96,a (bd)^k cdfd (ea)^k f (ae)^k a (bd)^k c,8,8,4
+NEW_n8_97,(ac)^k acdfdf (deae)^k (ac)^k ac,8,8,3
+NEW_n8_98,a (cd)^k cd (fa)^k fdf (ae)^k ac (ab)^k,8,8,4
+NEW_n8_99,(ac)^k ac (deae)^k dfdf (ac)^k ac,8,8,3
+NEW_n8_100,a (cb)^k c (ef)^k (df)^k dfdfac (af)^k,8,8,4
+NEW_n8_101,(ac)^k acdf (deae)^k df (ac)^k ac,8,8,3
+NEW_n8_102,acd (ce)^k f (ae)^k df (ab)^k a (cb)^k c,8,8,4
+NEW_n8_103,a (bd)^k c (df)^k dfd (fa)^k fac (ab)^k,8,8,4
+NEW_n8_104,ac (db)^k dfdf (aeae)^k a (bd)^k c,8,8,3
+NEW_n8_105,ac (db)^k dfdfa (efbf)^k (bd)^k c,8,8,3
+NEW_n8_106,a (bd)^k cdf (ae)^k d (ea)^k fac (db)^k,8,8,4
+NEW_n8_107,(ab)^k acdf (dede)^k dfac (ab)^k,8,8,3
+NEW_n8_108,(ab)^k ac (de)^k df (de)^k df (ab)^k ac,8,8,4
+NEW_n8_109,a (bd)^k (fd)^k cdfdfac (af)^k (ab)^k,8,8,4
+NEW_n8_110,a (bd)^k cd (ea)^k fd (ea)^k fa (bd)^k c,8,8,4
+NEW_n8_111,(ac)^k a (ce)^k cd (fe)^k fdfac (af)^k,8,8,4
+NEW_n8_112,a (bd)^k c (df)^k dfdfb (fa)^k f (ab)^k,8,8,4
+NEW_n8_113,(ac)^k acd (ce)^k fd (fe)^k (fa)^k fbf,8,8,4
+NEW_n8_114,a (cd)^k cd (fa)^k fd (fb)^k fb (fe)^k f,8,8,4
+NEW_n8_115,a (cb)^k cdfd (fefe)^k fbf (bc)^k,8,8,3
+NEW_n8_116,(ac)^k acd (ce)^k (fe)^k fdfb (fa)^k f,8,8,4
+NEW_n8_117,(ac)^k acdfdf (deae)^k (ac)^k bf,8,8,3
+NEW_n8_118,acdfd (ce)^k (ae)^k (ab)^k fbf (bc)^k,8,8,4
+NEW_n8_119,a (bd)^k cdf (ae)^k df (ea)^k (bd)^k bf,8,8,4
+NEW_n8_120,(ac)^k a (ce)^k cdfd (fe)^k fb (fa)^k f,8,8,4
+NEW_n8_121,acd (ce)^k (ae)^k fdf (ba)^k bf (bc)^k,8,8,4
+NEW_n8_122,a (cd)^k cd (fa)^k fdf (ea)^k (ba)^k bf,8,8,4
+NEW_n8_123,(ac)^k acdfd (ce)^k (fe)^k fb (fa)^k f,8,8,4
+NEW_n8_124,a (ce)^k cdfdfb (ae)^k (ab)^k f (bc)^k,8,8,4
+NEW_n8_125,a (cb)^k cd (fe)^k fd (ea)^k fbf (de)^k,8,8,4
+NEW_n8_126,a (cb)^k cd (fe)^k (fd)^k fdfb (fa)^k f,8,8,4
+NEW_n8_127,a (cb)^k cdfd (fe)^k (fd)^k (fa)^k fbf,8,8,4
+NEW_n8_128,a (cb)^k c (ef)^k dfd (fe)^k f (bc)^k bf,8,8,4
+NEW_n8_129,(ac)^k acece (fdfd)^k f (ac)^k ac,8,8,3
+NEW_n8_130,a (cb)^k c (ef)^k ece (fd)^k fac (af)^k,8,8,4
+NEW_n8_131,ac (dbdf)^k ecef (afab)^k ac,8,8,2
+NEW_n8_132,ac (db)^k (df)^k ece (fa)^k f (ab)^k ac,8,8,4
+NEW_n8_133,(ac)^k acecef (deae)^k (ac)^k ac,8,8,3
+NEW_n8_134,a (bd)^k c (df)^k ece (fa)^k fac (ab)^k,8,8,4
+NEW_n8_135,a (cb)^k c (ef)^k ec (ef)^k ef (bc)^k ac,8,8,4
+NEW_n8_136,(ab)^k ac (ed)^k ec (ed)^k ef (ab)^k ac,8,8,4
+NEW_n8_137,a (cb)^k c (ef)^k (df)^k ecefac (af)^k,8,8,4
+NEW_n8_138,a (cb)^k cec (ef)^k e (fd)^k (fa)^k fac,8,8,4
+NEW_n8_139,a (bd)^k cece (fd)^k (fa)^k fac (ab)^k,8,8,4
+NEW_n8_140,acec (bd)^k (ea)^k ef (ae)^k a (bd)^k c,8,8,4
+NEW_n8_141,a (bd)^k (fd)^k cecefac (af)^k (ab)^k,8,8,4
+NEW_n8_142,ac (bd)^k (ea)^k ecef (ea)^k (bd)^k bf,8,8,4
+NEW_n8_143,a (bd)^k cece (fd)^k fb (fa)^k f (ab)^k,8,8,4
+NEW_n8_144,a (cb)^k c (ef)^k ec (df)^k efb (fa)^k f,8,8,4
+NEW_n8_145,(ac)^k a (ce)^k cec (ef)^k efb (fa)^k f,8,8,4
+NEW_n8_146,a (bd)^k cec (df)^k e (fa)^k fbf (ab)^k,8,8,4
+NEW_n8_147,(ab)^k acec (eded)^k efbf (ab)^k,8,8,3
+NEW_n8_148,a (cb)^k cec (efef)^k efbf (bc)^k,8,8,3
+NEW_n8_149,a (ce)^k cec (ea)^k e (ab)^k fbf (bc)^k,8,8,4
+NEW_n8_150,a (cb)^k c (ef)^k ec (ef)^k ef (bc)^k bf,8,8,4
+NEW_n8_151,acec (bd)^k e (fd)^k (fa)^k f (ba)^k bf,8,8,4
+NEW_n8_152,a (cb)^k cec (ef)^k e (fd)^k (fa)^k fbf,8,8,4
+NEW_n8_153,(ac)^k acec (df)^k e (fd)^k fbf (ac)^k,8,8,4
+NEW_n8_154,a (bd)^k c (df)^k ecefb (fa)^k f (ab)^k,8,8,4
+NEW_n8_155,(ac)^k acecef (deae)^k (ac)^k bf,8,8,3
+NEW_n9_156,ab (cd)^k fded (fa)^k (ea)^k (ba)^k cdc,9,8,4
+NEW_n9_157,abfd (ea)^k ed (ce)^k (cb)^k c (ab)^k dc,9,8,4
+NEW_n9_158,abf (aece)^k dedcd (bcba)^k c,9,8,2
+NEW_n9_159,abf (ae)^k (ce)^k dedcd (bc)^k (ba)^k c,9,8,4
+NEW_n9_160,a (bfdf)^k bfded (cdcb)^k cdc,9,8,2
+NEW_n9_161,a (bf)^k (df)^k bfde (dc)^k d (cb)^k cdc,9,8,4
+NEW_n9_162,abfd (fb)^k (fd)^k e (dc)^k d (cb)^k cdc,9,8,4
+NEW_n9_163,abfde (af)^k (dc)^k (ec)^k (bc)^k dcdc,9,8,4
+NEW_n9_164,ab (caea)^k fde (dedc)^k dcdc,9,8,2
+NEW_n9_165,ab (ca)^k (ea)^k f (de)^k de (dc)^k dcdc,9,8,4
+NEW_n9_166,ab (fbfd)^k fdedcd (cdcb)^k c,9,8,2
+NEW_n9_167,a (bf)^k b (fd)^k fde (dc)^k dcd (cb)^k c,9,8,4
+NEW_n9_168,abfd (ef)^k e (cb)^k dc (db)^k (ab)^k dc,9,8,4
+NEW_n9_169,abf (ae)^k ded (ce)^k (cb)^k cd (ba)^k c,9,8,4
+NEW_n9_170,a (cb)^k cec (ef)^k e (df)^k (af)^k aeac,9,8,4
+NEW_n9_171,a (cb)^k c (ef)^k eceae (df)^k ac (af)^k,9,8,4
+NEW_n9_172,ac (bd)^k (fd)^k eceae (af)^k ac (ab)^k,9,8,4
+NEW_n9_173,acec (bd)^k (efbf)^k eaea (bd)^k c,9,8,3
+NEW_n9_174,acec (bd)^k ea (efbf)^k ea (bd)^k c,9,8,3
+NEW_n9_175,a (cb)^k cec (ef)^k eae (df)^k (af)^k ac,9,8,4
+NEW_n9_176,acec (bd)^k eae (df)^k (af)^k (ab)^k ac,9,8,4
+NEW_n9_177,acec (bd)^k (eaea)^k eaea (bd)^k c,9,8,3
+NEW_n9_178,acec (bdfd)^k eae (afab)^k ac,9,8,2
+NEW_n9_179,acec (bd)^k (fd)^k eae (af)^k (ab)^k ac,9,8,4
+NEW_n9_180,acec (bd)^k e (df)^k (af)^k ae (ab)^k ac,9,8,4
+NEW_n9_181,acec (bd)^k (fd)^k e (af)^k aeac (ab)^k,9,8,4
+NEW_n9_182,acec (bd)^k eaea (efbf)^k (bd)^k c,9,8,3
+NEW_n9_183,ac (bd)^k edea (efbf)^k ba (bd)^k c,9,8,3
+NEW_n9_184,ac (bd)^k ede (df)^k (af)^k (ab)^k abac,9,8,4
+NEW_n9_185,ac (bd)^k (ea)^k ed (ea)^k ea (bd)^k bac,9,8,4
+NEW_n9_186,ac (bd)^k ed (efbf)^k eaba (bd)^k c,9,8,3
+NEW_n9_187,a (cb)^k c (ef)^k edea (ef)^k (bc)^k bac,9,8,4
+NEW_n9_188,ac (bd)^k ede (afdf)^k aba (bd)^k c,9,8,3
+NEW_n9_189,ac (bd)^k ed (fdfa)^k eaba (bd)^k c,9,8,3
+NEW_n9_190,acedea (ef)^k (bc)^k bac (db)^k (ab)^k,9,8,4
+NEW_n9_191,ac (bd)^k e (df)^k de (af)^k abac (ab)^k,9,8,4
+NEW_n9_192,ac (bd)^k ed (eaea)^k eaba (bd)^k c,9,8,3
+NEW_n9_193,acede (af)^k a (cd)^k ba (ce)^k (cb)^k c,9,8,4
+NEW_n9_194,acedea (ef)^k (bc)^k b (ac)^k a (cd)^k c,9,8,4
+NEW_n10_195,a (bc)^k bc (ef)^k def (ae)^k (de)^k dfef,10,8,4
+NEW_n10_196,abcde (cd)^k (fa)^k fdf (ea)^k (ba)^k ef,10,8,4
+NEW_n10_197,a (bf)^k b (ce)^k cdefd (ce)^k fe (fb)^k f,10,8,4
+NEW_n10_198,ab (cd)^k cd (fa)^k efdf (ea)^k e (ab)^k f,10,8,4
+NEW_n10_199,ab (cd)^k cd (fa)^k efd (fb)^k (fe)^k fef,10,8,4
+NEW_n10_200,abc (ab)^k (de)^k defdf (ed)^k e (ab)^k f,10,8,4
+NEW_n10_201,abcd (bc)^k (ef)^k e (fd)^k fd (fa)^k fef,10,8,4
+NEW_n10_202,(ab)^k abc (de)^k def (de)^k dfe (ab)^k f,10,8,4
+NEW_n10_203,ab (cd)^k ce (af)^k dfed (fa)^k fb (dc)^k,10,8,4
+NEW_n10_204,abc (bd)^k edfe (df)^k (af)^k df (ba)^k b,10,8,4
+NEW_n10_205,ab (ca)^k ce (dfdf)^k dfedf (ac)^k b,10,8,3
+NEW_n10_206,a (bf)^k b (ce)^k cedfed (ce)^k (fb)^k fb,10,8,4
+NEW_n10_207,a (bc)^k bc (ef)^k edfed (fe)^k f (bc)^k b,10,8,4
+NEW_n10_208,ab (ca)^k ced (ce)^k (fe)^k fed (fa)^k fb,10,8,4
+NEW_n10_209,a (bd)^k bc (df)^k edfe (af)^k df (ba)^k b,10,8,4
+NEW_n10_210,(ab)^k abc (ed)^k ed (ce)^k (fe)^k fedfb,10,8,4
+NEW_n10_211,(ab)^k ab (de)^k cedfed (ce)^k fb (fe)^k,10,8,4
+NEW_n10_212,abc (bd)^k (ea)^k edfedf (ea)^k (bd)^k b,10,8,4
+NEW_n10_213,ab (ae)^k fded (ce)^k (cb)^k cdbf (ab)^k,10,8,4
+NEW_n10_214,a (bf)^k bfd (ec)^k ed (ce)^k cd (bf)^k bf,10,8,4
+NEW_n10_215,ab (ca)^k f (ae)^k (de)^k de (dc)^k dcdbf,10,8,4
+NEW_n10_216,abf (ae)^k de (db)^k dc (db)^k db (ae)^k f,10,8,4
+NEW_n10_217,ab (cd)^k fded (fa)^k (ea)^k c (ab)^k dbf,10,8,4
+NEW_n10_218,abf (ae)^k d (ec)^k edcd (bc)^k (ba)^k bf,10,8,4
+NEW_n10_219,abfded (fe)^k (cb)^k (db)^k (ab)^k cdbf,10,8,4
+NEW_n10_220,ab (fa)^k f (dc)^k dedcd (ec)^k bf (bc)^k,10,8,4
+NEW_n10_221,a (cace)^k cbdfed (fefa)^k fef,10,8,2
+NEW_n10_222,(ac)^k a (ce)^k cbdfed (fe)^k (fa)^k fef,10,8,4
+NEW_n10_223,acb (dc)^k dfe (fa)^k (bf)^k d (fe)^k fef,10,8,4
+NEW_n10_224,(ac)^k acbd (ce)^k (fe)^k fedfe (fa)^k f,10,8,4
+NEW_n10_225,acb (de)^k df (ba)^k edf (ba)^k ef (de)^k,10,8,4
+NEW_n10_226,acb (dc)^k d (fa)^k fedf (ea)^k e (ab)^k f,10,8,4
+NEW_n10_227,(ab)^k acb (de)^k df (ed)^k edfe (ab)^k f,10,8,4
+NEW_n10_228,(ab)^k ac (ed)^k bdf (ed)^k edf (ba)^k ef,10,8,4
+NEW_n10_229,acb (dc)^k d (fa)^k fed (fb)^k (fe)^k fef,10,8,4
+NEW_n11_230,a (bf)^k b (ce)^k cdefd (ec)^k e (fb)^k fab,11,8,4
+NEW_n11_231,ab (ca)^k cde (fdfd)^k fdef (ac)^k ab,11,8,3
+NEW_n11_232,ab (ceca)^k cdefd (efaf)^k efab,11,8,2
+NEW_n11_233,(ab)^k abc (de)^k def (de)^k def (ab)^k ab,11,8,4
+NEW_n11_234,abcde (cd)^k (fa)^k fd (ea)^k e (ab)^k fab,11,8,4
+NEW_n11_235,abc (db)^k def (ae)^k d (ea)^k efa (bd)^k b,11,8,4
+NEW_n11_236,ab (cace)^k cdefde (fefa)^k fab,11,8,2
+NEW_n11_237,ab (ca)^k (ce)^k cdefd (ef)^k e (fa)^k fab,11,8,4
+NEW_n11_238,a (bd)^k bcd (ea)^k efd (ea)^k efa (bd)^k b,11,8,4
+NEW_n11_239,ab (ca)^k cdef (deae)^k def (ac)^k ab,11,8,3
+NEW_n11_240,(ab)^k abc (ed)^k (ce)^k d (ef)^k efdefab,11,8,4
+NEW_n11_241,abcd (bc)^k (ef)^k (df)^k efd (fa)^k efab,11,8,4
+NEW_n11_242,abcd (bc)^k efd (fe)^k (fd)^k (fa)^k efab,11,8,4
+NEW_n11_243,abc (ab)^k (de)^k (ce)^k (fe)^k defdefab,11,8,4
+NEW_n11_244,(ac)^k abc (de)^k defd (fa)^k efa (bd)^k b,11,8,4
+NEW_n11_245,a (bf)^k bcd (ec)^k ef (ec)^k de (fb)^k fab,11,8,4
+NEW_n11_246,ab (ca)^k cdefd (ec)^k (ef)^k efab (af)^k,11,8,4
+NEW_n11_247,abc (de)^k de (ab)^k fdefa (bf)^k (bc)^k b,11,8,4
+NEW_n11_248,abc (db)^k d (ea)^k efdef (ae)^k a (bd)^k b,11,8,4
+NEW_n11_249,abc (de)^k de (ab)^k fdef (ac)^k ab (af)^k,11,8,4
+NEW_n11_250,a (bf)^k bcd (ec)^k efd (ec)^k efa (bf)^k b,11,8,4
+NEW_n11_251,abc (db)^k de (fd)^k fd (fa)^k ef (ab)^k ab,11,8,4
+NEW_n11_252,ab (ca)^k c (df)^k defde (fd)^k f (ac)^k ab,11,8,4
+NEW_n11_253,(ab)^k ab (de)^k cdef (de)^k de (ab)^k fab,11,8,4
+NEW_n11_254,abcd (bc)^k (ef)^k efdefa (ef)^k (bc)^k b,11,8,4
+NEW_n11_255,ab (cd)^k cd (fa)^k efde (fa)^k fa (cd)^k b,11,8,4
+NEW_n11_256,(ac)^k abc (df)^k de (fd)^k fdef (ac)^k ab,11,8,4
+NEW_n11_257,a (bc)^k bc (ef)^k defd (ef)^k ef (bc)^k ab,11,8,4
+NEW_n11_258,abc (db)^k de (fdfa)^k fdefa (bd)^k b,11,8,3
+NEW_n11_259,abc (ab)^k (de)^k defdef (de)^k (ab)^k ab,11,8,4
+NEW_n11_260,ab (ca)^k cde (fdfd)^k fdfe (ac)^k ac,11,8,3
+NEW_n11_261,(ab)^k abc (ed)^k (ce)^k d (ef)^k efdfeac,11,8,4
+NEW_n11_262,abc (db)^k de (fdfa)^k fdfea (bd)^k c,11,8,3
+NEW_n11_263,(ac)^k abc (df)^k de (fd)^k fdfe (ac)^k ac,11,8,4
+NEW_n11_264,ab (cd)^k cd (fa)^k efdf (ea)^k eac (ab)^k,11,8,4
+NEW_n11_265,(ab)^k abc (de)^k def (de)^k dfe (ab)^k ac,11,8,4
+NEW_n11_266,abc (db)^k def (ae)^k d (ea)^k fea (bd)^k c,11,8,4
+NEW_n11_267,ab (ceca)^k cdefdfe (afef)^k ac,11,8,2
+NEW_n11_268,ab (ca)^k c (df)^k defdfe (df)^k (ac)^k ac,11,8,4
+NEW_n11_269,abc (ab)^k (de)^k (ce)^k (fe)^k defdfeac,11,8,4
+NEW_n11_270,a (bd)^k bcd (ea)^k efd (ea)^k fea (bd)^k c,11,8,4
+NEW_n11_271,a (bf)^k b (ce)^k cdefd (ce)^k fe (fb)^k ac,11,8,4
+NEW_n11_272,(ac)^k abc (de)^k defd (fa)^k fea (bd)^k c,11,8,4
+NEW_n11_273,a (bc)^k bc (ef)^k defdfe (df)^k ac (af)^k,11,8,4
+NEW_n11_274,abc (db)^k de (fd)^k fd (fa)^k fe (ab)^k ac,11,8,4
+NEW_n11_275,ab (ca)^k cd (ec)^k efd (fe)^k fe (af)^k ac,11,8,4
+NEW_n11_276,ab (ce)^k cd (ea)^k efdf (ba)^k ea (cb)^k c,11,8,4
+NEW_n11_277,a (bf)^k bcd (ec)^k efd (ce)^k fea (fb)^k c,11,8,4
+NEW_n11_278,ab (cd)^k cd (fa)^k efdfe (af)^k a (cd)^k c,11,8,4
+NEW_n11_279,abc (ab)^k (de)^k defdf (ed)^k e (ab)^k ac,11,8,4
+NEW_n11_280,ab (ca)^k cdef (deae)^k dfe (ac)^k ac,11,8,3
+NEW_n11_281,abcd (bc)^k (ef)^k (df)^k efd (fa)^k feac,11,8,4
+NEW_n11_282,abcd (bc)^k efd (fe)^k (fd)^k (fa)^k feac,11,8,4
+NEW_n11_283,abc (db)^k d (ea)^k efdf (ea)^k ea (bd)^k c,11,8,4
+NEW_n11_284,(ab)^k abc (de)^k df (ed)^k edef (ab)^k ac,11,8,4
+NEW_n11_285,ab (ca)^k c (df)^k dfede (fd)^k f (ac)^k ac,11,8,4
+NEW_n11_286,abc (db)^k dfe (df)^k d (fa)^k ef (ab)^k ac,11,8,4
+NEW_n11_287,ab (cd)^k cd (fa)^k fede (fa)^k fa (cd)^k c,11,8,4
+NEW_n11_288,a (bf)^k b (ce)^k cdfed (ec)^k e (fb)^k fac,11,8,4
+NEW_n11_289,(ac)^k abc (de)^k dfed (fa)^k efa (bd)^k c,11,8,4
+NEW_n11_290,a (bc)^k bc (ef)^k dfed (ef)^k ef (bc)^k ac,11,8,4
+NEW_n11_291,a (bc)^k bc (ef)^k dfede (fd)^k fac (af)^k,11,8,4
+NEW_n11_292,abc (db)^k dfe (dfaf)^k defa (bd)^k c,11,8,3
+NEW_n11_293,ab (cace)^k cdfede (fefa)^k fac,11,8,2
+NEW_n11_294,ab (ca)^k (ce)^k cdfed (ef)^k e (fa)^k fac,11,8,4
+NEW_n11_295,abc (db)^k df (ea)^k ed (ea)^k efa (bd)^k c,11,8,4
+NEW_n11_296,(ab)^k ab (de)^k cdf (ed)^k ede (ab)^k fac,11,8,4
+NEW_n11_297,ab (cd)^k cd (fa)^k fedef (ae)^k ac (ab)^k,11,8,4
+NEW_n11_298,a (bf)^k bcd (ce)^k fed (ec)^k efa (fb)^k c,11,8,4
+NEW_n11_299,abc (ab)^k (de)^k (ce)^k (fe)^k dfedefac,11,8,4
+NEW_n11_300,a (bf)^k b (ce)^k cdfed (ec)^k e (fb)^k fbf,11,8,4
+NEW_n11_301,abcd (ce)^k (ae)^k fede (ab)^k fbf (bc)^k,11,8,4
+NEW_n11_302,a (bc)^k bcd (fe)^k fede (fd)^k fb (fa)^k f,11,8,4
+NEW_n11_303,ab (cd)^k cd (fa)^k fedef (ea)^k (ba)^k bf,11,8,4
+NEW_n11_304,a (bf)^k bcdf (dc)^k ed (ef)^k efb (ca)^k f,11,8,4
+NEW_n11_305,a (bc)^k bc (ef)^k dfed (ef)^k ef (bc)^k bf,11,8,4
+NEW_n11_306,ab (cd)^k cd (fa)^k fede (fb)^k fb (fe)^k f,11,8,4
+NEW_n11_307,ab (cace)^k cdfede (fefa)^k fbf,11,8,2
+NEW_n11_308,ab (ca)^k (ce)^k cdfed (ef)^k e (fa)^k fbf,11,8,4
+NEW_n11_309,(ab)^k ab (de)^k cdf (ec)^k edefb (fe)^k f,11,8,4
+NEW_n11_310,abc (ab)^k (de)^k (ce)^k (fe)^k dfedefbf,11,8,4
+NEW_n11_311,(ab)^k ab (de)^k cdf (ed)^k ede (ab)^k fbf,11,8,4
+NEW_n11_312,a (bf)^k b (cd)^k cdfed (ef)^k efbf (ac)^k,11,8,4
+NEW_n11_313,a (bd)^k bcdfe (df)^k d (fa)^k ef (ba)^k bf,11,8,4
+NEW_n11_314,abc (de)^k df (ba)^k edef (ba)^k bf (de)^k,11,8,4
+NEW_n11_315,abcdf (ecac)^k edefb (fafe)^k f,11,8,2
+NEW_n11_316,a (bf)^k bd (ce)^k cea (ec)^k edfe (fb)^k f,11,8,4
+NEW_n11_317,(ab)^k abdc (ed)^k ea (ed)^k edfe (ab)^k f,11,8,4
+NEW_n11_318,a (bd)^k bdcea (fd)^k ed (fa)^k fe (ab)^k f,11,8,4
+NEW_n11_319,a (bd)^k bdce (df)^k ae (af)^k dfe (ab)^k f,11,8,4
+NEW_n11_320,(ac)^k abdc (ed)^k efd (fa)^k eaf (bd)^k b,11,8,4
+NEW_n11_321,(ac)^k ab (ce)^k dcefd (ef)^k e (af)^k afb,11,8,4
+NEW_n11_322,ab (ac)^k dc (edea)^k efdeaf (ac)^k b,11,8,3
+NEW_n11_323,abdc (bd)^k ef (ae)^k d (ea)^k eaf (bd)^k b,11,8,4
+NEW_n11_324,a (bd)^k bdc (ea)^k efd (ea)^k eaf (bd)^k b,11,8,4
+NEW_n11_325,ab (dbdf)^k dcefde (afab)^k afb,11,8,2
+NEW_n11_326,a (bd)^k b (df)^k dcefde (af)^k (ab)^k afb,11,8,4
+NEW_n11_327,a (bf)^k b (dc)^k dcefd (ef)^k eaf (ac)^k b,11,8,4
+NEW_n11_328,abdc (bd)^k efdea (fd)^k (fa)^k f (ba)^k b,11,8,4
+NEW_n11_329,abd (cb)^k c (ef)^k efdea (fe)^k f (bc)^k b,11,8,4
+NEW_n11_330,abd (cace)^k cefd (fefa)^k eafb,11,8,2
+NEW_n11_331,abd (ca)^k (ce)^k cefd (fe)^k (fa)^k eafb,11,8,4
+NEW_n11_332,(ac)^k abdc (df)^k e (fd)^k fdeaf (ac)^k b,11,8,4
+NEW_n11_333,abdce (cd)^k (fa)^k fd (ea)^k e (ab)^k afb,11,8,4
+NEW_n11_334,ab (ac)^k dc (ed)^k efde (af)^k af (bd)^k b,11,8,4
+NEW_n11_335,a (bf)^k bd (ce)^k cefd (ec)^k ea (fb)^k fb,11,8,4
+NEW_n11_336,(ab)^k abdc (ed)^k ef (de)^k deaf (ba)^k b,11,8,4
+NEW_n11_337,abd (cb)^k c (ef)^k (df)^k efd (fa)^k eafb,11,8,4
+NEW_n11_338,abd (cb)^k cefd (fe)^k (fd)^k (fa)^k eafb,11,8,4
+NEW_n11_339,ab (ac)^k dcefd (ecef)^k eaf (ac)^k b,11,8,3
+NEW_n11_340,abdc (bd)^k (ea)^k efdeaf (ea)^k (bd)^k b,11,8,4
+NEW_n11_341,a (bc)^k bd (fe)^k cefd (ef)^k ea (cb)^k fb,11,8,4
+NEW_n11_342,(ab)^k ab (de)^k dcef (de)^k de (ab)^k afb,11,8,4
+NEW_n11_343,abdc (ed)^k e (ab)^k fdea (fb)^k f (bc)^k b,11,8,4
+NEW_n11_344,ab (ac)^k (df)^k dcefde (df)^k (ac)^k afb,11,8,4
+NEW_n11_345,abdc (bd)^k e (fdfa)^k fdeaf (bd)^k b,11,8,3
+NEW_n11_346,ab (dc)^k dce (fa)^k fdea (fb)^k fb (fe)^k,11,8,4
+NEW_n11_347,ab (ac)^k dc (df)^k efde (df)^k af (ac)^k b,11,8,4
+NEW_n11_348,abdc (bd)^k e (fd)^k fd (fa)^k eaf (ba)^k b,11,8,4
+NEW_n11_349,a (bc)^k bdc (ef)^k efd (ef)^k eaf (bc)^k b,11,8,4
+NEW_n11_350,(ab)^k ab (de)^k decdf (de)^k ae (ab)^k ae,11,8,4
+NEW_n11_351,abdecd (fe)^k f (bc)^k aea (bd)^k (ba)^k e,11,8,4
+NEW_n11_352,ab (ca)^k (ce)^k dec (ef)^k dfaeae (af)^k,11,8,4
+NEW_n11_353,abdec (de)^k df (ab)^k (ac)^k (af)^k aeae,11,8,4
+NEW_n11_354,abd (bc)^k ec (ef)^k (df)^k d (fa)^k faeae,11,8,4
+NEW_n11_355,abd (bc)^k ec (ef)^k dfaeae (df)^k (af)^k,11,8,4
+NEW_n11_356,abd (bc)^k ec (ef)^k df (ae)^k aea (ed)^k e,11,8,4
+NEW_n11_357,abd (bc)^k ec (ef)^k dfa (fd)^k eae (af)^k,11,8,4
+NEW_n11_358,abd (bc)^k ec (ef)^k dfae (df)^k (af)^k ae,11,8,4
+NEW_n11_359,a (bd)^k bde (fd)^k cdfae (af)^k (ba)^k fb,11,8,4
+NEW_n11_360,(ac)^k abdecdf (de)^k ae (fa)^k f (bd)^k b,11,8,4
+NEW_n11_361,abd (bc)^k ec (ef)^k dfa (ef)^k ef (bc)^k b,11,8,4
+NEW_n11_362,a (bc)^k bd (ef)^k ec (df)^k dfaefb (af)^k,11,8,4
+NEW_n11_363,abd (bc)^k ecd (fe)^k fae (fd)^k (fa)^k fb,11,8,4
+NEW_n11_364,abd (bc)^k ec (ef)^k (df)^k d (fa)^k faefb,11,8,4
+NEW_n11_365,ab (ac)^k dec (ecef)^k dfaef (ac)^k b,11,8,3
+NEW_n11_366,abdec (de)^k df (ab)^k (ac)^k (af)^k aefb,11,8,4
+NEW_n11_367,a (bf)^k b (dc)^k decd (fe)^k faef (ac)^k b,11,8,4
+NEW_n11_368,(ac)^k ab (ce)^k decd (fe)^k fae (fa)^k fb,11,8,4
+NEW_n11_369,ab (dbdf)^k decdfae (faba)^k fb,11,8,2
+NEW_n11_370,a (bd)^k b (df)^k decdfae (fa)^k (ba)^k fb,11,8,4
+NEW_n11_371,ab (ac)^k dec (de)^k dfae (fa)^k f (bd)^k b,11,8,4
+NEW_n11_372,(ab)^k ab (de)^k decdf (de)^k ae (ab)^k fb,11,8,4
+NEW_n11_373,abdecdf (de)^k (ab)^k a (bf)^k ef (bc)^k b,11,8,4
+NEW_n11_374,ab (ac)^k dec (dfdf)^k dfaef (ac)^k b,11,8,3
+NEW_n11_375,ab (ac)^k decd (fece)^k faef (ac)^k b,11,8,3
+NEW_n11_376,ab (ac)^k dec (deae)^k dfaef (ac)^k b,11,8,3
+NEW_n11_377,ab (ac)^k decdf (deae)^k aef (ac)^k b,11,8,3
+NEW_n11_378,ab (ac)^k decd (ce)^k (fe)^k fae (fa)^k fb,11,8,4
+NEW_n11_379,abd (bc)^k ec (ef)^k dfa (fd)^k fd (fa)^k f,11,8,4
+NEW_n11_380,abdec (de)^k df (ab)^k (ac)^k (af)^k afdf,11,8,4
+NEW_n11_381,abd (bc)^k ec (ef)^k dfafd (fe)^k f (bc)^k,11,8,4
+NEW_n11_382,abd (bc)^k ec (ef)^k df (ae)^k afdf (de)^k,11,8,4
+NEW_n11_383,abd (bc)^k ec (ef)^k dfafdf (ae)^k (de)^k,11,8,4
+NEW_n11_384,abd (bc)^k ec (ef)^k (ae)^k dfaf (de)^k df,11,8,4
+NEW_n11_385,abd (bc)^k ec (ef)^k (df)^k d (fa)^k fafdf,11,8,4
+NEW_n11_386,ab (ca)^k (ce)^k dec (ef)^k dfafd (fa)^k f,11,8,4
+NEW_n11_387,(ab)^k ab (de)^k (ce)^k decdfa (fe)^k fdf,11,8,4
+NEW_n11_388,(ab)^k abdec (ed)^k (ec)^k dfa (fe)^k fdf,11,8,4
+NEW_n11_389,abdfdb (cace)^k de (fefa)^k fdf,11,8,2
+NEW_n11_390,abdfdb (ca)^k (ce)^k d (ef)^k e (fa)^k fdf,11,8,4
+NEW_n11_391,abdfdbd (bc)^k (ef)^k (df)^k (af)^k efdf,11,8,4
+NEW_n11_392,(ac)^k abdfdb (df)^k de (fd)^k fdf (ac)^k,11,8,4
+NEW_n11_393,ab (ac)^k dfdbdfed (ec)^k (ef)^k (af)^k e,11,8,4
+NEW_n11_394,(ab)^k ac (ed)^k bdef (de)^k df (ba)^k eab,11,8,4
+NEW_n11_395,acb (ac)^k def (deae)^k dfe (ac)^k ab,11,8,3
+NEW_n11_396,(ac)^k acb (df)^k de (fd)^k fdfe (ac)^k ab,11,8,4
+NEW_n11_397,acbd (bc)^k (ef)^k (df)^k efd (fa)^k feab,11,8,4
+NEW_n11_398,acbd (bc)^k efd (fe)^k (fd)^k (fa)^k feab,11,8,4
+NEW_n11_399,(ac)^k acb (de)^k defd (fa)^k fea (bd)^k b,11,8,4
+NEW_n11_400,acb (de)^k de (ab)^k fdfe (ac)^k ab (af)^k,11,8,4
+NEW_n11_401,ac (bd)^k bdef (ae)^k d (ea)^k fea (bd)^k b,11,8,4
+NEW_n11_402,ac (bd)^k bde (fd)^k fd (fa)^k fe (ab)^k ab,11,8,4
+NEW_n11_403,acb (ac)^k d (ec)^k efd (fe)^k fe (af)^k ab,11,8,4
+NEW_n11_404,acb (ceae)^k defdfe (abcb)^k ab,11,8,2
+NEW_n11_405,acb (ce)^k (ae)^k defdfe (ab)^k (cb)^k ab,11,8,4
+NEW_n11_406,acb (dc)^k d (fa)^k efdfe (af)^k a (cd)^k b,11,8,4
+NEW_n11_407,ac (bd)^k bde (fdfa)^k fdfea (bd)^k b,11,8,3
+NEW_n11_408,ac (bd)^k bd (ea)^k efdf (ea)^k ea (bd)^k b,11,8,4
+NEW_n11_409,acbd (ec)^k (ea)^k efdf (ba)^k ea (bc)^k b,11,8,4
+NEW_n11_410,a (cace)^k cbdefdfea (efaf)^k b,11,8,2
+NEW_n11_411,(ac)^k a (ce)^k cbdefdfea (ef)^k (af)^k b,11,8,4
+NEW_n11_412,(ab)^k acb (de)^k def (de)^k dfe (ab)^k ab,11,8,4
+NEW_n11_413,a (bd)^k cbd (ea)^k efd (ea)^k fea (bd)^k b,11,8,4
+NEW_n11_414,acb (ac)^k de (fdfd)^k fdfe (ac)^k ab,11,8,3
+NEW_n11_415,acb (ac)^k (df)^k defdfe (df)^k (ac)^k ab,11,8,4
+NEW_n11_416,acbdefd (ce)^k (ae)^k (ab)^k fea (bc)^k b,11,8,4
+NEW_n11_417,acb (de)^k de (ab)^k fdfea (bf)^k (bc)^k b,11,8,4
+NEW_n11_418,acbd (bc)^k (ef)^k efdfea (ef)^k (bc)^k b,11,8,4
+NEW_n11_419,(ab)^k acb (de)^k df (ed)^k edef (ab)^k ab,11,8,4
+NEW_n11_420,acb (ce)^k df (ea)^k ede (ab)^k fa (bc)^k b,11,8,4
+NEW_n11_421,(ac)^k acb (df)^k dfe (df)^k def (ac)^k ab,11,8,4
+NEW_n11_422,ac (bd)^k bdf (ea)^k ed (ea)^k efa (bd)^k b,11,8,4
+NEW_n11_423,ac (bd)^k bdfe (dfaf)^k defa (bd)^k b,11,8,3
+NEW_n11_424,acb (dc)^k d (fa)^k fede (fa)^k fa (cd)^k b,11,8,4
+NEW_n11_425,acb (ac)^k (df)^k dfede (fd)^k f (ac)^k ab,11,8,4
+NEW_n11_426,(ac)^k acb (de)^k dfed (fa)^k efa (bd)^k b,11,8,4
+NEW_n11_427,ac (bd)^k bdfe (df)^k d (fa)^k ef (ab)^k ab,11,8,4
+NEW_n11_428,acb (ce)^k (ae)^k dfedef (ab)^k (cb)^k ab,11,8,4
+NEW_n11_429,a (cace)^k cbdfedefa (efaf)^k b,11,8,2
+NEW_n11_430,(ac)^k a (ce)^k cbdfedefa (ef)^k (af)^k b,11,8,4
+NEW_n11_431,acb (acec)^k dfede (fefa)^k fab,11,8,2
+NEW_n11_432,acb (ac)^k (ec)^k dfed (ef)^k e (fa)^k fab,11,8,4
+NEW_n11_433,ac (bd)^k bdfe (df)^k d (fa)^k fe (ab)^k ac,11,8,4
+NEW_n11_434,acb (dc)^k d (fa)^k fedf (ea)^k eac (ab)^k,11,8,4
+NEW_n11_435,(ab)^k ac (ed)^k bdf (ed)^k edf (ba)^k eac,11,8,4
+NEW_n11_436,ac (bd)^k bdfe (dfaf)^k dfea (bd)^k c,11,8,3
+NEW_n11_437,acb (dc)^k d (fa)^k fedfe (af)^k a (cd)^k c,11,8,4
+NEW_n11_438,(ac)^k acb (de)^k dfed (fa)^k fea (bd)^k c,11,8,4
+NEW_n11_439,(ab)^k acb (de)^k df (ed)^k edfe (ab)^k ac,11,8,4
+NEW_n11_440,ac (bd)^k bdf (ea)^k ed (ea)^k fea (bd)^k c,11,8,4
+NEW_n11_441,acb (ceae)^k dfedfe (abcb)^k ac,11,8,2
+NEW_n11_442,acb (ce)^k (ae)^k dfedfe (ab)^k (cb)^k ac,11,8,4
+NEW_n11_443,acb (ac)^k (df)^k dfedfe (df)^k (ac)^k ac,11,8,4
+NEW_n11_444,(ac)^k acb (df)^k dfe (df)^k dfe (ac)^k ac,11,8,4
+NEW_n11_445,ac (dbdf)^k dbdfef (afab)^k afe,11,8,2
+NEW_n11_446,ac (db)^k (df)^k dbdfe (fa)^k f (ab)^k afe,11,8,4
+NEW_n11_447,acdbdf (db)^k (df)^k e (fa)^k f (ab)^k afe,11,8,4
+NEW_n11_448,acdbdf (ed)^k e (ab)^k fa (fb)^k (cb)^k fe,11,8,4
+NEW_n11_449,a (cb)^k c (ef)^k dbd (fe)^k fef (bc)^k afe,11,8,4
+NEW_n11_450,ac (ab)^k (de)^k dbdfef (de)^k (ab)^k afe,11,8,4
+NEW_n11_451,acdb (acec)^k dfe (fefa)^k fafe,11,8,2
+NEW_n11_452,acdb (ac)^k (ec)^k d (fe)^k fe (fa)^k fafe,11,8,4
+NEW_n11_453,(ac)^k ac (df)^k dbdfe (fd)^k f (ac)^k afe,11,8,4
+NEW_n11_454,acdbdf (ec)^k ef (ae)^k (ab)^k a (cb)^k fe,11,8,4
+NEW_n11_455,acdb (de)^k df (ba)^k ef (ab)^k af (ed)^k e,11,8,4
+NEW_n11_456,acdbdfe (cd)^k (fa)^k (ea)^k (ba)^k fafe,11,8,4
+NEW_n11_457,acdc (bd)^k (ea)^k eafef (ae)^k a (bd)^k b,11,8,4
+NEW_n11_458,ac (dbdf)^k dceafe (afab)^k fab,11,8,2
+NEW_n11_459,ac (db)^k (df)^k dceafe (af)^k (ab)^k fab,11,8,4
+NEW_n11_460,(ac)^k acdc (df)^k eafe (fd)^k f (ac)^k ab,11,8,4
+NEW_n11_461,acdc (ed)^k e (ab)^k afefa (bf)^k (bc)^k b,11,8,4
+NEW_n11_462,acdc (ef)^k ea (cb)^k fef (bc)^k ab (fe)^k,11,8,4
+NEW_n11_463,ac (db)^k dc (ea)^k eaf (ea)^k efa (bd)^k b,11,8,4
+NEW_n11_464,a (cb)^k cdc (ef)^k ea (fd)^k fe (fa)^k fab,11,8,4
+NEW_n11_465,acdc (ed)^k e (ab)^k afef (ac)^k ab (af)^k,11,8,4
+NEW_n11_466,(ac)^k ac (df)^k dcefae (df)^k (ac)^k afb,11,8,4
+NEW_n11_467,acdc (ed)^k e (ab)^k fae (ac)^k (af)^k afb,11,8,4
+NEW_n11_468,(ac)^k acdc (eaed)^k efaeaf (ac)^k b,11,8,3
+NEW_n11_469,acdce (cd)^k (fa)^k f (ae)^k ae (ab)^k afb,11,8,4
+NEW_n11_470,acdc (ef)^k ef (bc)^k aea (cb)^k fb (fe)^k,11,8,4
+NEW_n11_471,ac (dbdf)^k dcefae (afab)^k afb,11,8,2
+NEW_n11_472,ac (db)^k (df)^k dcefae (af)^k (ab)^k afb,11,8,4
+NEW_n11_473,acdc (bd)^k efae (df)^k (af)^k af (ba)^k b,11,8,4
+NEW_n11_474,acdc (bd)^k efa (efbf)^k eaf (bd)^k b,11,8,3
+NEW_n11_475,acdce (cd)^k fae (af)^k afb (ae)^k (ab)^k,11,8,4
+NEW_n11_476,acdc (bd)^k e (fd)^k (fa)^k faeaf (ba)^k b,11,8,4
+NEW_n11_477,ac (db)^k dc (ea)^k ef (ae)^k aeaf (bd)^k b,11,8,4
+NEW_n11_478,acdc (ef)^k efa (bc)^k e (cb)^k afb (fe)^k,11,8,4
+NEW_n11_479,acdc (bd)^k ef (aeae)^k aeaf (bd)^k b,11,8,3
+NEW_n11_480,acdcef (de)^k (abab)^k aea (ed)^k fb,11,8,3
+NEW_n11_481,(ac)^k acdc (df)^k efae (df)^k af (ac)^k b,11,8,4
+NEW_n11_482,a (cb)^k cdc (ef)^k efae (df)^k (af)^k afb,11,8,4
+NEW_n11_483,acdc (bd)^k (ea)^k efaeaf (ea)^k (bd)^k b,11,8,4
+NEW_n11_484,a (cb)^k cdc (ef)^k e (fd)^k (fa)^k faeafb,11,8,4
+NEW_n11_485,a (cd)^k cdce (fa)^k faea (fb)^k fb (fe)^k,11,8,4
+NEW_n11_486,(ac)^k acdc (ed)^k efae (af)^k af (bd)^k b,11,8,4
+NEW_n11_487,acdcef (de)^k (ab)^k aea (fb)^k (cb)^k fb,11,8,4
+NEW_n11_488,acdc (ed)^k e (ab)^k faea (fb)^k f (bc)^k b,11,8,4
+NEW_n11_489,a (cd)^k cdefb (af)^k (ea)^k caef (ba)^k e,11,8,4
+NEW_n11_490,a (cb)^k c (ef)^k d (ef)^k ef (bc)^k bcaefe,11,8,4
+NEW_n11_491,acd (ec)^k (ea)^k fde (ab)^k abf (bc)^k bc,11,8,4
+NEW_n11_492,acdfdea (ef)^k (bc)^k bfb (ca)^k (cd)^k c,11,8,4
+NEW_n11_493,a (bd)^k cdfd (ea)^k eabf (ea)^k (bd)^k bc,11,8,4
+NEW_n11_494,a (cd)^k cdfd (fa)^k (ea)^k e (ab)^k abfbc,11,8,4
+NEW_n11_495,(ac)^k acdf (de)^k d (fa)^k ea (bd)^k bfbc,11,8,4
+NEW_n11_496,acdfdea (ef)^k (bc)^k bfbc (db)^k (ab)^k,11,8,4
+NEW_n11_497,(ab)^k acdf (dede)^k de (ab)^k abfbc,11,8,3
+NEW_n11_498,acdfde (af)^k a (cd)^k bfb (ce)^k (cb)^k c,11,8,4
+NEW_n11_499,acdfd (ef)^k ea (bc)^k (bd)^k (ba)^k bfbc,11,8,4
+NEW_n11_500,a (cb)^k c (ef)^k dfdea (ef)^k (bc)^k bfbc,11,8,4
+NEW_n11_501,a (bd)^k cdf (ae)^k d (ea)^k ea (bd)^k bfbc,11,8,4
+NEW_n11_502,acdfdea (ef)^k (bc)^k (ac)^k bfb (cd)^k c,11,8,4
+NEW_n11_503,ac (db)^k dfde (df)^k (af)^k (ab)^k abfbc,11,8,4
+NEW_n11_504,a (cd)^k cdfd (fa)^k eabf (ea)^k (ba)^k bc,11,8,4
+NEW_n12_505,a (bd)^k bcdeae (df)^k d (fa)^k eaf (ba)^k e,12,8,4
+NEW_n12_506,a (bd)^k bc (df)^k deaed (fa)^k eaf (ba)^k e,12,8,4
+NEW_n12_507,(ab)^k abc (de)^k dea (ed)^k edeaf (ba)^k e,12,8,4
+NEW_n12_508,a (bf)^k bcd (ec)^k eaed (ec)^k ea (fb)^k fe,12,8,4
+NEW_n12_509,(ab)^k ab (de)^k cdea (ed)^k ede (ab)^k afe,12,8,4
+NEW_n12_510,ab (ceca)^k cdeaed (fefa)^k eafe,12,8,2
+NEW_n12_511,(ab)^k abc (ed)^k (ce)^k dea (ef)^k edeafe,12,8,4
+NEW_n12_512,ab (cd)^k cde (af)^k aedeaf (ea)^k (ba)^k e,12,8,4
+NEW_n12_513,a (bd)^k bcdea (fd)^k ede (af)^k af (ba)^k e,12,8,4
+NEW_n12_514,a (bd)^k bcdeaedea (fd)^k (fa)^k f (ba)^k e,12,8,4
+NEW_n12_515,a (bd)^k bcdea (fd)^k fde (af)^k df (ba)^k e,12,8,4
+NEW_n12_516,(ab)^k abc (de)^k deaf (de)^k dedf (ba)^k e,12,8,4
+NEW_n12_517,a (bd)^k bc (df)^k deafd (fa)^k edf (ba)^k e,12,8,4
+NEW_n12_518,a (bc)^k bcd (fe)^k (fd)^k eafded (fa)^k fe,12,8,4
+NEW_n12_519,a (bc)^k bcd (fe)^k (df)^k edeafafe (af)^k,12,8,4
+NEW_n12_520,(ab)^k ab (de)^k (ce)^k cdedeafa (fe)^k fe,12,8,4
+NEW_n12_521,ab (ceca)^k cdede (afef)^k afafe,12,8,2
+NEW_n12_522,a (bf)^k b (cece)^k cdedeafafe (fb)^k,12,8,3
+NEW_n12_523,(ac)^k ab (ce)^k cdedea (fe)^k fafe (af)^k,12,8,4
+NEW_n12_524,abcde (dc)^k d (fa)^k eaf (ae)^k (ab)^k afe,12,8,4
+NEW_n12_525,ab (ca)^k cd (ec)^k ed (ef)^k e (af)^k afafe,12,8,4
+NEW_n12_526,a (bdbf)^k bcdedea (fede)^k fafe,12,8,2
+NEW_n12_527,a (bf)^k b (cdfd)^k cdedeafafe (fb)^k,12,8,3
+NEW_n12_528,a (bf)^k bc (db)^k dedea (ed)^k (fe)^k fafe,12,8,4
+NEW_n12_529,abcde (db)^k (df)^k d (fa)^k eaf (ab)^k afe,12,8,4
+NEW_n12_530,ab (cd)^k cded (fa)^k eafaf (ea)^k (ba)^k e,12,8,4
+NEW_n12_531,a (bd)^k bcde (df)^k de (af)^k afaf (ba)^k e,12,8,4
+NEW_n12_532,abcd (bc)^k (ef)^k edefa (fe)^k f (bc)^k ab,12,8,4
+NEW_n12_533,ab (cd)^k cded (fa)^k efaf (ae)^k (ab)^k ab,12,8,4
+NEW_n12_534,(ac)^k abcd (edea)^k edefafab (ac)^k,12,8,3
+NEW_n12_535,abcd (ecac)^k edefa (fafe)^k fab,12,8,2
+NEW_n12_536,ab (ca)^k c (df)^k dede (fd)^k faf (ac)^k ab,12,8,4
+NEW_n12_537,(ac)^k abc (df)^k de (df)^k defaf (ac)^k ab,12,8,4
+NEW_n12_538,abc (ab)^k (de)^k dede (fd)^k fafab (dc)^k,12,8,4
+NEW_n12_539,a (bf)^k bcde (cd)^k (ef)^k def (ac)^k afab,12,8,4
+NEW_n12_540,ab (cd)^k cded (fa)^k e (fa)^k fafab (dc)^k,12,8,4
+NEW_n12_541,(ab)^k ab (de)^k cdedef (de)^k (ab)^k afab,12,8,4
+NEW_n12_542,abc (db)^k ded (ea)^k efaf (ae)^k a (bd)^k b,12,8,4
+NEW_n12_543,(ac)^k abcde (dfdf)^k defafab (ac)^k,12,8,3
+NEW_n12_544,(ab)^k ab (de)^k (ce)^k cdedefafa (ef)^k b,12,8,4
+NEW_n12_545,ab (ca)^k cde (df)^k de (fd)^k fafab (ac)^k,12,8,4
+NEW_n12_546,a (cd)^k bcded (fafa)^k efafab (dc)^k,12,8,3
+NEW_n12_547,(ab)^k abcdedf (dede)^k afdf (ba)^k e,12,8,3
+NEW_n12_548,a (bf)^k bc (db)^k dedf (de)^k a (fe)^k fdfe,12,8,4
+NEW_n12_549,ab (cd)^k cde (af)^k dfafdf (ea)^k (ba)^k e,12,8,4
+NEW_n12_550,(ac)^k ab (ce)^k cdedfa (fe)^k fdfe (af)^k,12,8,4
+NEW_n12_551,abc (ab)^k (de)^k dedfafd (ce)^k (fe)^k fe,12,8,4
+NEW_n12_552,ab (ca)^k (ce)^k cded (fe)^k fafd (fa)^k fe,12,8,4
+NEW_n12_553,a (bd)^k bcdedfa (fd)^k fd (fa)^k f (ba)^k e,12,8,4
+NEW_n12_554,a (bd)^k bcde (df)^k d (fa)^k fafdf (ba)^k e,12,8,4
+NEW_n12_555,(ab)^k abc (ed)^k (ec)^k dedfa (fe)^k fdfe,12,8,4
+NEW_n12_556,ab (cd)^k cde (af)^k df (ea)^k eafac (ab)^k,12,8,4
+NEW_n12_557,a (bf)^k bcde (cd)^k (ef)^k dfe (ac)^k afac,12,8,4
+NEW_n12_558,ab (ca)^k c (df)^k dedfe (df)^k af (ac)^k ac,12,8,4
+NEW_n12_559,(ac)^k abc (df)^k de (df)^k dfeaf (ac)^k ac,12,8,4
+NEW_n12_560,abcd (bc)^k (ef)^k edfea (fe)^k f (bc)^k ac,12,8,4
+NEW_n12_561,(ac)^k abcd (ec)^k (ef)^k edfeafac (af)^k,12,8,4
+NEW_n12_562,a (bd)^k bcde (dfaf)^k dfeafac (db)^k,12,8,3
+NEW_n12_563,a (bc)^k bc (ef)^k dedfe (df)^k afac (af)^k,12,8,4
+NEW_n12_564,a (bd)^k bcde (df)^k d (fa)^k feafac (ab)^k,12,8,4
+NEW_n12_565,a (bd)^k bcd (ea)^k ed (ea)^k feafac (db)^k,12,8,4
+NEW_n12_566,ab (cd)^k cded (fa)^k feaf (ae)^k (ab)^k ac,12,8,4
+NEW_n12_567,abc (ab)^k (de)^k dedfea (ed)^k fac (ab)^k,12,8,4
+NEW_n12_568,(ab)^k ab (de)^k cdedf (ed)^k e (ab)^k afac,12,8,4
+NEW_n12_569,abcd (bc)^k (ef)^k edfea (fd)^k fac (af)^k,12,8,4
+NEW_n12_570,a (bc)^k bcd (ef)^k ed (fe)^k feaf (bc)^k ac,12,8,4
+NEW_n12_571,abc (db)^k ded (ea)^k feaf (ae)^k a (bd)^k c,12,8,4
+NEW_n12_572,abc (db)^k d (ea)^k edf (ea)^k eafac (db)^k,12,8,4
+NEW_n12_573,abc (db)^k d (ea)^k edfeaf (ea)^k (bd)^k bf,12,8,4
+NEW_n12_574,abcd (bc)^k (ef)^k edfea (fe)^k f (bc)^k bf,12,8,4
+NEW_n12_575,ab (cd)^k cded (fa)^k feafbf (ae)^k (ab)^k,12,8,4
+NEW_n12_576,(ab)^k ab (de)^k cdedf (ed)^k e (ab)^k afbf,12,8,4
+NEW_n12_577,a (bd)^k bcd (ea)^k edf (ea)^k eaf (bd)^k bf,12,8,4
+NEW_n12_578,(ac)^k abcd (ecef)^k edfeafbf (ac)^k,12,8,3
+NEW_n12_579,a (bf)^k bcde (cd)^k (ef)^k dfe (ac)^k afbf,12,8,4
+NEW_n12_580,abcde (dc)^k d (fa)^k feafb (ae)^k (ab)^k f,12,8,4
+NEW_n12_581,(ab)^k abc (de)^k dedf (ed)^k eaf (ba)^k bf,12,8,4
+NEW_n12_582,ab (ca)^k c (df)^k dedfe (df)^k af (ac)^k bf,12,8,4
+NEW_n12_583,(ac)^k abcdedf (eaed)^k eafb (ca)^k f,12,8,3
+NEW_n12_584,(ac)^k abc (df)^k de (df)^k dfeaf (ac)^k bf,12,8,4
+NEW_n12_585,abcd (ec)^k edf (ea)^k (ba)^k eafbf (bc)^k,12,8,4
+NEW_n12_586,abc (dfdb)^k dedfeaf (bafa)^k bf,12,8,2
+NEW_n12_587,(ac)^k ab (ce)^k cded (fe)^k feafb (fa)^k f,12,8,4
+NEW_n12_588,a (bc)^k bcd (ef)^k ed (fe)^k feaf (bc)^k bf,12,8,4
+NEW_n12_589,ab (ca)^k cde (fdfd)^k fdef (ac)^k abc,12,8,3
+NEW_n12_590,a (bd)^k bcd (ea)^k efdef (ae)^k abc (db)^k,12,8,4
+NEW_n12_591,ab (cd)^k cd (fa)^k efde (fa)^k fa (cd)^k bc,12,8,4
+NEW_n12_592,(ac)^k abc (de)^k defd (fa)^k efa (bd)^k bc,12,8,4
+NEW_n12_593,ab (ca)^k cdef (de)^k de (fa)^k fabc (db)^k,12,8,4
+NEW_n12_594,a (bf)^k bcd (ec)^k efd (ec)^k efa (bf)^k bc,12,8,4
+NEW_n12_595,abcd (ec)^k ef (ae)^k de (ab)^k fa (bc)^k bc,12,8,4
+NEW_n12_596,a (bf)^k bcde (cd)^k fd (ef)^k efab (ca)^k c,12,8,4
+NEW_n12_597,ab (ca)^k c (df)^k defde (fd)^k f (ac)^k abc,12,8,4
+NEW_n12_598,ab (ac)^k (de)^k cdefdefab (fa)^k (bd)^k c,12,8,4
+NEW_n12_599,(ab)^k abcdef (dede)^k defabc (ab)^k,12,8,3
+NEW_n12_600,ab (cd)^k cde (fa)^k fde (fa)^k fab (cd)^k c,12,8,4
+NEW_n12_601,abc (ab)^k (de)^k defdef (de)^k (ab)^k abc,12,8,4
+NEW_n12_602,a (bd)^k bcd (ea)^k efd (ea)^k efa (bd)^k bc,12,8,4
+NEW_n12_603,a (bc)^k bcd (ef)^k efd (ef)^k efa (bc)^k bc,12,8,4
+NEW_n12_604,ab (ca)^k cde (fd)^k fde (fd)^k fab (ca)^k c,12,8,4
+NEW_n12_605,abc (db)^k def (ae)^k d (ea)^k efa (bd)^k bc,12,8,4
+NEW_n12_606,a (bd)^k bcde (fd)^k fd (fa)^k efabc (ab)^k,12,8,4
+NEW_n12_607,a (bd)^k bcdef (ae)^k d (ea)^k efabc (db)^k,12,8,4
+NEW_n12_608,(ac)^k abc (df)^k defde (fd)^k fab (ca)^k c,12,8,4
+NEW_n12_609,(ac)^k abcde (fdfd)^k fdefab (ca)^k c,12,8,3
+NEW_n12_610,(ac)^k abcdef (deae)^k defab (ca)^k c,12,8,3
+NEW_n12_611,abcd (bc)^k efd (fe)^k (df)^k (af)^k efabc,12,8,4
+NEW_n12_612,(ac)^k ab (ce)^k cdefd (ef)^k efab (fa)^k c,12,8,4
+NEW_n12_613,abcde (cd)^k (fa)^k fdefab (fa)^k (cd)^k c,12,8,4
+NEW_n12_614,abc (dbdf)^k defdef (afab)^k abc,12,8,2
+NEW_n12_615,abc (db)^k (df)^k defde (fa)^k f (ab)^k abc,12,8,4
+NEW_n12_616,abcde (cd)^k fd (fa)^k efab (ae)^k (ab)^k c,12,8,4
+NEW_n12_617,(ac)^k abc (df)^k de (fd)^k fdef (ac)^k abc,12,8,4
+NEW_n12_618,(ab)^k abc (de)^k def (de)^k def (ab)^k abc,12,8,4
+NEW_n12_619,(ab)^k ab (de)^k cdef (de)^k de (ab)^k fabc,12,8,4
+NEW_n12_620,abc (db)^k def (ae)^k def (ae)^k abc (db)^k,12,8,4
+NEW_n12_621,ab (ca)^k cdef (deae)^k def (ac)^k abc,12,8,3
+NEW_n12_622,abcd (bc)^k (ef)^k efdefa (ef)^k (bc)^k bc,12,8,4
+NEW_n12_623,a (bc)^k bc (ef)^k defd (ef)^k ef (bc)^k abc,12,8,4
+NEW_n12_624,a (bf)^k b (ce)^k cdefd (ec)^k e (fb)^k fabc,12,8,4
+NEW_n12_625,abc (dfdb)^k defde (faba)^k fabc,12,8,2
+NEW_n12_626,abc (db)^k d (ea)^k efdef (ae)^k a (bd)^k bc,12,8,4
+NEW_n12_627,(ab)^k abc (de)^k def (de)^k dfe (ab)^k acb,12,8,4
+NEW_n12_628,a (bf)^k bcd (ec)^k efd (ce)^k fea (fb)^k cb,12,8,4
+NEW_n12_629,ab (ca)^k cdef (deae)^k dfe (ac)^k acb,12,8,3
+NEW_n12_630,abc (de)^k de (ab)^k fdfe (ac)^k ac (af)^k b,12,8,4
+NEW_n12_631,abc (dfdb)^k defdfe (abaf)^k acb,12,8,2
+NEW_n12_632,ab (ca)^k cdefd (ce)^k (fe)^k feac (af)^k b,12,8,4
+NEW_n12_633,ab (ca)^k cdef (de)^k dfe (af)^k ac (bd)^k b,12,8,4
+NEW_n12_634,abcde (cd)^k fd (fa)^k f (ea)^k (ba)^k eacb,12,8,4
+NEW_n12_635,(ab)^k abcdef (dede)^k dfeac (ba)^k b,12,8,3
+NEW_n12_636,abc (db)^k def (ae)^k df (ea)^k eac (bd)^k b,12,8,4
+NEW_n12_637,(ac)^k abcdef (deae)^k dfeacb (ac)^k,12,8,3
+NEW_n12_638,ab (cd)^k cd (fa)^k efdfe (af)^k a (cd)^k cb,12,8,4
+NEW_n12_639,abc (de)^k de (ab)^k fdfea (fb)^k (cb)^k cb,12,8,4
+NEW_n12_640,abc (dbdf)^k defdfe (afab)^k acb,12,8,2
+NEW_n12_641,abc (db)^k (df)^k defdfe (af)^k (ab)^k acb,12,8,4
+NEW_n12_642,ab (cd)^k cde (fa)^k fdfe (af)^k acb (dc)^k,12,8,4
+NEW_n12_643,ab (ca)^k cde (fdfd)^k fdfe (ac)^k acb,12,8,3
+NEW_n12_644,a (bf)^k b (ce)^k cdefd (ce)^k fe (fb)^k acb,12,8,4
+NEW_n12_645,(ac)^k abcde (fdfd)^k fdfeacb (ac)^k,12,8,3
+NEW_n12_646,ab (ca)^k cd (ec)^k (ef)^k efdfeac (af)^k b,12,8,4
+NEW_n12_647,ab (ca)^k c (df)^k defdfe (df)^k (ac)^k acb,12,8,4
+NEW_n12_648,a (bc)^k bcd (ef)^k efd (fe)^k fea (cb)^k cb,12,8,4
+NEW_n12_649,(ac)^k abc (df)^k de (fd)^k fdfe (ac)^k acb,12,8,4
+NEW_n12_650,a (bd)^k bcde (fd)^k fd (fa)^k feac (ba)^k b,12,8,4
+NEW_n12_651,a (bd)^k bcd (ea)^k efdf (ea)^k eac (bd)^k b,12,8,4
+NEW_n12_652,abcdfd (bc)^k (ef)^k efdfab (ae)^k (de)^k,12,8,4
+NEW_n12_653,a (bc)^k bc (ef)^k dfdefd (fe)^k f (bc)^k ab,12,8,4
+NEW_n12_654,ab (cd)^k cd (fa)^k fdefd (ea)^k f (ab)^k ab,12,8,4
+NEW_n12_655,ab (cd)^k cdfd (fa)^k ef (ae)^k df (ab)^k ab,12,8,4
+NEW_n12_656,(ac)^k abc (deae)^k dfdefdf (ac)^k ab,12,8,3
+NEW_n12_657,(ac)^k abc (dfdf)^k dfdefdf (ac)^k ab,12,8,3
+NEW_n12_658,a (bc)^k bcdfd (efef)^k efdfa (bc)^k b,12,8,3
+NEW_n12_659,a (bf)^k b (ce)^k cdfdefd (ce)^k (fb)^k fab,12,8,4
+NEW_n12_660,(ab)^k abcdf (ed)^k (ce)^k defd (fe)^k fab,12,8,4
+NEW_n12_661,(ac)^k abcdfdefd (ce)^k (fe)^k fab (af)^k,12,8,4
+NEW_n12_662,(ab)^k abcdf (dede)^k defdf (ab)^k ab,12,8,3
+NEW_n12_663,(ac)^k abcdfd (ec)^k (ef)^k efdfab (af)^k,12,8,4
+NEW_n12_664,ab (ca)^k c (df)^k dfde (fd)^k fdf (ac)^k ab,12,8,4
+NEW_n12_665,(ac)^k abcdf (deae)^k defdf (ac)^k ab,12,8,3
+NEW_n12_666,ab (cd)^k cd (fa)^k fdefd (fa)^k fa (cd)^k b,12,8,4
+NEW_n12_667,ab (cd)^k cdfd (fa)^k (bf)^k (ef)^k efdfab,12,8,4
+NEW_n12_668,a (bf)^k bcdf (dbde)^k dfdeafe (fb)^k,12,8,3
+NEW_n12_669,a (bc)^k bcdfd (fe)^k fdeaf (ea)^k (ed)^k e,12,8,4
+NEW_n12_670,abcdf (dc)^k d (fa)^k fd (ea)^k e (ab)^k afe,12,8,4
+NEW_n12_671,(ab)^k abc (de)^k dfdf (de)^k deaf (ba)^k e,12,8,4
+NEW_n12_672,abcdf (db)^k dfdea (fd)^k (fa)^k (ba)^k fe,12,8,4
+NEW_n12_673,a (bd)^k bcdfdfdea (fd)^k (fa)^k f (ba)^k e,12,8,4
+NEW_n12_674,(ab)^k abcdf (ed)^k (ce)^k dfd (ef)^k eafe,12,8,4
+NEW_n12_675,a (bc)^k bcd (fe)^k fd (ea)^k fdea (ed)^k fe,12,8,4
+NEW_n12_676,ab (ceca)^k cdfdfd (fefa)^k eafe,12,8,2
+NEW_n12_677,(ab)^k abcdf (dede)^k dfdeaf (ba)^k e,12,8,3
+NEW_n12_678,(ac)^k abcdf (ec)^k dfdea (fe)^k fe (af)^k,12,8,4
+NEW_n12_679,(ab)^k ab (de)^k cdfdf (de)^k de (ab)^k afe,12,8,4
+NEW_n12_680,a (bc)^k bcdfd (fe)^k fdeafe (df)^k (af)^k,12,8,4
+NEW_n12_681,a (bd)^k bc (df)^k dfdfd (fa)^k eaf (ba)^k e,12,8,4
+NEW_n12_682,a (bc)^k bcd (fe)^k fdfde (df)^k (af)^k afe,12,8,4
+NEW_n12_683,abcdf (db)^k (df)^k dfd (fa)^k e (ab)^k afe,12,8,4
+NEW_n12_684,a (bf)^k bcdfd (ce)^k fed (ce)^k (fb)^k fac,12,8,4
+NEW_n12_685,ab (cd)^k cd (fa)^k fdfed (fa)^k fa (cd)^k c,12,8,4
+NEW_n12_686,a (bc)^k bcd (fe)^k fdfed (fe)^k fa (cb)^k c,12,8,4
+NEW_n12_687,(ac)^k abcdf (deae)^k dfedf (ac)^k ac,12,8,3
+NEW_n12_688,(ac)^k abcdf (ec)^k d (fe)^k fedfac (af)^k,12,8,4
+NEW_n12_689,a (bf)^k b (ce)^k cdfdfed (ce)^k (fb)^k fac,12,8,4
+NEW_n12_690,ab (cd)^k cd (fa)^k fdfedf (ae)^k ac (ab)^k,12,8,4
+NEW_n12_691,a (bc)^k bcdfd (fe)^k fe (df)^k d (fa)^k fac,12,8,4
+NEW_n12_692,(ab)^k abcdf (dede)^k dfedf (ab)^k ac,12,8,3
+NEW_n12_693,(ac)^k abc (deae)^k dfdfedf (ac)^k ac,12,8,3
+NEW_n12_694,abc (af)^k dfdfe (cd)^k (ec)^k d (cb)^k fac,12,8,4
+NEW_n12_695,a (bc)^k bc (ef)^k dfdfe (df)^k dfac (af)^k,12,8,4
+NEW_n12_696,(ab)^k abcdf (ed)^k (ce)^k dfed (fe)^k fac,12,8,4
+NEW_n12_697,ab (ca)^k c (df)^k dfdfe (df)^k df (ac)^k ac,12,8,4
+NEW_n12_698,(ac)^k abcd (ce)^k fd (fe)^k fed (fa)^k fac,12,8,4
+NEW_n12_699,ab (cd)^k cd (fa)^k fdfed (ea)^k f (ab)^k ac,12,8,4
+NEW_n12_700,(ac)^k abc (dfdf)^k dfdfedf (ac)^k ac,12,8,3
+NEW_n12_701,ab (cd)^k cdfd (fa)^k f (ea)^k edf (ab)^k ac,12,8,4
+NEW_n12_702,a (bc)^k bc (ef)^k dfdfed (fe)^k f (bc)^k ac,12,8,4
+NEW_n12_703,(ac)^k ab (ce)^k cd (fe)^k fdfedfac (af)^k,12,8,4
+NEW_n12_704,a (bf)^k bcd (ce)^k fdfed (ce)^k fa (fb)^k c,12,8,4
+NEW_n12_705,(ab)^k abc (de)^k dfdf (ed)^k edf (ba)^k bf,12,8,4
+NEW_n12_706,(ac)^k abcdfd (ce)^k (fe)^k fedfb (fa)^k f,12,8,4
+NEW_n12_707,ab (cd)^k cd (fa)^k fdfedf (ea)^k (ba)^k bf,12,8,4
+NEW_n12_708,a (bf)^k b (ce)^k cdfdfed (ce)^k (fb)^k fbf,12,8,4
+NEW_n12_709,a (bc)^k bcdfd (fe)^k fe (df)^k d (fa)^k fbf,12,8,4
+NEW_n12_710,(ac)^k abcd (ce)^k (fe)^k fdfedfb (fa)^k f,12,8,4
+NEW_n12_711,a (bf)^k bcdfd (ce)^k fed (ce)^k (fb)^k fbf,12,8,4
+NEW_n12_712,ab (cd)^k cd (fa)^k fdfed (fb)^k fb (fe)^k f,12,8,4
+NEW_n12_713,abc (af)^k dfdfe (cd)^k (ec)^k d (cb)^k fbf,12,8,4
+NEW_n12_714,a (bc)^k bcd (fe)^k fdfed (ea)^k fbf (de)^k,12,8,4
+NEW_n12_715,a (bc)^k bc (ef)^k dfdfed (fe)^k f (bc)^k bf,12,8,4
+NEW_n12_716,(ab)^k abcdf (ed)^k (ce)^k dfed (fe)^k fbf,12,8,4
+NEW_n12_717,a (bc)^k bcdfd (fe)^k fed (fe)^k fbf (bc)^k,12,8,4
+NEW_n12_718,a (bc)^k bcd (fe)^k fdfe (df)^k dfb (fa)^k f,12,8,4
+NEW_n12_719,abcdf (dc)^k d (fa)^k fedfb (ae)^k (ab)^k f,12,8,4
+NEW_n12_720,abc (db)^k dfdfe (df)^k (af)^k df (ba)^k bf,12,8,4
+NEW_n12_721,(ac)^k abcd (ce)^k fd (fe)^k fed (fa)^k fbf,12,8,4
+NEW_n12_722,(ac)^k ab (ce)^k cdfd (fe)^k fedfb (fa)^k f,12,8,4
+NEW_n12_723,abcdf (dc)^k e (af)^k defac (af)^k b (dc)^k,12,8,4
+NEW_n12_724,abc (db)^k df (ea)^k edef (ae)^k ac (bd)^k b,12,8,4
+NEW_n12_725,abc (dfdb)^k dfede (faba)^k facb,12,8,2
+NEW_n12_726,abcdf (db)^k (df)^k ede (fa)^k (ba)^k facb,12,8,4
+NEW_n12_727,a (bc)^k bcd (fe)^k fed (ef)^k efa (cb)^k cb,12,8,4
+NEW_n12_728,a (bf)^k b (ce)^k cdfed (ec)^k e (fb)^k facb,12,8,4
+NEW_n12_729,a (bf)^k bcd (ce)^k fed (ec)^k efa (fb)^k cb,12,8,4
+NEW_n12_730,(ab)^k abc (de)^k df (ed)^k edef (ab)^k acb,12,8,4
+NEW_n12_731,a (bd)^k bcdf (ea)^k ed (ea)^k efac (bd)^k b,12,8,4
+NEW_n12_732,abc (db)^k df (ea)^k ed (ea)^k efa (bd)^k cb,12,8,4
+NEW_n12_733,(ac)^k abc (de)^k dfed (fa)^k efa (bd)^k cb,12,8,4
+NEW_n12_734,(ac)^k abcdfe (dfdf)^k defacb (ac)^k,12,8,3
+NEW_n12_735,a (bd)^k bcdfe (df)^k d (fa)^k efac (ba)^k b,12,8,4
+NEW_n12_736,ab (ca)^k c (df)^k dfede (fd)^k f (ac)^k acb,12,8,4
+NEW_n12_737,ab (ca)^k cd (ce)^k fed (ef)^k e (fa)^k facb,12,8,4
+NEW_n12_738,a (bc)^k bcd (fe)^k fede (fd)^k fac (af)^k b,12,8,4
+NEW_n12_739,ab (ce)^k cdf (ea)^k ede (ab)^k fa (cb)^k cb,12,8,4
+NEW_n12_740,(ab)^k ab (de)^k cdf (ed)^k ede (ab)^k facb,12,8,4
+NEW_n12_741,(ab)^k abcdf (eded)^k edefac (ba)^k b,12,8,3
+NEW_n12_742,ab (cd)^k cd (fa)^k fede (fa)^k fa (cd)^k cb,12,8,4
+NEW_n12_743,ab (cd)^k cdfe (af)^k de (fa)^k facb (dc)^k,12,8,4
+NEW_n12_744,abc (dbdf)^k dfedef (afab)^k acb,12,8,2
+NEW_n12_745,abc (db)^k (df)^k dfede (fa)^k f (ab)^k acb,12,8,4
+NEW_n12_746,a (bc)^k bc (ef)^k dfed (ef)^k ef (bc)^k acb,12,8,4
+NEW_n12_747,a (bd)^k bcece (fd)^k fd (fa)^k eaf (ba)^k e,12,8,4
+NEW_n12_748,abc (bd)^k e (fd)^k cefde (af)^k af (ba)^k e,12,8,4
+NEW_n12_749,abce (cb)^k c (ef)^k (df)^k efd (fa)^k eafe,12,8,4
+NEW_n12_750,abce (cb)^k cefd (fe)^k (fd)^k (fa)^k eafe,12,8,4
+NEW_n12_751,a (bf)^k bc (bd)^k ec (ed)^k (ef)^k efdeafe,12,8,4
+NEW_n12_752,(ab)^k abcec (ed)^k (ec)^k (ef)^k efdeafe,12,8,4
+NEW_n12_753,abcece (cd)^k (fa)^k fd (ea)^k e (ab)^k afe,12,8,4
+NEW_n12_754,abcec (bd)^k efdea (fd)^k (fa)^k f (ba)^k e,12,8,4
+NEW_n12_755,(ab)^k ab (de)^k cecef (de)^k de (ab)^k afe,12,8,4
+NEW_n12_756,a (bc)^k bcec (ef)^k efdeafe (df)^k (af)^k,12,8,4
+NEW_n12_757,abcec (bd)^k e (fd)^k fd (fa)^k eaf (ba)^k e,12,8,4
+NEW_n12_758,a (bd)^k bcecefdea (fd)^k (fa)^k f (ba)^k e,12,8,4
+NEW_n12_759,a (bd)^k bc (df)^k ecefd (fa)^k eaf (ba)^k e,12,8,4
+NEW_n12_760,abcec (ed)^k ef (ab)^k d (ba)^k eaf (ed)^k e,12,8,4
+NEW_n12_761,ab (ceca)^k cecefd (fefa)^k eafe,12,8,2
+NEW_n12_762,abce (ca)^k (ce)^k cefd (fe)^k (fa)^k eafe,12,8,4
+NEW_n12_763,a (bc)^k bcec (ef)^k efdeaf (ea)^k (ed)^k e,12,8,4
+NEW_n12_764,a (bc)^k bc (ef)^k ecefe (df)^k dfac (af)^k,12,8,4
+NEW_n12_765,(ac)^k abcece (fdfd)^k fedf (ac)^k ac,12,8,3
+NEW_n12_766,abc (af)^k ecefe (cd)^k (ec)^k d (cb)^k fac,12,8,4
+NEW_n12_767,a (bf)^k bc (bd)^k ec (ed)^k (ef)^k efedfac,12,8,4
+NEW_n12_768,ab (ca)^k cece (fd)^k fe (df)^k df (ac)^k ac,12,8,4
+NEW_n12_769,a (bc)^k bcec (ef)^k efe (df)^k d (fa)^k fac,12,8,4
+NEW_n12_770,abc (bd)^k ecefe (df)^k (af)^k dfac (ab)^k,12,8,4
+NEW_n12_771,abc (bd)^k ecefedfa (fd)^k (fa)^k c (ab)^k,12,8,4
+NEW_n12_772,a (bd)^k bcec (ea)^k efedf (ae)^k a (bd)^k c,12,8,4
+NEW_n12_773,a (bc)^k bc (ef)^k ecefed (fe)^k f (bc)^k ac,12,8,4
+NEW_n12_774,ab (cd)^k cece (fa)^k f (ea)^k edf (ab)^k ac,12,8,4
+NEW_n12_775,(ab)^k abcec (ed)^k ef (ed)^k edfac (ab)^k,12,8,4
+NEW_n12_776,abc (bdfd)^k ecefedf (afab)^k ac,12,8,2
+NEW_n12_777,abc (bd)^k (fd)^k ecefed (fa)^k f (ab)^k ac,12,8,4
+NEW_n12_778,(ab)^k abcec (ed)^k (ec)^k (ef)^k efedfac,12,8,4
+NEW_n12_779,abcec (bd)^k (ea)^k efedf (ae)^k a (bd)^k c,12,8,4
+NEW_n12_780,abc (bd)^k ecef (ea)^k edf (ae)^k a (bd)^k c,12,8,4
+NEW_n12_781,abce (db)^k c (df)^k e (fa)^k fedfac (ab)^k,12,8,4
+NEW_n12_782,a (bf)^k b (ce)^k cecefed (ce)^k (fb)^k fac,12,8,4
+NEW_n12_783,abc (bd)^k (ea)^k ecefed (ea)^k fac (db)^k,12,8,4
+NEW_n12_784,abcec (bd)^k (fd)^k efe (af)^k dfac (ab)^k,12,8,4
+NEW_n12_785,(ab)^k abcec (ed)^k (ec)^k (ef)^k efedfbf,12,8,4
+NEW_n12_786,abce (cb)^k c (ef)^k efedfb (fd)^k (fa)^k f,12,8,4
+NEW_n12_787,(ac)^k abcec (df)^k e (fd)^k fedfbf (ac)^k,12,8,4
+NEW_n12_788,(ab)^k abc (ed)^k ecefed (ce)^k fb (fe)^k f,12,8,4
+NEW_n12_789,abce (cb)^k c (ef)^k efedfb (fe)^k f (bc)^k,12,8,4
+NEW_n12_790,abc (af)^k ecefe (cd)^k (ec)^k d (cb)^k fbf,12,8,4
+NEW_n12_791,a (bf)^k bc (bd)^k ec (ed)^k (ef)^k efedfbf,12,8,4
+NEW_n12_792,abce (cd)^k ce (fa)^k (ea)^k fedf (ba)^k bf,12,8,4
+NEW_n12_793,abce (cb)^k c (ef)^k efedfbf (ae)^k (de)^k,12,8,4
+NEW_n12_794,abcece (cd)^k (fa)^k fedfb (ae)^k (ab)^k f,12,8,4
+NEW_n12_795,ab (ca)^k cec (df)^k efe (df)^k dfbf (ac)^k,12,8,4
+NEW_n12_796,a (bc)^k bc (ef)^k ecefed (fe)^k f (bc)^k bf,12,8,4
+NEW_n12_797,abc (bd)^k (ea)^k ecefedf (ea)^k (bd)^k bf,12,8,4
+NEW_n12_798,a (bf)^k b (ce)^k cecefed (ce)^k (fb)^k fbf,12,8,4
+NEW_n12_799,a (bc)^k bcec (ef)^k efed (fe)^k fbf (bc)^k,12,8,4
+NEW_n12_800,(ac)^k ab (ce)^k cec (ef)^k efedfb (fa)^k f,12,8,4
+NEW_n12_801,a (bc)^k bcec (ef)^k efe (df)^k d (fa)^k fbf,12,8,4
+NEW_n12_802,ab (ca)^k ce (df)^k de (fd)^k fe (ac)^k acbc,12,8,4
+NEW_n12_803,a (bd)^k bcede (fd)^k (fa)^k feacbc (ab)^k,12,8,4
+NEW_n12_804,(ab)^k abc (eded)^k edefe (ab)^k acbc,12,8,3
+NEW_n12_805,a (bf)^k b (ce)^k ced (ec)^k efe (fb)^k acbc,12,8,4
+NEW_n12_806,abce (dc)^k d (fa)^k (ea)^k efeacbc (ab)^k,12,8,4
+NEW_n12_807,a (bdfd)^k bcedefeac (abaf)^k bc,12,8,2
+NEW_n12_808,(ac)^k abce (dfdf)^k defe (ac)^k acbc,12,8,3
+NEW_n12_809,(ac)^k ab (ce)^k ced (ef)^k efeacb (fa)^k c,12,8,4
+NEW_n12_810,a (cd)^k bcede (af)^k (ae)^k fe (ab)^k acbc,12,8,4
+NEW_n12_811,a (bd)^k bced (ea)^k fd (ea)^k efba (bd)^k c,12,8,4
+NEW_n12_812,(ab)^k ab (de)^k cedf (de)^k de (ab)^k fbac,12,8,4
+NEW_n12_813,abc (bd)^k ed (ea)^k fdef (ea)^k ba (bd)^k c,12,8,4
+NEW_n12_814,a (bd)^k bce (df)^k dfd (fa)^k efbac (ab)^k,12,8,4
+NEW_n12_815,abc (bd)^k edf (ae)^k def (ea)^k bac (db)^k,12,8,4
+NEW_n12_816,ab (ac)^k (de)^k cedfdefb (af)^k a (bd)^k c,12,8,4
+NEW_n12_817,abc (bd)^k (ea)^k edfdef (ea)^k (bd)^k bac,12,8,4
+NEW_n12_818,(ac)^k abc (ed)^k edfd (fa)^k efbac (db)^k,12,8,4
+NEW_n12_819,ab (ca)^k c (ed)^k edfde (fa)^k fba (bd)^k c,12,8,4
+NEW_n12_820,abce (dc)^k d (fa)^k fdefb (ae)^k ac (ab)^k,12,8,4
+NEW_n12_821,ab (cd)^k ced (fa)^k fde (fa)^k fba (cd)^k c,12,8,4
+NEW_n12_822,a (bc)^k bc (ef)^k edfd (ef)^k ef (bc)^k bac,12,8,4
+NEW_n12_823,abced (ce)^k f (ae)^k de (ab)^k fba (cb)^k c,12,8,4
+NEW_n12_824,(ab)^k abcedf (dede)^k defbac (ab)^k,12,8,3
+NEW_n12_825,ab (ca)^k ce (dfdf)^k dfdef (ac)^k bac,12,8,3
+NEW_n12_826,a (bd)^k bc (df)^k edfde (fa)^k f (ba)^k bac,12,8,4
+NEW_n12_827,ab (ca)^k ce (df)^k dfde (fd)^k fb (ac)^k ac,12,8,4
+NEW_n12_828,ab (cd)^k ce (af)^k dfde (fa)^k fb (dc)^k ac,12,8,4
+NEW_n12_829,abc (bd)^k edfde (fd)^k (fa)^k f (ba)^k bac,12,8,4
+NEW_n12_830,a (bf)^k (bd)^k bcedf (de)^k defb (fe)^k ac,12,8,4
+NEW_n12_831,abce (dc)^k d (fa)^k fdefb (af)^k a (cd)^k c,12,8,4
+NEW_n12_832,abce (dbdf)^k dfde (afab)^k fbac,12,8,2
+NEW_n12_833,abce (db)^k (df)^k dfde (af)^k (ab)^k fbac,12,8,4
+NEW_n12_834,(ac)^k ab (ce)^k cedfd (ef)^k efb (af)^k ac,12,8,4
+NEW_n12_835,abce (cb)^k d (fe)^k fdefb (fe)^k a (cb)^k c,12,8,4
+NEW_n12_836,a (bc)^k bced (fe)^k fd (ef)^k efba (cb)^k c,12,8,4
+NEW_n12_837,(ab)^k abc (ed)^k edf (de)^k def (ba)^k bac,12,8,4
+NEW_n12_838,abc (bd)^k edfde (fafd)^k fba (bd)^k c,12,8,3
+NEW_n12_839,ab (ca)^k cedf (de)^k de (fa)^k fbac (db)^k,12,8,4
+NEW_n12_840,a (bd)^k bcedf (ae)^k d (ea)^k efbac (db)^k,12,8,4
+NEW_n12_841,a (bc)^k bc (ef)^k edfdefb (ae)^k (de)^k ac,12,8,4
+NEW_n12_842,a (bc)^k bc (ef)^k efdcefd (fe)^k f (bc)^k b,12,8,4
+NEW_n12_843,a (bfbd)^k bcefdc (edef)^k efdfb,12,8,2
+NEW_n12_844,a (bf)^k (bd)^k bcefdc (ed)^k (ef)^k efdfb,12,8,4
+NEW_n12_845,abc (bd)^k (ea)^k efdcefdf (ea)^k (bd)^k b,12,8,4
+NEW_n12_846,abcefdce (cd)^k (fa)^k (ea)^k (ba)^k fdfb,12,8,4
+NEW_n12_847,a (bc)^k bc (ef)^k efdc (df)^k efd (fa)^k fb,12,8,4
+NEW_n12_848,a (bf)^k bce (cd)^k fdc (ef)^k efdf (ac)^k b,12,8,4
+NEW_n12_849,a (bc)^k bcefd (fe)^k ce (fd)^k fd (fa)^k fb,12,8,4
+NEW_n12_850,abc (bd)^k ef (ae)^k dcefd (ea)^k f (bd)^k b,12,8,4
+NEW_n12_851,abce (cd)^k (fa)^k fdcefd (ea)^k (ba)^k fb,12,8,4
+NEW_n12_852,(ac)^k ab (ce)^k cefd (fe)^k cefdfb (af)^k,12,8,4
+NEW_n12_853,ab (ca)^k c (dfdf)^k efdcefdf (ac)^k b,12,8,3
+NEW_n12_854,ab (cd)^k ce (fa)^k fdcefd (fb)^k fb (fe)^k,12,8,4
+NEW_n12_855,abc (bd)^k e (fd)^k fdce (fa)^k fdf (ba)^k b,12,8,4
+NEW_n12_856,(ac)^k abdb (ce)^k d (ef)^k efdeafe (af)^k,12,8,4
+NEW_n12_857,(ab)^k abdb (de)^k d (ec)^k (ef)^k efdeafe,12,8,4
+NEW_n12_858,abd (bc)^k bd (ef)^k e (fd)^k fde (af)^k afe,12,8,4
+NEW_n12_859,abdbde (cd)^k (fa)^k fd (ea)^k e (ab)^k afe,12,8,4
+NEW_n12_860,ab (ac)^k dbd (ecef)^k efdeafe (ac)^k,12,8,3
+NEW_n12_861,a (bd)^k bdbdefdea (fd)^k (fa)^k f (ba)^k e,12,8,4
+NEW_n12_862,a (bc)^k bdbd (ef)^k efdeafe (df)^k (af)^k,12,8,4
+NEW_n12_863,abdbd (bc)^k (ef)^k (df)^k efd (fa)^k eafe,12,8,4
+NEW_n12_864,abdbd (bc)^k efd (fe)^k (fd)^k (fa)^k eafe,12,8,4
+NEW_n12_865,a (bd)^k bdbde (fd)^k fd (fa)^k eaf (ba)^k e,12,8,4
+NEW_n12_866,a (bf)^k b (dc)^k dbdefdea (fe)^k fe (ac)^k,12,8,4
+NEW_n12_867,abdb (de)^k def (ab)^k d (ba)^k eaf (ed)^k e,12,8,4
+NEW_n12_868,ab (ac)^k (df)^k dbdefde (df)^k (ac)^k afe,12,8,4
+NEW_n12_869,(ab)^k ab (de)^k dbdef (de)^k de (ab)^k afe,12,8,4
+NEW_n12_870,a (bf)^k bdb (dfdc)^k defdeafe (fb)^k,12,8,3
+NEW_n12_871,a (bc)^k bdbd (ef)^k efdeaf (ea)^k (ed)^k e,12,8,4
+NEW_n12_872,ab (ac)^k d (ec)^k bdefdea (fe)^k fe (af)^k,12,8,4
+NEW_n12_873,(ac)^k abdb (df)^k defe (df)^k df (ac)^k ac,12,8,4
+NEW_n12_874,ab (ac)^k db (de)^k defed (fa)^k fa (bd)^k c,12,8,4
+NEW_n12_875,abdb (dc)^k d (fa)^k efed (ea)^k f (ab)^k ac,12,8,4
+NEW_n12_876,abdb (ac)^k (df)^k defe (df)^k df (ac)^k ac,12,8,4
+NEW_n12_877,abdb (acec)^k defed (fefa)^k fac,12,8,2
+NEW_n12_878,abdb (ac)^k (ec)^k defed (fe)^k (fa)^k fac,12,8,4
+NEW_n12_879,(ab)^k abdb (de)^k d (ec)^k (ef)^k efedfac,12,8,4
+NEW_n12_880,a (bf)^k b (dc)^k dbd (ef)^k efedf (ac)^k ac,12,8,4
+NEW_n12_881,abdb (ac)^k de (fdfd)^k fedf (ac)^k ac,12,8,3
+NEW_n12_882,abdb (dc)^k d (fa)^k efedf (ae)^k ac (ab)^k,12,8,4
+NEW_n12_883,a (bc)^k bdbd (ef)^k efe (df)^k d (fa)^k fac,12,8,4
+NEW_n12_884,abdb (ceae)^k defedf (abcb)^k ac,12,8,2
+NEW_n12_885,abdb (ce)^k (ae)^k defedf (ab)^k (cb)^k ac,12,8,4
+NEW_n12_886,abdb (dc)^k d (fa)^k efed (fa)^k fa (cd)^k c,12,8,4
+NEW_n12_887,a (bf)^k bdbd (ec)^k efed (ce)^k (fb)^k fac,12,8,4
+NEW_n12_888,a (bd)^k bdbd (ea)^k efedf (ae)^k a (bd)^k c,12,8,4
+NEW_n12_889,ab (ac)^k d (ec)^k bd (ef)^k efedfac (af)^k,12,8,4
+NEW_n12_890,(ac)^k abdbde (fdfd)^k fedf (ac)^k ac,12,8,3
+NEW_n12_891,(ab)^k abdb (de)^k def (ed)^k edfac (ab)^k,12,8,4
+NEW_n12_892,ab (ac)^k dbdefed (ce)^k (fe)^k fac (af)^k,12,8,4
+NEW_n12_893,a (bd)^k bdb (df)^k defe (af)^k dfac (ab)^k,12,8,4
+NEW_n12_894,abd (ca)^k b (ce)^k d (ef)^k efed (fa)^k fac,12,8,4
+NEW_n12_895,abdbde (cd)^k (fa)^k fedfb (ae)^k (ab)^k f,12,8,4
+NEW_n12_896,abd (bf)^k b (dc)^k d (ef)^k efedfbf (ac)^k,12,8,4
+NEW_n12_897,abdb (ac)^k d (ec)^k (ef)^k efedfb (fa)^k f,12,8,4
+NEW_n12_898,abdb (dc)^k d (fa)^k efed (fb)^k fb (fe)^k f,12,8,4
+NEW_n12_899,a (bc)^k bdbd (ef)^k efe (df)^k d (fa)^k fbf,12,8,4
+NEW_n12_900,abdbd (bc)^k (ef)^k efedfbf (ae)^k (de)^k,12,8,4
+NEW_n12_901,a (bf)^k bdbd (ec)^k efed (ce)^k (fb)^k fbf,12,8,4
+NEW_n12_902,ab (ac)^k (ec)^k dbdefed (fe)^k fb (fa)^k f,12,8,4
+NEW_n12_903,abdbd (bc)^k (ef)^k efedfb (fd)^k (fa)^k f,12,8,4
+NEW_n12_904,abd (ca)^k b (ce)^k d (ef)^k efed (fa)^k fbf,12,8,4
+NEW_n12_905,ab (ac)^k dbdefed (cefe)^k fbf (ac)^k,12,8,3
+NEW_n12_906,abdb (dc)^k d (fa)^k efedf (ea)^k (ba)^k bf,12,8,4
+NEW_n12_907,ab (ac)^k dbd (edea)^k efedfbf (ac)^k,12,8,3
+NEW_n12_908,abdbd (bc)^k (ef)^k efedfb (fe)^k f (bc)^k,12,8,4
+NEW_n12_909,abdb (acec)^k defed (fefa)^k fbf,12,8,2
+NEW_n12_910,abdb (ac)^k (ec)^k defed (fe)^k (fa)^k fbf,12,8,4
+NEW_n12_911,(ac)^k ab (ce)^k dbd (ef)^k efedfb (fa)^k f,12,8,4
+NEW_n12_912,(ab)^k abdb (de)^k d (ec)^k (ef)^k efedfbf,12,8,4
+NEW_n12_913,(ac)^k abdbd (ec)^k (ef)^k efedfb (fa)^k f,12,8,4
+NEW_n12_914,a (bc)^k bdbd (ef)^k efed (fe)^k fbf (bc)^k,12,8,4
+NEW_n12_915,(ab)^k abdb (de)^k dfed (ec)^k ea (ef)^k ef,12,8,4
+NEW_n12_916,abdb (ac)^k d (ce)^k (fe)^k fedeae (fa)^k f,12,8,4
+NEW_n12_917,ab (acec)^k dbdfedeae (fefa)^k f,12,8,2
+NEW_n12_918,ab (ac)^k (ec)^k dbdfedea (ef)^k e (fa)^k f,12,8,4
+NEW_n12_919,a (bf)^k bdb (ce)^k dfed (ec)^k eae (fb)^k f,12,8,4
+NEW_n12_920,(ab)^k abdb (de)^k df (ed)^k edeae (ab)^k f,12,8,4
+NEW_n12_921,ab (ac)^k (df)^k dbdfede (df)^k (ac)^k aef,12,8,4
+NEW_n12_922,(ac)^k abdbd (ce)^k (fe)^k fedeae (fa)^k f,12,8,4
+NEW_n12_923,abdb (dc)^k d (fa)^k fed (ea)^k eae (ab)^k f,12,8,4
+NEW_n12_924,(ac)^k abdbdf (ec)^k edea (ef)^k e (fa)^k f,12,8,4
+NEW_n12_925,abdb (dc)^k d (fa)^k fedea (bf)^k (ef)^k ef,12,8,4
+NEW_n12_926,(ab)^k ab (de)^k dbdf (ed)^k ede (ab)^k aef,12,8,4
+NEW_n12_927,abdb (de)^k df (ba)^k ede (ab)^k aef (de)^k,12,8,4
+NEW_n12_928,abdb (de)^k dfe (ab)^k d (ba)^k eaef (de)^k,12,8,4
+NEW_n12_929,(ab)^k abdb (de)^k df (ec)^k ed (ef)^k eaef,12,8,4
+NEW_n12_930,abdc (de)^k de (ab)^k fae (ac)^k (af)^k aef,12,8,4
+NEW_n12_931,(ab)^k ab (de)^k dcdef (de)^k ae (ab)^k aef,12,8,4
+NEW_n12_932,a (bf)^k bdcde (cd)^k (fe)^k fae (ac)^k aef,12,8,4
+NEW_n12_933,a (bd)^k bdcdefaeae (df)^k (af)^k (ba)^k f,12,8,4
+NEW_n12_934,abdc (de)^k def (abab)^k aeaef (de)^k,12,8,3
+NEW_n12_935,ab (dc)^k dcd (fa)^k ef (ae)^k aeae (ab)^k f,12,8,4
+NEW_n12_936,ab (dc)^k dcd (fa)^k efaea (bf)^k (ef)^k ef,12,8,4
+NEW_n12_937,a (bd)^k bdcdefa (fd)^k eae (af)^k (ba)^k f,12,8,4
+NEW_n12_938,abdcdef (de)^k (abab)^k aea (ed)^k ef,12,8,3
+NEW_n12_939,ab (dc)^k dcd (fa)^k efa (bf)^k (ef)^k eaef,12,8,4
+NEW_n12_940,abdc (de)^k de (ab)^k fa (bf)^k eaef (bc)^k,12,8,4
+NEW_n12_941,abdcde (cd)^k (fa)^k f (ae)^k ae (ab)^k aef,12,8,4
+NEW_n12_942,(ac)^k abd (ce)^k cdefa (ef)^k eae (fa)^k f,12,8,4
+NEW_n12_943,a (bf)^k b (dc)^k dcd (ef)^k efeaf (ac)^k ab,12,8,4
+NEW_n12_944,abd (cb)^k c (ef)^k defea (fe)^k f (bc)^k ab,12,8,4
+NEW_n12_945,abdc (db)^k de (fd)^k (fa)^k feaf (ab)^k ab,12,8,4
+NEW_n12_946,(ab)^k abdc (de)^k defe (df)^k afa (cd)^k b,12,8,4
+NEW_n12_947,ab (ac)^k dcde (fdfd)^k feaf (ac)^k ab,12,8,3
+NEW_n12_948,a (bf)^k bdc (db)^k def (ed)^k eafa (ef)^k b,12,8,4
+NEW_n12_949,a (bf)^k bdcd (ec)^k ef (ec)^k eafa (bf)^k b,12,8,4
+NEW_n12_950,(ac)^k abdc (df)^k defe (df)^k afab (ac)^k,12,8,4
+NEW_n12_951,a (bd)^k bdc (df)^k defe (af)^k af (ab)^k ab,12,8,4
+NEW_n12_952,(ac)^k abdcde (fdfd)^k feafab (ac)^k,12,8,3
+NEW_n12_953,abdcd (bc)^k (ef)^k efeafa (ef)^k (bc)^k b,12,8,4
+NEW_n12_954,a (bc)^k bdc (ef)^k d (ef)^k efeaf (bc)^k ab,12,8,4
+NEW_n12_955,ab (ac)^k (df)^k dcdefe (df)^k (ac)^k afab,12,8,4
+NEW_n12_956,abdc (de)^k de (ab)^k feafa (bf)^k (bc)^k b,12,8,4
+NEW_n12_957,abdc (ab)^k (de)^k defeaf (de)^k (ab)^k ab,12,8,4
+NEW_n12_958,(ac)^k abdcd (efec)^k efeafab (ac)^k,12,8,3
+NEW_n12_959,a (bc)^k bd (fe)^k cd (ef)^k efea (cb)^k fab,12,8,4
+NEW_n12_960,(ab)^k ab (de)^k dcdef (ed)^k e (ab)^k afab,12,8,4
+NEW_n12_961,abdc (de)^k de (ab)^k feaf (ac)^k ab (af)^k,12,8,4
+NEW_n12_962,a (cd)^k bdcde (fafa)^k feafab (dc)^k,12,8,3
+NEW_n12_963,ab (ac)^k dc (df)^k defe (df)^k af (ac)^k ab,12,8,4
+NEW_n12_964,(ab)^k abdc (de)^k def (ed)^k eaf (ab)^k ab,12,8,4
+NEW_n12_965,abd (cb)^k cd (ef)^k efea (fe)^k fa (bc)^k b,12,8,4
+NEW_n12_966,(ab)^k ab (de)^k (ce)^k dcdefeafa (ef)^k b,12,8,4
+NEW_n12_967,abd (cace)^k cdefe (afef)^k afab,12,8,2
+NEW_n12_968,abd (ca)^k (ce)^k cdefea (fe)^k (fa)^k fab,12,8,4
+NEW_n12_969,ab (ac)^k dcd (efec)^k efeaf (ac)^k ab,12,8,3
+NEW_n12_970,(ab)^k abdc (de)^k def (ec)^k eafa (ef)^k b,12,8,4
+NEW_n12_971,abd (ca)^k c (df)^k defea (fd)^k f (ac)^k ab,12,8,4
+NEW_n12_972,abdc (db)^k d (ea)^k efeaf (ae)^k a (bd)^k b,12,8,4
+NEW_n12_973,abd (ba)^k c (de)^k defea (ed)^k f (ab)^k ab,12,8,4
+NEW_n12_974,ab (dc)^k dcd (fa)^k ef (ea)^k eaf (ab)^k ab,12,8,4
+NEW_n12_975,a (bc)^k bdcd (efef)^k efeafa (bc)^k b,12,8,3
+NEW_n12_976,(ac)^k abdc (de)^k defe (af)^k afa (bd)^k b,12,8,4
+NEW_n12_977,abdc (db)^k defea (fbfe)^k fa (bd)^k b,12,8,3
+NEW_n12_978,ab (ce)^k dcd (ea)^k efe (ab)^k afa (bc)^k b,12,8,4
+NEW_n12_979,ab (dc)^k dcd (fa)^k efe (af)^k afa (cd)^k b,12,8,4
+NEW_n12_980,abd (ca)^k (ce)^k c (ef)^k defeafab (af)^k,12,8,4
+NEW_n12_981,a (bd)^k bdcd (ea)^k ef (ea)^k eafa (bd)^k b,12,8,4
+NEW_n12_982,(ab)^k abdcdf (de)^k (ce)^k (fe)^k aefede,12,8,4
+NEW_n12_983,(ac)^k ab (ce)^k dcdfa (ef)^k efed (fa)^k e,12,8,4
+NEW_n12_984,abdcdf (de)^k (ab)^k aef (ba)^k (ed)^k ede,12,8,4
+NEW_n12_985,(ac)^k abdcd (ce)^k (fe)^k faefe (af)^k de,12,8,4
+NEW_n12_986,ab (acec)^k dcdfaefed (fefa)^k e,12,8,2
+NEW_n12_987,ab (ac)^k (ec)^k dcdfaefed (fe)^k (fa)^k e,12,8,4
+NEW_n12_988,ab (ac)^k dcdfa (ec)^k efed (ef)^k e (af)^k,12,8,4
+NEW_n12_989,a (bf)^k (bd)^k bdcdf (de)^k a (ef)^k efede,12,8,4
+NEW_n12_990,abd (cb)^k cd (fe)^k fea (fd)^k fd (fa)^k fe,12,8,4
+NEW_n12_991,(ac)^k ab (ce)^k dcdfea (fe)^k fdfe (af)^k,12,8,4
+NEW_n12_992,a (bd)^k bdcdfea (fd)^k fd (fa)^k f (ba)^k e,12,8,4
+NEW_n12_993,ab (dc)^k dcd (fa)^k fea (fb)^k fd (fe)^k fe,12,8,4
+NEW_n12_994,(ab)^k abdcdf (eded)^k eafdf (ba)^k e,12,8,3
+NEW_n12_995,abd (cb)^k cd (fe)^k fe (df)^k (af)^k afdfe,12,8,4
+NEW_n12_996,a (bf)^k b (dc)^k dcdfeafd (fe)^k fe (ac)^k,12,8,4
+NEW_n12_997,a (bd)^k bdcdfe (df)^k (af)^k afdf (ba)^k e,12,8,4
+NEW_n12_998,a (bc)^k bdc (ef)^k eaed (ef)^k efa (bc)^k b,12,8,4
+NEW_n12_999,ab (ac)^k dc (edea)^k eaedefab (ac)^k,12,8,3
+NEW_n12_1000,a (bd)^k bdce (dfaf)^k aedefa (bd)^k b,12,8,3
+NEW_n12_1001,(ab)^k ab (de)^k dcea (ed)^k ede (ab)^k fab,12,8,4
+NEW_n12_1002,abdc (ed)^k e (ab)^k aedefa (bf)^k (bc)^k b,12,8,4
+NEW_n12_1003,a (bd)^k bdceae (dfaf)^k defa (bd)^k b,12,8,3
+NEW_n12_1004,(ac)^k abdceaed (ec)^k (ef)^k efab (af)^k,12,8,4
+NEW_n12_1005,a (bd)^k bdc (ea)^k eaed (ea)^k efa (bd)^k b,12,8,4
+NEW_n12_1006,ab (ac)^k dce (dfdf)^k aedefab (ac)^k,12,8,3
+NEW_n12_1007,a (bf)^k bd (ce)^k ceaed (ec)^k efa (bf)^k b,12,8,4
+NEW_n12_1008,ab (ac)^k d (ce)^k ceaed (ef)^k e (fa)^k fab,12,8,4
+NEW_n12_1009,(ac)^k abdc (eaed)^k eaedef (ac)^k ab,12,8,3
+NEW_n12_1010,a (bd)^k bdceae (df)^k d (fa)^k ef (ab)^k ab,12,8,4
+NEW_n12_1011,ab (ac)^k dceaed (edea)^k efab (ac)^k,12,8,3
+NEW_n12_1012,abd (cb)^k ceaed (ef)^k efa (fd)^k (fa)^k b,12,8,4
+NEW_n12_1013,(ac)^k abd (ce)^k c (ef)^k eaedefab (af)^k,12,8,4
+NEW_n12_1014,(ac)^k abdceae (dfdf)^k def (ac)^k ab,12,8,3
+NEW_n12_1015,ab (dc)^k dceae (fa)^k (bf)^k defa (ef)^k b,12,8,4
+NEW_n12_1016,ab (ac)^k dc (df)^k eaede (fd)^k f (ac)^k ab,12,8,4
+NEW_n12_1017,(ac)^k abdce (df)^k ae (df)^k defab (ac)^k,12,8,4
+NEW_n12_1018,ab (ac)^k dce (df)^k ae (df)^k def (ac)^k ab,12,8,4
+NEW_n12_1019,(ab)^k abdc (ed)^k ea (ed)^k edef (ab)^k ab,12,8,4
+NEW_n12_1020,abdc (ed)^k e (ab)^k aedef (ac)^k ab (af)^k,12,8,4
+NEW_n12_1021,(ac)^k abdc (df)^k eaede (fd)^k fab (ac)^k,12,8,4
+NEW_n12_1022,abdc (bd)^k (ea)^k eaedef (ae)^k a (bd)^k b,12,8,4
+NEW_n12_1023,ab (ac)^k dce (df)^k ae (df)^k dfe (ac)^k ac,12,8,4
+NEW_n12_1024,a (bd)^k bdce (df)^k ae (af)^k dfeac (ab)^k,12,8,4
+NEW_n12_1025,a (bc)^k bdc (ef)^k eaed (fe)^k fea (cb)^k c,12,8,4
+NEW_n12_1026,a (bd)^k bdcea (fd)^k ed (fa)^k feac (ab)^k,12,8,4
+NEW_n12_1027,a (bd)^k bdceae (df)^k d (fa)^k fe (ab)^k ac,12,8,4
+NEW_n12_1028,abdc (bd)^k (ea)^k eaedf (ea)^k ea (bd)^k c,12,8,4
+NEW_n12_1029,(ac)^k abdceae (dfdf)^k dfe (ac)^k ac,12,8,3
+NEW_n12_1030,a (bf)^k bd (ce)^k cea (ec)^k edfe (fb)^k ac,12,8,4
+NEW_n12_1031,a (bd)^k bdc (ea)^k eaed (ea)^k fea (bd)^k c,12,8,4
+NEW_n12_1032,a (bf)^k bd (ce)^k ceaed (ce)^k fea (fb)^k c,12,8,4
+NEW_n12_1033,ab (ac)^k d (ce)^k c (ef)^k eaedfeac (af)^k,12,8,4
+NEW_n12_1034,(ab)^k abdc (ed)^k ea (ed)^k edfe (ab)^k ac,12,8,4
+NEW_n12_1035,(ac)^k abdc (eaed)^k eaedfe (ac)^k ac,12,8,3
+NEW_n12_1036,(ac)^k ab (ce)^k dceaed (fe)^k fe (af)^k ac,12,8,4
+NEW_n12_1037,a (bf)^k bdc (bd)^k ea (ed)^k ed (fe)^k feac,12,8,4
+NEW_n12_1038,a (bd)^k bdce (dfaf)^k aedfea (bd)^k c,12,8,3
+NEW_n12_1039,ab (ac)^k dc (df)^k eaedfe (df)^k (ac)^k ac,12,8,4
+NEW_n12_1040,a (bd)^k bdceae (dfaf)^k dfea (bd)^k c,12,8,3
+NEW_n12_1041,a (bf)^k b (dc)^k dcefdea (ef)^k bfe (ac)^k,12,8,4
+NEW_n12_1042,a (cd)^k bdce (fa)^k (ea)^k fdeabf (ba)^k e,12,8,4
+NEW_n12_1043,ab (ac)^k dc (ecef)^k efdeabfe (ac)^k,12,8,3
+NEW_n12_1044,abdc (ed)^k e (ab)^k fdeabf (ba)^k (ed)^k e,12,8,4
+NEW_n12_1045,ab (ac)^k dc (dfdf)^k efdeabfe (ac)^k,12,8,3
+NEW_n12_1046,ab (dc)^k dce (fa)^k fdeab (ae)^k fe (ab)^k,12,8,4
+NEW_n12_1047,abd (cb)^k cefd (fe)^k (df)^k (af)^k eabfe,12,8,4
+NEW_n12_1048,abd (cb)^k c (ef)^k efdeabf (ea)^k (ed)^k e,12,8,4
+NEW_n12_1049,ab (dc)^k dce (fa)^k fdea (bf)^k b (fe)^k fe,12,8,4
+NEW_n12_1050,ab (ac)^k (df)^k dcefde (df)^k (ac)^k abfe,12,8,4
+NEW_n12_1051,a (bd)^k bdce (fd)^k fde (af)^k abf (ba)^k e,12,8,4
+NEW_n12_1052,abd (cb)^k c (ef)^k efdeabfe (df)^k (af)^k,12,8,4
+NEW_n12_1053,(ab)^k ab (de)^k dcef (de)^k de (ab)^k abfe,12,8,4
+NEW_n12_1054,abd (cace)^k cefde (afef)^k abfe,12,8,2
+NEW_n12_1055,abd (ca)^k (ce)^k cefdea (fe)^k (fa)^k bfe,12,8,4
+NEW_n12_1056,ab (dc)^k dce (fa)^k fd (ea)^k eabf (ba)^k e,12,8,4
+NEW_n12_1057,a (bd)^k bdc (ea)^k efd (ea)^k eaf (bd)^k bc,12,8,4
+NEW_n12_1058,(ac)^k ab (ce)^k dcefd (ef)^k eafb (fa)^k c,12,8,4
+NEW_n12_1059,(ab)^k ab (de)^k dcef (de)^k de (ab)^k afbc,12,8,4
+NEW_n12_1060,a (bd)^k bdcef (ae)^k d (ea)^k eafbc (db)^k,12,8,4
+NEW_n12_1061,(ab)^k abdcef (dede)^k deafbc (ab)^k,12,8,3
+NEW_n12_1062,ab (ac)^k dc (df)^k efde (df)^k af (ac)^k bc,12,8,4
+NEW_n12_1063,abdce (cd)^k fd (fa)^k eafb (ae)^k (ab)^k c,12,8,4
+NEW_n12_1064,a (bd)^k bdc (ea)^k efdeaf (ea)^k bc (db)^k,12,8,4
+NEW_n12_1065,(ac)^k abdcef (de)^k de (af)^k afbc (db)^k,12,8,4
+NEW_n12_1066,(ac)^k abdc (df)^k e (fd)^k fdeaf (ac)^k bc,12,8,4
+NEW_n12_1067,(ac)^k abdc (ed)^k efd (fa)^k eaf (bd)^k bc,12,8,4
+NEW_n12_1068,abdc (bd)^k ef (ae)^k deaf (ea)^k bc (db)^k,12,8,4
+NEW_n12_1069,abdc (bd)^k ef (ae)^k d (ea)^k eaf (bd)^k bc,12,8,4
+NEW_n12_1070,ab (ac)^k (df)^k dcefde (df)^k (ac)^k afbc,12,8,4
+NEW_n12_1071,(ab)^k abdc (ed)^k ef (de)^k deaf (ba)^k bc,12,8,4
+NEW_n12_1072,(ac)^k abdce (fdfd)^k fdeafb (ca)^k c,12,8,3
+NEW_n12_1073,a (bc)^k bdc (ef)^k efd (ef)^k eaf (bc)^k bc,12,8,4
+NEW_n12_1074,abd (ce)^k cef (ae)^k de (ab)^k af (bc)^k bc,12,8,4
+NEW_n12_1075,abd (cace)^k cefde (afef)^k afbc,12,8,2
+NEW_n12_1076,abd (ca)^k (ce)^k cefdea (fe)^k (fa)^k fbc,12,8,4
+NEW_n12_1077,a (cd)^k bdce (fa)^k f (ae)^k deafbc (ab)^k,12,8,4
+NEW_n12_1078,ab (dc)^k dce (fa)^k fde (af)^k afb (cd)^k c,12,8,4
+NEW_n12_1079,ab (ac)^k dcefd (ec)^k (ef)^k eafbc (af)^k,12,8,4
+NEW_n12_1080,ab (ac)^k dc (ed)^k efde (af)^k af (bd)^k bc,12,8,4
+NEW_n12_1081,ab (dbdf)^k dcefdeafb (faba)^k c,12,8,2
+NEW_n12_1082,a (bd)^k b (df)^k dcefdeafb (fa)^k (ba)^k c,12,8,4
+NEW_n12_1083,a (bd)^k bdcefdea (fd)^k (fa)^k fbc (ab)^k,12,8,4
+NEW_n12_1084,ab (ac)^k dce (fd)^k fde (df)^k afb (ca)^k c,12,8,4
+NEW_n12_1085,a (bc)^k bd (fe)^k cefd (ef)^k ea (cb)^k fbc,12,8,4
+NEW_n12_1086,a (bf)^k b (dc)^k dcefd (ef)^k eaf (ac)^k bc,12,8,4
+NEW_n12_1087,ab (ac)^k dcefd (ecef)^k eaf (ac)^k bc,12,8,3
+NEW_n12_1088,abd (cb)^k cefd (fe)^k (df)^k (af)^k eafbc,12,8,4
+NEW_n12_1089,ab (ac)^k (de)^k dcefdeafb (fa)^k (bd)^k c,12,8,4
+NEW_n12_1090,abdc (bd)^k (ea)^k efdeaf (ea)^k (bd)^k bc,12,8,4
+NEW_n12_1091,(ac)^k abdcef (deae)^k deafb (ca)^k c,12,8,3
+NEW_n12_1092,a (bf)^k bdce (cd)^k fd (ef)^k eafb (ca)^k c,12,8,4
+NEW_n12_1093,abdc (bd)^k e (fd)^k fde (af)^k af (ba)^k bc,12,8,4
+NEW_n12_1094,ab (dc)^k dce (fa)^k (ea)^k fdeafbc (ab)^k,12,8,4
+NEW_n12_1095,a (bd)^k bdce (fd)^k fd (fa)^k eafbc (ab)^k,12,8,4
+NEW_n12_1096,abd (cb)^k c (ef)^k efdea (fe)^k f (bc)^k bc,12,8,4
+NEW_n12_1097,ab (ac)^k dc (edea)^k efdeaf (ac)^k bc,12,8,3
+NEW_n12_1098,abdce (cd)^k (fa)^k fdeafb (fa)^k (cd)^k c,12,8,4
+NEW_n12_1099,(ac)^k abdcefd (ec)^k (ef)^k efbab (af)^k,12,8,4
+NEW_n12_1100,abdc (bd)^k (ea)^k efdef (ea)^k ba (bd)^k b,12,8,4
+NEW_n12_1101,ab (ac)^k (de)^k dcefdefb (af)^k a (bd)^k b,12,8,4
+NEW_n12_1102,abdce (cd)^k (fa)^k fdefb (af)^k a (cd)^k b,12,8,4
+NEW_n12_1103,(ac)^k ab (ce)^k dcefd (ef)^k efb (af)^k ab,12,8,4
+NEW_n12_1104,a (cd)^k bdce (fa)^k (ea)^k fdef (ba)^k bab,12,8,4
+NEW_n12_1105,a (bf)^k (bd)^k bdcef (de)^k defb (fe)^k ab,12,8,4
+NEW_n12_1106,(ab)^k ab (de)^k dcef (de)^k de (ab)^k fbab,12,8,4
+NEW_n12_1107,ab (ac)^k dcefd (edea)^k efbab (ac)^k,12,8,3
+NEW_n12_1108,a (bf)^k bdce (cd)^k fd (ef)^k efb (ac)^k ab,12,8,4
+NEW_n12_1109,ab (dc)^k dcefd (fafa)^k efbab (dc)^k,12,8,3
+NEW_n12_1110,ab (dc)^k dce (fa)^k fdefba (bf)^k (ef)^k b,12,8,4
+NEW_n12_1111,abd (cb)^k cefd (fe)^k (df)^k (af)^k efbab,12,8,4
+NEW_n12_1112,ab (dc)^k dce (fa)^k fd (ea)^k ef (ba)^k bab,12,8,4
+NEW_n12_1113,ab (dbdf)^k dcefdef (bafa)^k bab,12,8,2
+NEW_n12_1114,a (bd)^k b (df)^k dcefdefb (af)^k (ab)^k ab,12,8,4
+NEW_n12_1115,abd (ca)^k (ce)^k cefd (fe)^k fb (fa)^k fde,12,8,4
+NEW_n12_1116,a (bd)^k bdcefdfb (fd)^k (fa)^k fde (ab)^k,12,8,4
+NEW_n12_1117,abdce (cd)^k fd (fa)^k f (ea)^k (ba)^k bfde,12,8,4
+NEW_n12_1118,ab (ac)^k dc (df)^k efdfbfde (df)^k (ac)^k,12,8,4
+NEW_n12_1119,abd (cb)^k c (ef)^k (df)^k efdfb (fa)^k fde,12,8,4
+NEW_n12_1120,abd (cb)^k cefd (fe)^k (fd)^k fb (fa)^k fde,12,8,4
+NEW_n12_1121,abd (cb)^k c (ef)^k efdfb (fd)^k fd (fa)^k e,12,8,4
+NEW_n12_1122,ab (ac)^k d (ce)^k cefd (fe)^k fbfd (fa)^k e,12,8,4
+NEW_n12_1123,abde (cd)^k cd (fa)^k f (ae)^k ae (ab)^k fbc,12,8,4
+NEW_n12_1124,ab (ac)^k (de)^k decdfaefb (fa)^k (bd)^k c,12,8,4
+NEW_n12_1125,abdec (db)^k (df)^k d (fa)^k fae (ab)^k fbc,12,8,4
+NEW_n12_1126,ab (ac)^k decdf (ec)^k (ef)^k aefbc (af)^k,12,8,4
+NEW_n12_1127,a (bd)^k bdecdfae (fd)^k (fa)^k fbc (ab)^k,12,8,4
+NEW_n12_1128,abde (db)^k cdfae (df)^k (af)^k (ba)^k fbc,12,8,4
+NEW_n12_1129,ab (ac)^k decd (ce)^k (fe)^k faefb (fa)^k c,12,8,4
+NEW_n12_1130,ab (ac)^k dec (dfdf)^k dfaef (ac)^k bc,12,8,3
+NEW_n12_1131,(ab)^k ab (de)^k decdf (de)^k ae (ab)^k fbc,12,8,4
+NEW_n12_1132,ab (ac)^k decdf (deae)^k aef (ac)^k bc,12,8,3
+NEW_n12_1133,abd (bc)^k ecd (fe)^k (fd)^k (fa)^k faefbc,12,8,4
+NEW_n12_1134,ab (ac)^k decd (fece)^k faef (ac)^k bc,12,8,3
+NEW_n12_1135,a (bf)^k b (dc)^k decd (fe)^k faef (ac)^k bc,12,8,4
+NEW_n12_1136,ab (ac)^k dec (ecef)^k dfaef (ac)^k bc,12,8,3
+NEW_n12_1137,ab (ac)^k d (ec)^k ec (ef)^k dfaefbc (af)^k,12,8,4
+NEW_n12_1138,ab (dbdf)^k decdfaefb (faba)^k c,12,8,2
+NEW_n12_1139,a (bd)^k b (df)^k decdfaefb (fa)^k (ba)^k c,12,8,4
+NEW_n12_1140,abde (cd)^k cd (fa)^k faefb (ae)^k (ab)^k c,12,8,4
+NEW_n12_1141,abdecdf (de)^k (ab)^k (fb)^k aef (bc)^k bc,12,8,4
+NEW_n12_1142,(ac)^k ab (ce)^k decd (fe)^k faefb (fa)^k c,12,8,4
+NEW_n12_1143,ab (ac)^k dec (deae)^k dfaef (ac)^k bc,12,8,3
+NEW_n12_1144,ab (ac)^k dec (de)^k dfae (fa)^k f (bd)^k bc,12,8,4
+NEW_n12_1145,abd (bc)^k ec (ef)^k dfa (ef)^k ef (bc)^k bc,12,8,4
+NEW_n12_1146,(ac)^k abdecdf (de)^k ae (fa)^k f (bd)^k bc,12,8,4
+NEW_n12_1147,abd (bc)^k ecd (fe)^k fae (fd)^k fb (fa)^k c,12,8,4
+NEW_n12_1148,a (bf)^k b (dc)^k dec (ef)^k dfaefb (ca)^k c,12,8,4
+NEW_n12_1149,a (bd)^k bde (fd)^k cdfaefb (af)^k (ba)^k c,12,8,4
+NEW_n12_1150,a (bd)^k bd (ea)^k ecedf (ae)^k a (bd)^k baf,12,8,4
+NEW_n12_1151,ab (ac)^k deced (ce)^k (fe)^k fab (af)^k af,12,8,4
+NEW_n12_1152,abd (bc)^k ec (ef)^k ed (ea)^k fabaf (de)^k,12,8,4
+NEW_n12_1153,abd (bc)^k (ef)^k ecedfa (ef)^k (bc)^k baf,12,8,4
+NEW_n12_1154,ab (dc)^k d (fa)^k eced (fa)^k fa (cd)^k baf,12,8,4
+NEW_n12_1155,abdeced (fe)^k f (bc)^k aba (bd)^k (ba)^k f,12,8,4
+NEW_n12_1156,abd (bc)^k ec (ef)^k edf (ae)^k aba (ed)^k f,12,8,4
+NEW_n12_1157,abdec (bdfd)^k edf (afab)^k abaf,12,8,2
+NEW_n12_1158,abdec (bd)^k (fd)^k ed (fa)^k f (ab)^k abaf,12,8,4
+NEW_n12_1159,(ab)^k ab (de)^k decedf (de)^k (ab)^k abaf,12,8,4
+NEW_n12_1160,(ac)^k abdec (dfdf)^k edfabaf (ac)^k,12,8,3
+NEW_n12_1161,ab (ac)^k (df)^k dece (df)^k df (ac)^k abaf,12,8,4
+NEW_n12_1162,a (bd)^k bdecedfa (bf)^k (ef)^k baf (de)^k,12,8,4
+NEW_n12_1163,ab (ac)^k de (fd)^k c (df)^k edf (ac)^k abaf,12,8,4
+NEW_n12_1164,(ac)^k abdec (ecef)^k edfabaf (ac)^k,12,8,3
+NEW_n12_1165,abd (bc)^k eced (fe)^k fa (ef)^k baf (bc)^k,12,8,4
+NEW_n12_1166,abdec (bdfd)^k edfabaf (afab)^k,12,8,2
+NEW_n12_1167,abdec (bd)^k (fd)^k edfab (af)^k af (ab)^k,12,8,4
+NEW_n12_1168,ab (ac)^k ded (ce)^k c (ef)^k eafab (fa)^k f,12,8,4
+NEW_n12_1169,ab (ac)^k (df)^k dedce (df)^k af (ac)^k abf,12,8,4
+NEW_n12_1170,abdedc (bd)^k (fd)^k (fa)^k eaf (ab)^k abf,12,8,4
+NEW_n12_1171,abd (bc)^k ed (fe)^k cea (fe)^k fa (bc)^k bf,12,8,4
+NEW_n12_1172,(ac)^k abdedc (eaed)^k eafabf (ac)^k,12,8,3
+NEW_n12_1173,(ac)^k abdedce (df)^k a (fd)^k fabf (ac)^k,12,8,4
+NEW_n12_1174,abd (bc)^k edc (ef)^k ea (fe)^k fabf (bc)^k,12,8,4
+NEW_n12_1175,a (bd)^k bde (df)^k dceafab (fa)^k f (ab)^k,12,8,4
+NEW_n12_1176,(acec)^k abdedceafa (efaf)^k bf,12,8,2
+NEW_n12_1177,(ac)^k (ec)^k abdedceafa (ef)^k (af)^k bf,12,8,4
+NEW_n12_1178,(ac)^k abde (df)^k dcea (fd)^k f (ac)^k abf,12,8,4
+NEW_n12_1179,a (bc)^k bd (ef)^k edc (df)^k eafab (fa)^k f,12,8,4
+NEW_n12_1180,abd (bc)^k (ef)^k edcea (fe)^k f (bc)^k abf,12,8,4
+NEW_n12_1181,a (bf)^k b (dc)^k ded (ef)^k efb (ac)^k acbc,12,8,4
+NEW_n12_1182,ab (fe)^k dede (cb)^k fbacb (ca)^k (cd)^k c,12,8,4
+NEW_n12_1183,ab (fe)^k dede (cb)^k fbacbc (db)^k (ab)^k,12,8,4
+NEW_n12_1184,(ac)^k ab (ce)^k ded (ef)^k efbacb (fa)^k c,12,8,4
+NEW_n12_1185,(ab)^k ab (dede)^k dede (ab)^k fbacbc,12,8,3
+NEW_n12_1186,(ac)^k abded (ec)^k efb (fe)^k acb (fa)^k c,12,8,4
+NEW_n12_1187,ab (dc)^k dede (af)^k (ea)^k (ba)^k fbacbc,12,8,4
+NEW_n12_1188,(ac)^k ab (de)^k dedefb (af)^k a (bd)^k cbc,12,8,4
+NEW_n12_1189,ab (fe)^k dede (cb)^k (db)^k (ab)^k fbacbc,12,8,4
+NEW_n12_1190,a (cd)^k bdede (af)^k (ae)^k (ab)^k fbacbc,12,8,4
+NEW_n12_1191,a (bd)^k bdfdb (df)^k d (fa)^k eaedf (ab)^k,12,8,4
+NEW_n12_1192,a (bfbd)^k bdfdbd (edef)^k eaedf,12,8,2
+NEW_n12_1193,a (bf)^k (bd)^k bdfdb (de)^k d (ef)^k eaedf,12,8,4
+NEW_n12_1194,abdfd (bc)^k bdea (ef)^k e (df)^k (af)^k df,12,8,4
+NEW_n12_1195,ab (ac)^k dfdbd (ec)^k (ef)^k eaed (fa)^k f,12,8,4
+NEW_n12_1196,(ac)^k abdfdb (dfdf)^k deaedf (ac)^k,12,8,3
+NEW_n12_1197,ab (ac)^k dfdbde (df)^k ae (df)^k df (ac)^k,12,8,4
+NEW_n12_1198,(ab)^k abdfdb (dede)^k deaedf (ab)^k,12,8,3
+NEW_n12_1199,ab (ac)^k dfdb (df)^k de (df)^k aedf (ac)^k,12,8,4
+NEW_n12_1200,ab (ac)^k dfd (ec)^k bdea (ef)^k ed (fa)^k f,12,8,4
+NEW_n12_1201,ab (ac)^k (df)^k dfdbdfde (df)^k (ac)^k ae,12,8,4
+NEW_n12_1202,ab (ac)^k dfd (ec)^k bdfd (ef)^k e (af)^k ae,12,8,4
+NEW_n12_1203,ab (ac)^k dfdb (df)^k dfde (df)^k ae (ac)^k,12,8,4
+NEW_n12_1204,ab (ac)^k dfdbdfd (ec)^k (ef)^k eae (af)^k,12,8,4
+NEW_n12_1205,abdfdb (dc)^k d (fa)^k (ea)^k fde (ab)^k ae,12,8,4
+NEW_n12_1206,(ab)^k abdfdb (dede)^k dfdeae (ab)^k,12,8,3
+NEW_n12_1207,(ac)^k abdfdb (dfdf)^k dfdeae (ac)^k,12,8,3
+NEW_n12_1208,(ac)^k abdfdb (df)^k dfdeae (df)^k (ac)^k,12,8,4
+NEW_n12_1209,a (bd)^k bdfdb (df)^k d (fa)^k fdeae (ab)^k,12,8,4
+NEW_n12_1210,(ac)^k abdfdbdfd (ec)^k (ef)^k e (af)^k ae,12,8,4
+NEW_n12_1211,ab (ac)^k dfdbdfde (df)^k ae (df)^k (ac)^k,12,8,4
+NEW_n12_1212,ab (ac)^k (ec)^k dfdbd (fe)^k fdeae (af)^k,12,8,4
+NEW_n12_1213,abdfdb (dc)^k d (fa)^k (ea)^k fde (ab)^k fb,12,8,4
+NEW_n12_1214,(ac)^k abdfdb (df)^k dfde (fd)^k f (ac)^k b,12,8,4
+NEW_n12_1215,ab (ac)^k (ec)^k dfdbd (fe)^k fdfd (fa)^k f,12,8,4
+NEW_n12_1216,(ab)^k abdfdb (dede)^k dfdfdf (ab)^k,12,8,3
+NEW_n12_1217,a (bd)^k bdfdb (df)^k d (fa)^k fdfdf (ab)^k,12,8,4
+NEW_n12_1218,(ac)^k abdfdb (dfdf)^k dfdfdf (ac)^k,12,8,3
+NEW_n12_1219,(ac)^k abdfdc (deae)^k deafaf (ac)^k,12,8,3
+NEW_n12_1220,a (bc)^k bd (fe)^k fdcd (ef)^k eaf (bc)^k af,12,8,4
+NEW_n12_1221,a (bf)^k b (dc)^k dfdcd (ef)^k eafaf (ac)^k,12,8,4
+NEW_n12_1222,a (bd)^k bdfdcdea (fd)^k (fa)^k faf (ab)^k,12,8,4
+NEW_n12_1223,a (bd)^k bdfdc (df)^k d (fa)^k eafaf (ab)^k,12,8,4
+NEW_n12_1224,ab (ac)^k dfdc (df)^k de (df)^k afaf (ac)^k,12,8,4
+NEW_n12_1225,(ac)^k abdfdc (dfdf)^k deafaf (ac)^k,12,8,3
+NEW_n12_1226,(ab)^k abdfdc (dede)^k deafaf (ab)^k,12,8,3
+NEW_n12_1227,(ac)^k abd (ce)^k fdc (ef)^k de (af)^k afaf,12,8,4
+NEW_n12_1228,ab (dbdf)^k dfdcdeaf (afab)^k af,12,8,2
+NEW_n12_1229,a (bd)^k b (df)^k dfdcde (af)^k af (ab)^k af,12,8,4
+NEW_n12_1230,(ab)^k abdfdc (de)^k (ce)^k (fe)^k deafaf,12,8,4
+NEW_n12_1231,a (bc)^k bdfdc (ef)^k d (ef)^k eafaf (bc)^k,12,8,4
+NEW_n12_1232,a (bc)^k bdfd (fe)^k cd (ef)^k eafa (cb)^k f,12,8,4
+NEW_n12_1233,abdf (db)^k dcdea (fd)^k (fa)^k f (ab)^k af,12,8,4
+NEW_n12_1234,(ac)^k abdfdc (ecef)^k deafaf (ac)^k,12,8,3
+NEW_n12_1235,abdf (db)^k dc (df)^k d (fa)^k eaf (ab)^k af,12,8,4
+NEW_n12_1236,abdfd (cace)^k cdea (fafe)^k faf,12,8,2
+NEW_n12_1237,abdfd (ca)^k (ce)^k cdeafa (fe)^k (fa)^k f,12,8,4
+NEW_n12_1238,ab (ac)^k dfdcd (ec)^k (ef)^k e (af)^k afaf,12,8,4
+NEW_n12_1239,ab (ac)^k (df)^k dfdcde (df)^k af (ac)^k af,12,8,4
+NEW_n12_1240,(ac)^k abdfdcde (df)^k a (fd)^k faf (ac)^k,12,8,4
+NEW_n12_1241,(ab)^k abdfdcdf (dede)^k afde (ab)^k,12,8,3
+NEW_n12_1242,abdfdc (de)^k df (ab)^k (ac)^k (af)^k afde,12,8,4
+NEW_n12_1243,ab (ac)^k dfd (ce)^k cd (fe)^k fafd (fa)^k e,12,8,4
+NEW_n12_1244,a (bfbd)^k bdfdcdf (defe)^k afde,12,8,2
+NEW_n12_1245,a (bf)^k (bd)^k bdfdcdf (de)^k (fe)^k afde,12,8,4
+NEW_n12_1246,(ab)^k abdfdc (de)^k (ce)^k (fe)^k dfafde,12,8,4
+NEW_n12_1247,a (bd)^k bdfdc (df)^k (af)^k dfafde (ab)^k,12,8,4
+NEW_n12_1248,a (bd)^k bdfdcdfa (fd)^k (fa)^k fde (ab)^k,12,8,4
+NEW_n12_1249,ab (ac)^k dfdc (df)^k dfafde (df)^k (ac)^k,12,8,4
+NEW_n12_1250,ab (ac)^k (ec)^k dfdcd (fe)^k fafd (fa)^k e,12,8,4
+NEW_n12_1251,ab (ac)^k d (ce)^k fdc (ef)^k dfafd (fa)^k e,12,8,4
+NEW_n12_1252,abfde (df)^k dc (db)^k (ab)^k db (af)^k afe,12,8,4
+NEW_n12_1253,abfde (df)^k dcdba (bd)^k (ba)^k (fa)^k fe,12,8,4
+NEW_n12_1254,ab (ae)^k fde (db)^k dc (db)^k dbaf (ea)^k e,12,8,4
+NEW_n12_1255,ab (fa)^k fde (dcdc)^k dcdb (af)^k afe,12,8,3
+NEW_n12_1256,abf (de)^k dedc (ab)^k (ac)^k db (af)^k afe,12,8,4
+NEW_n12_1257,abf (ae)^k de (dc)^k dcd (ba)^k ba (fd)^k fe,12,8,4
+NEW_n12_1258,abf (de)^k ded (ba)^k cdb (ac)^k (af)^k afe,12,8,4
+NEW_n12_1259,ab (ae)^k (ce)^k fdedcdba (cb)^k fe (ab)^k,12,8,4
+NEW_n12_1260,abf (ae)^k de (db)^k dc (db)^k db (ae)^k afe,12,8,4
+NEW_n12_1261,a (bf)^k bfd (ec)^k edcd (ec)^k ba (fb)^k fe,12,8,4
+NEW_n12_1262,ab (ae)^k fded (ce)^k (cb)^k cdbafe (ab)^k,12,8,4
+NEW_n12_1263,abfd (ef)^k e (cb)^k dcdba (cb)^k (fe)^k fe,12,8,4
+NEW_n12_1264,ab (fd)^k fde (db)^k dcd (ba)^k b (af)^k afe,12,8,4
+NEW_n12_1265,ab (fa)^k fde (dc)^k (ec)^k dcdba (cb)^k fe,12,8,4
+NEW_n12_1266,ab (fe)^k fde (cb)^k dcd (bc)^k ba (fe)^k fe,12,8,4
+NEW_n12_1267,a (bf)^k bfd (ec)^k ed (ce)^k cd (bf)^k bafe,12,8,4
+NEW_n12_1268,abf (ae)^k de (db)^k decbc (db)^k (ae)^k ab,12,8,4
+NEW_n12_1269,ab (ae)^k fde (db)^k dec (bd)^k bc (ae)^k ab,12,8,4
+NEW_n12_1270,(ac)^k abf (ae)^k dedec (ed)^k b (cd)^k cab,12,8,4
+NEW_n12_1271,(ac)^k abfd (ea)^k edec (ed)^k bca (cd)^k b,12,8,4
+NEW_n12_1272,abfd (ef)^k ed (bc)^k e (ca)^k cbcab (dc)^k,12,8,4
+NEW_n12_1273,abf (ae)^k dede (db)^k cbc (db)^k ab (ae)^k,12,8,4
+NEW_n12_1274,ab (ae)^k fdede (db)^k c (bd)^k bcab (ae)^k,12,8,4
+NEW_n12_1275,abfd (ef)^k ed (bc)^k ec (bd)^k (ba)^k bcab,12,8,4
+NEW_n12_1276,abfd (eaec)^k edec (bcba)^k bcab,12,8,2
+NEW_n12_1277,abfd (ea)^k (ec)^k ede (cb)^k c (ba)^k bcab,12,8,4
+NEW_n12_1278,abfd (ea)^k ede (db)^k cbca (bd)^k b (ae)^k,12,8,4
+NEW_n12_1279,ab (fe)^k fde (cb)^k de (cb)^k cbca (ef)^k b,12,8,4
+NEW_n12_1280,a (bf)^k bfd (ec)^k ed (ec)^k ecbca (bf)^k b,12,8,4
+NEW_n12_1281,(ac)^k ab (ae)^k (de)^k fdedecbca (cd)^k b,12,8,4
+NEW_n12_1282,abfd (ef)^k e (cb)^k de (db)^k c (ba)^k bcab,12,8,4
+NEW_n12_1283,ab (ae)^k fded (ec)^k e (cb)^k cbc (ab)^k ab,12,8,4
+NEW_n12_1284,ab (ca)^k f (ae)^k df (de)^k (dc)^k dcedcbc,12,8,4
+NEW_n12_1285,ab (fa)^k fdf (dc)^k dced (ce)^k (cb)^k cbc,12,8,4
+NEW_n12_1286,ab (ae)^k fdf (ec)^k dce (cb)^k dcbc (ab)^k,12,8,4
+NEW_n12_1287,abfd (fa)^k f (dc)^k (ec)^k dce (cb)^k dcbc,12,8,4
+NEW_n12_1288,abfd (fa)^k fdce (cd)^k (ce)^k (cb)^k dcbc,12,8,4
+NEW_n12_1289,a (bf)^k bfdfd (ce)^k ced (ce)^k c (bf)^k bc,12,8,4
+NEW_n12_1290,a (bfdf)^k bfdfdce (cdcb)^k dcbc,12,8,2
+NEW_n12_1291,a (bf)^k (df)^k bfdfdce (cd)^k (cb)^k dcbc,12,8,4
+NEW_n12_1292,abfd (fb)^k (fd)^k fdce (cd)^k (cb)^k dcbc,12,8,4
+NEW_n12_1293,(ac)^k ab (ae)^k fdfdc (ed)^k e (dc)^k dcbc,12,8,4
+NEW_n12_1294,ab (fa)^k f (dc)^k dfdce (dc)^k dc (af)^k bc,12,8,4
+NEW_n12_1295,abfdfd (fe)^k (cb)^k ce (db)^k d (ba)^k cbc,12,8,4
+NEW_n12_1296,abfdf (ae)^k d (ce)^k ce (cb)^k dc (ba)^k bc,12,8,4
+NEW_n12_1297,abf (aece)^k dfdcedc (bcba)^k bc,12,8,2
+NEW_n12_1298,abf (ae)^k (ce)^k dfdced (cb)^k c (ba)^k bc,12,8,4
+NEW_n12_1299,abfec (ef)^k e (cb)^k ce (db)^k d (ba)^k cbc,12,8,4
+NEW_n12_1300,a (bf)^k bf (ec)^k ececed (ce)^k c (bf)^k bc,12,8,4
+NEW_n12_1301,(ab)^k abfec (ed)^k e (fd)^k (cd)^k cedcbc,12,8,4
+NEW_n12_1302,a (bfdf)^k bfecece (cdcb)^k dcbc,12,8,2
+NEW_n12_1303,a (bf)^k (df)^k bfecece (cd)^k (cb)^k dcbc,12,8,4
+NEW_n12_1304,(ac)^k ab (ae)^k fecec (ed)^k e (dc)^k dcbc,12,8,4
+NEW_n12_1305,ab (fa)^k fe (cd)^k cece (dc)^k dcb (fa)^k c,12,8,4
+NEW_n12_1306,ab (fa)^k fece (cd)^k ced (ce)^k (cb)^k cbc,12,8,4
+NEW_n12_1307,ab (fa)^k f (dc)^k ecece (dc)^k dc (af)^k bc,12,8,4
+NEW_n12_1308,abfec (ea)^k (ec)^k ece (cb)^k d (ba)^k cbc,12,8,4
+NEW_n12_1309,ab (fe)^k fed (bc)^k bdedc (bd)^k (ba)^k bc,12,8,4
+NEW_n12_1310,ab (ac)^k (ae)^k f (ed)^k edb (dc)^k dedcbc,12,8,4
+NEW_n12_1311,a (bf)^k bf (ec)^k edbded (ce)^k c (bf)^k bc,12,8,4
+NEW_n12_1312,abfe (af)^k dbde (dc)^k dcb (cd)^k c (af)^k,12,8,4
+NEW_n12_1313,a (bf)^k bfedbd (ec)^k ed (ce)^k c (bf)^k bc,12,8,4
+NEW_n12_1314,(ac)^k ab (ae)^k fedb (de)^k de (dc)^k dcbc,12,8,4
+NEW_n12_1315,a (bfdf)^k bfedbde (cdcb)^k dcbc,12,8,2
+NEW_n12_1316,a (bf)^k (df)^k bfedbde (cd)^k (cb)^k dcbc,12,8,4
+NEW_n12_1317,ab (fa)^k fe (cd)^k (ec)^k dbded (cb)^k cbc,12,8,4
+NEW_n12_1318,ab (fa)^k f (dc)^k edbde (dc)^k dc (af)^k bc,12,8,4
+NEW_n12_1319,abfe (af)^k dbde (dc)^k dcb (ce)^k (cb)^k c,12,8,4
+NEW_n12_1320,ab (fe)^k fe (cb)^k dcde (cb)^k cb (fe)^k af,12,8,4
+NEW_n12_1321,abf (eaec)^k edcdec (bcba)^k baf,12,8,2
+NEW_n12_1322,abf (ea)^k (ec)^k edcde (cb)^k c (ba)^k baf,12,8,4
+NEW_n12_1323,ab (ae)^k fedc (db)^k de (db)^k cbaf (ae)^k,12,8,4
+NEW_n12_1324,ab (ae)^k fedcd (ecbc)^k ecbaf (ae)^k,12,8,3
+NEW_n12_1325,a (bf)^k bfed (cece)^k cdec (bf)^k baf,12,8,3
+NEW_n12_1326,(ac)^k ab (fe)^k fe (dc)^k dcdec (bf)^k baf,12,8,4
+NEW_n12_1327,abf (ed)^k edc (ab)^k dec (ba)^k baf (de)^k,12,8,4
+NEW_n12_1328,a (bf)^k bf (ec)^k edcd (ec)^k ec (bf)^k baf,12,8,4
+NEW_n12_1329,abfe (af)^k (dc)^k dcdecb (dc)^k (af)^k af,12,8,4
+NEW_n12_1330,abf (ed)^k edc (ab)^k decb (ac)^k (af)^k af,12,8,4
+NEW_n12_1331,ab (fa)^k fe (dc)^k dcde (cd)^k cb (af)^k af,12,8,4
+NEW_n12_1332,ab (ae)^k fedcdecb (dcac)^k af (ae)^k,12,8,3
+NEW_n12_1333,abfe (df)^k d (ca)^k cdecb (ac)^k a (fd)^k f,12,8,4
+NEW_n12_1334,abfed (fe)^k (cb)^k cde (db)^k (ab)^k cbaf,12,8,4
+NEW_n12_1335,abf (ed)^k ed (ba)^k cdec (ba)^k ba (ed)^k f,12,8,4
+NEW_n12_1336,ab (fd)^k fed (ca)^k cde (ca)^k cba (fd)^k f,12,8,4
+NEW_n12_1337,ab (fa)^k f (dc)^k edcde (cd)^k c (af)^k baf,12,8,4
+NEW_n12_1338,ab (fe)^k fed (cb)^k cde (cb)^k cba (fe)^k f,12,8,4
+NEW_n12_1339,abfed (fe)^k (cb)^k cdecba (cb)^k (fe)^k f,12,8,4
+NEW_n12_1340,ab (ca)^k fed (fe)^k cde (cd)^k cba (fb)^k f,12,8,4
+NEW_n12_1341,abf (ea)^k edc (db)^k dec (bd)^k baf (ae)^k,12,8,4
+NEW_n12_1342,a (bf)^k bfed (ce)^k cd (ec)^k ecba (fb)^k f,12,8,4
+NEW_n12_1343,abf (ea)^k e (db)^k dcdec (bd)^k b (ae)^k af,12,8,4
+NEW_n12_1344,abf (ea)^k edcd (ec)^k (bc)^k ecbaf (ab)^k,12,8,4
+NEW_n12_1345,abf (ea)^k edcdecb (ce)^k (cb)^k af (ab)^k,12,8,4
+NEW_n12_1346,ab (ae)^k fedcdec (bdbd)^k baf (ae)^k,12,8,3
+NEW_n12_1347,ab (ae)^k fe (db)^k dcde (db)^k cb (ae)^k af,12,8,4
+NEW_n12_1348,abf (ecea)^k edcde (cbab)^k cbaf,12,8,2
+NEW_n12_1349,abfed (fe)^k (cb)^k cdf (db)^k d (ba)^k bcb,12,8,4
+NEW_n12_1350,a (bf)^k bfed (ce)^k cdf (ec)^k dbc (bf)^k b,12,8,4
+NEW_n12_1351,a (bf)^k bf (ed)^k edcdfd (bc)^k bcb (ae)^k,12,8,4
+NEW_n12_1352,(ac)^k ab (ae)^k fedcdf (de)^k (dc)^k dbcb,12,8,4
+NEW_n12_1353,ab (ae)^k fedcdf (dcac)^k dbcb (ae)^k,12,8,3
+NEW_n12_1354,abfe (af)^k (dc)^k dcdf (ec)^k (bc)^k dbcb,12,8,4
+NEW_n12_1355,(ac)^k ab (ae)^k (de)^k fedcdfdbcb (dc)^k,12,8,4
+NEW_n12_1356,abf (ea)^k edcdf (db)^k dbc (bd)^k b (ae)^k,12,8,4
+NEW_n12_1357,abfe (af)^k (dc)^k dcdfdb (cd)^k c (af)^k b,12,8,4
+NEW_n12_1358,ab (fa)^k fe (dc)^k dcdf (dc)^k dbc (af)^k b,12,8,4
+NEW_n12_1359,a (bf)^k bf (ec)^k edcdfd (ec)^k bc (bf)^k b,12,8,4
+NEW_n12_1360,abf (ea)^k edcdfdb (ce)^k (cb)^k c (ba)^k b,12,8,4
+NEW_n12_1361,ab (ae)^k f (ec)^k edcdfd (bc)^k bc (ba)^k b,12,8,4
+NEW_n12_1362,abf (ed)^k ed (ba)^k cdfdb (ca)^k c (af)^k b,12,8,4
+NEW_n12_1363,ab (ae)^k fedcdf (dbdb)^k dbcb (ae)^k,12,8,3
+NEW_n12_1364,ab (ae)^k fedcdfd (bcec)^k bcb (ae)^k,12,8,3
+NEW_n12_1365,abf (ea)^k e (db)^k dcec (db)^k db (ae)^k ae,12,8,4
+NEW_n12_1366,abf (ed)^k ed (ba)^k cecd (ba)^k ba (ed)^k e,12,8,4
+NEW_n12_1367,ab (ae)^k fedce (cd)^k cd (ba)^k ba (fd)^k e,12,8,4
+NEW_n12_1368,abfe (df)^k d (ca)^k cecdb (ac)^k a (fd)^k e,12,8,4
+NEW_n12_1369,abfe (df)^k (db)^k dcec (ab)^k dbae (af)^k,12,8,4
+NEW_n12_1370,a (bf)^k bf (ec)^k edcecd (ec)^k (bf)^k bae,12,8,4
+NEW_n12_1371,ab (ae)^k fed (ce)^k ce (cb)^k cdbae (ab)^k,12,8,4
+NEW_n12_1372,abf (eaec)^k edcecd (bcba)^k bae,12,8,2
+NEW_n12_1373,abf (ea)^k (ec)^k edcecd (bc)^k (ba)^k bae,12,8,4
+NEW_n12_1374,abf (ea)^k edc (bd)^k e (db)^k cdb (ae)^k ae,12,8,4
+NEW_n12_1375,abfed (fe)^k ce (cb)^k c (db)^k (ab)^k dbae,12,8,4
+NEW_n12_1376,abfed (fe)^k ce (cb)^k cdba (bd)^k (ba)^k e,12,8,4
+NEW_n12_1377,abf (ecea)^k edcecd (babc)^k bae,12,8,2
+NEW_n12_1378,abf (ed)^k ed (ba)^k cecdb (ac)^k ae (af)^k,12,8,4
+NEW_n12_1379,a (bf)^k bfedc (edbd)^k ecd (bf)^k bae,12,8,3
+NEW_n12_1380,(ac)^k ab (fe)^k fe (dc)^k dcecd (bf)^k bae,12,8,4
+NEW_n12_1381,abfedce (fd)^k (bd)^k (ba)^k cdbae (af)^k,12,8,4
+NEW_n12_1382,abfe (af)^k (dc)^k dcecdb (dc)^k (af)^k ae,12,8,4
+NEW_n12_1383,ab (fe)^k fe (cb)^k dcec (db)^k dbae (ab)^k,12,8,4
+NEW_n12_1384,ab (ae)^k fedcecdb (dc)^k (ab)^k ae (df)^k,12,8,4
+NEW_n12_1385,a (bf)^k bfed (cece)^k cecd (bf)^k bae,12,8,3
+NEW_n12_1386,ab (fe)^k fe (cb)^k dcecd (bc)^k b (fe)^k ae,12,8,4
+NEW_n12_1387,abf (ed)^k ed (ba)^k cecd (ca)^k b (af)^k ae,12,8,4
+NEW_n12_1388,abfedce (fd)^k (bd)^k c (ab)^k db (af)^k ae,12,8,4
+NEW_n12_1389,ab (ae)^k f (ec)^k edcecd (bc)^k bf (ba)^k b,12,8,4
+NEW_n12_1390,a (bf)^k bfed (cece)^k cecd (bf)^k bfb,12,8,3
+NEW_n12_1391,a (bf)^k bfedce (fd)^k (cd)^k cdbf (bc)^k b,12,8,4
+NEW_n12_1392,abf (ed)^k ed (ba)^k cecdb (ca)^k (fa)^k fb,12,8,4
+NEW_n12_1393,ab (fa)^k fe (dc)^k dce (cd)^k cdb (fa)^k fb,12,8,4
+NEW_n12_1394,ab (aece)^k fedcecdbf (bcba)^k b,12,8,2
+NEW_n12_1395,ab (ae)^k (ce)^k fedcecdbf (bc)^k (ba)^k b,12,8,4
+NEW_n12_1396,a (bf)^k bfedc (edbd)^k ecd (bf)^k bfb,12,8,3
+NEW_n12_1397,abf (ea)^k ed (ce)^k ce (cb)^k cdbf (ba)^k b,12,8,4
+NEW_n12_1398,abf (ecea)^k edcecd (babc)^k bfb,12,8,2
+NEW_n12_1399,abf (ed)^k ed (ba)^k cecd (bf)^k bf (bc)^k b,12,8,4
+NEW_n12_1400,(ac)^k ab (fe)^k fe (dc)^k dcecd (bf)^k bfb,12,8,4
+NEW_n12_1401,abfed (fe)^k (cb)^k cecdbf (bc)^k b (fe)^k,12,8,4
+NEW_n12_1402,abf (eaec)^k edcecd (bcba)^k bfb,12,8,2
+NEW_n12_1403,abf (ea)^k (ec)^k edcecd (bc)^k (ba)^k bfb,12,8,4
+NEW_n12_1404,abfed (fe)^k (cb)^k cecdbfb (ac)^k (dc)^k,12,8,4
+NEW_n12_1405,ab (fe)^k fe (cb)^k dcecd (bc)^k b (fe)^k fb,12,8,4
+NEW_n12_1406,abfed (fe)^k ce (cb)^k c (db)^k (ab)^k dbfb,12,8,4
+NEW_n12_1407,ab (ae)^k fedce (dbdb)^k cdbfb (ae)^k,12,8,3
+NEW_n12_1408,a (bf)^k bfe (df)^k (dc)^k dcecdbf (bc)^k b,12,8,4
+NEW_n12_1409,a (bf)^k bf (ed)^k edcecd (bc)^k bfb (ae)^k,12,8,4
+NEW_n12_1410,abfed (fe)^k (cb)^k cecdbf (bd)^k (ba)^k b,12,8,4
+NEW_n12_1411,ab (ae)^k fedce (cecb)^k cdbfb (ae)^k,12,8,3
+NEW_n12_1412,a (bf)^k bf (ec)^k edcecd (ec)^k (bf)^k bfb,12,8,4
+NEW_n12_1413,abf (ecea)^k edced (cbab)^k cabc,12,8,2
+NEW_n12_1414,ab (fa)^k fe (dc)^k dce (dc)^k dcab (fa)^k c,12,8,4
+NEW_n12_1415,abfe (df)^k dce (db)^k (ab)^k dcabc (af)^k,12,8,4
+NEW_n12_1416,a (bf)^k bfed (ce)^k ced (ce)^k ca (bf)^k bc,12,8,4
+NEW_n12_1417,a (bf)^k bfed (cece)^k cedc (bf)^k abc,12,8,3
+NEW_n12_1418,ab (ca)^k (ea)^k fedc (ed)^k edca (cd)^k bc,12,8,4
+NEW_n12_1419,ab (ca)^k fed (fe)^k ce (dc)^k dca (bf)^k bc,12,8,4
+NEW_n12_1420,a (bf)^k bfedc (edbd)^k edc (bf)^k abc,12,8,3
+NEW_n12_1421,(ac)^k ab (ae)^k (de)^k fedcedcab (cd)^k c,12,8,4
+NEW_n12_1422,(ac)^k ab (fe)^k fe (dc)^k dcedc (bf)^k abc,12,8,4
+NEW_n12_1423,abfe (df)^k dc (bd)^k ed (ba)^k cab (fa)^k c,12,8,4
+NEW_n12_1424,abfe (af)^k dce (cd)^k (ec)^k (bc)^k dcabc,12,8,4
+NEW_n12_1425,ab (ae)^k fed (ce)^k cedca (bc)^k bc (ab)^k,12,8,4
+NEW_n12_1426,abfe (af)^k dce (dc)^k dca (cd)^k bc (af)^k,12,8,4
+NEW_n12_1427,abf (ea)^k edce (db)^k dca (bd)^k bc (ae)^k,12,8,4
+NEW_n12_1428,ab (fa)^k f (dc)^k edce (dc)^k dc (af)^k abc,12,8,4
+NEW_n12_1429,a (cace)^k cabdedefe (afef)^k df,12,8,2
+NEW_n12_1430,aca (bf)^k b (dc)^k ded (ef)^k efedf (ac)^k,12,8,4
+NEW_n12_1431,a (bfbd)^k cabded (edef)^k efedf,12,8,2
+NEW_n12_1432,a (bf)^k (bd)^k cab (de)^k ded (ef)^k efedf,12,8,4
+NEW_n12_1433,acabdede (cd)^k (fa)^k (ea)^k (ba)^k fedf,12,8,4
+NEW_n12_1434,aca (bc)^k bd (ef)^k e (df)^k defed (fa)^k f,12,8,4
+NEW_n12_1435,acab (ac)^k d (ec)^k ed (ef)^k efed (fa)^k f,12,8,4
+NEW_n12_1436,ac (ab)^k ab (de)^k ded (ec)^k (ef)^k efedf,12,8,4
+NEW_n12_1437,aca (bc)^k bded (ef)^k efe (df)^k (af)^k df,12,8,4
+NEW_n12_1438,a (cace)^k cacdefd (efaf)^k eafe,12,8,2
+NEW_n12_1439,(ac)^k a (ce)^k cacdefd (ef)^k (af)^k eafe,12,8,4
+NEW_n12_1440,acacde (cd)^k (fa)^k fd (ea)^k e (ab)^k afe,12,8,4
+NEW_n12_1441,aca (bd)^k cde (fd)^k fde (af)^k af (ba)^k e,12,8,4
+NEW_n12_1442,aca (bfbd)^k cd (edef)^k efdeafe,12,8,2
+NEW_n12_1443,aca (bf)^k (bd)^k c (de)^k d (ef)^k efdeafe,12,8,4
+NEW_n12_1444,a (bd)^k cacdefdea (fd)^k (fa)^k f (ba)^k e,12,8,4
+NEW_n12_1445,acacd (bc)^k (ef)^k (df)^k efd (fa)^k eafe,12,8,4
+NEW_n12_1446,acacd (bc)^k efd (fe)^k (fd)^k (fa)^k eafe,12,8,4
+NEW_n12_1447,acac (db)^k de (fd)^k fd (fa)^k eaf (ba)^k e,12,8,4
+NEW_n12_1448,acac (db)^k defdea (fd)^k (fa)^k f (ba)^k e,12,8,4
+NEW_n12_1449,aca (cb)^k cd (fe)^k (fd)^k efdeafe (af)^k,12,8,4
+NEW_n12_1450,a (bd)^k cacde (fd)^k fd (fa)^k eaf (ba)^k e,12,8,4
+NEW_n12_1451,(ab)^k acac (de)^k d (ec)^k (ef)^k efdeafe,12,8,4
+NEW_n12_1452,acac (de)^k def (ab)^k d (ba)^k eaf (ed)^k e,12,8,4
+NEW_n12_1453,ac (db)^k ac (df)^k defe (af)^k df (ab)^k ac,12,8,4
+NEW_n12_1454,aca (cb)^k c (ef)^k defe (df)^k dfac (af)^k,12,8,4
+NEW_n12_1455,aca (bd)^k c (df)^k defed (fa)^k f (ab)^k ac,12,8,4
+NEW_n12_1456,acac (db)^k d (ea)^k efedf (ae)^k a (bd)^k c,12,8,4
+NEW_n12_1457,aca (bfbd)^k cd (edef)^k efedfac,12,8,2
+NEW_n12_1458,aca (bf)^k (bd)^k c (de)^k d (ef)^k efedfac,12,8,4
+NEW_n12_1459,acac (db)^k (df)^k defe (af)^k dfac (ab)^k,12,8,4
+NEW_n12_1460,(ac)^k acacde (fdfd)^k fedf (ac)^k ac,12,8,3
+NEW_n12_1461,aca (cb)^k c (ef)^k defed (fe)^k f (bc)^k ac,12,8,4
+NEW_n12_1462,aca (cd)^k cd (fa)^k efed (fa)^k fa (cd)^k c,12,8,4
+NEW_n12_1463,aca (cd)^k cd (fa)^k efedf (ae)^k ac (ab)^k,12,8,4
+NEW_n12_1464,a (bd)^k cac (df)^k defe (af)^k dfac (ab)^k,12,8,4
+NEW_n12_1465,aca (cace)^k cdefed (fefa)^k fac,12,8,2
+NEW_n12_1466,(ac)^k aca (ce)^k cdefed (fe)^k (fa)^k fac,12,8,4
+NEW_n12_1467,aca (cd)^k cd (fa)^k efed (ea)^k f (ab)^k ac,12,8,4
+NEW_n12_1468,ac (db)^k acde (fd)^k (fa)^k fedfac (ab)^k,12,8,4
+NEW_n12_1469,a (cace)^k cacdefed (fafe)^k fac,12,8,2
+NEW_n12_1470,(ac)^k a (ce)^k cacdefedfa (fe)^k (fa)^k c,12,8,4
+NEW_n12_1471,(ab)^k acac (de)^k d (ec)^k (ef)^k efedfac,12,8,4
+NEW_n12_1472,(ab)^k acac (de)^k def (ed)^k edfac (ab)^k,12,8,4
+NEW_n12_1473,aca (bd)^k cd (ea)^k efed (ea)^k fa (bd)^k c,12,8,4
+NEW_n12_1474,(ac)^k acac (df)^k defe (df)^k df (ac)^k ac,12,8,4
+NEW_n12_1475,aca (bdfd)^k cdefedfb (faba)^k f,12,8,2
+NEW_n12_1476,aca (bd)^k (fd)^k cdefedfb (fa)^k (ba)^k f,12,8,4
+NEW_n12_1477,aca (bfbd)^k cd (edef)^k efedfbf,12,8,2
+NEW_n12_1478,aca (bf)^k (bd)^k c (de)^k d (ef)^k efedfbf,12,8,4
+NEW_n12_1479,acacd (bc)^k (ef)^k efedfb (fd)^k (fa)^k f,12,8,4
+NEW_n12_1480,(ab)^k acac (de)^k d (ec)^k (ef)^k efedfbf,12,8,4
+NEW_n12_1481,aca (fb)^k (cd)^k cdefed (fe)^k fbf (ac)^k,12,8,4
+NEW_n12_1482,acacd (bc)^k (ef)^k efedfb (fe)^k f (bc)^k,12,8,4
+NEW_n12_1483,aca (bd)^k cdefedfb (fd)^k (fa)^k f (ab)^k,12,8,4
+NEW_n12_1484,aca (cd)^k cd (fa)^k efed (fb)^k fb (fe)^k f,12,8,4
+NEW_n12_1485,a (cace)^k cacdefed (fafe)^k fbf,12,8,2
+NEW_n12_1486,acacde (cd)^k (fa)^k fedfb (ae)^k (ab)^k f,12,8,4
+NEW_n12_1487,acacd (bc)^k (ef)^k efedfbf (ae)^k (de)^k,12,8,4
+NEW_n12_1488,aca (cb)^k c (ef)^k defed (fe)^k f (bc)^k bf,12,8,4
+NEW_n12_1489,aca (cd)^k cd (fa)^k efedf (ea)^k (ba)^k bf,12,8,4
+NEW_n12_1490,(ac)^k acacd (ec)^k (ef)^k efedfb (fa)^k f,12,8,4
+NEW_n12_1491,aca (cace)^k cdefed (fefa)^k fbf,12,8,2
+NEW_n12_1492,(ac)^k aca (ce)^k cdefed (fe)^k (fa)^k fbf,12,8,4
+NEW_n12_1493,aca (cb)^k c (ef)^k edfde (fd)^k fac (af)^k,12,8,4
+NEW_n12_1494,aca (cb)^k c (ef)^k edfd (ef)^k ef (bc)^k ac,12,8,4
+NEW_n12_1495,(ac)^k acace (dfdf)^k dfdef (ac)^k ac,12,8,3
+NEW_n12_1496,aca (bd)^k ce (df)^k dfd (fa)^k efac (ab)^k,12,8,4
+NEW_n12_1497,aca (fb)^k c (bd)^k edf (de)^k d (ef)^k efac,12,8,4
+NEW_n12_1498,aca (bd)^k c (df)^k edfde (fa)^k f (ab)^k ac,12,8,4
+NEW_n12_1499,a (bd)^k caced (eaea)^k fdefa (bd)^k c,12,8,3
+NEW_n12_1500,aca (bd)^k ced (ea)^k fd (ea)^k efa (bd)^k c,12,8,4
+NEW_n12_1501,a (bd)^k caced (fdfa)^k fdefa (bd)^k c,12,8,3
+NEW_n12_1502,acace (dc)^k d (fa)^k fd (ea)^k e (ab)^k fac,12,8,4
+NEW_n12_1503,a (bd)^k cace (df)^k dfd (fa)^k ef (ab)^k ac,12,8,4
+NEW_n12_1504,a (cace)^k cacedfd (efaf)^k efac,12,8,2
+NEW_n12_1505,(ac)^k a (ce)^k cacedfd (ef)^k (af)^k efac,12,8,4
+NEW_n12_1506,(ac)^k a (ce)^k cacedfdefa (fe)^k (fa)^k c,12,8,4
+NEW_n12_1507,acace (ca)^k (ce)^k dfd (ef)^k (af)^k efac,12,8,4
+NEW_n12_1508,acace (ca)^k (ce)^k dfdefa (fe)^k (fa)^k c,12,8,4
+NEW_n12_1509,acac (bd)^k ed (ea)^k fdef (ae)^k a (bd)^k c,12,8,4
+NEW_n12_1510,aca (cace)^k cedfde (fefa)^k fac,12,8,2
+NEW_n12_1511,(ac)^k aca (ce)^k cedfd (ef)^k e (fa)^k fac,12,8,4
+NEW_n12_1512,acace (db)^k (df)^k dfd (fa)^k e (ab)^k fac,12,8,4
+NEW_n12_1513,(ab)^k acac (ed)^k edf (de)^k defac (ab)^k,12,8,4
+NEW_n12_1514,(ab)^k acac (eded)^k edfdef (ab)^k ac,12,8,3
+NEW_n12_1515,aca (bdfd)^k cedfdefb (faba)^k f,12,8,2
+NEW_n12_1516,aca (bd)^k (fd)^k cedfdefb (fa)^k (ba)^k f,12,8,4
+NEW_n12_1517,aca (cb)^k c (ef)^k edfd (ef)^k ef (bc)^k bf,12,8,4
+NEW_n12_1518,acac (bd)^k (ea)^k edfdef (ea)^k (bd)^k bf,12,8,4
+NEW_n12_1519,a (cace)^k cacedfd (efaf)^k efbf,12,8,2
+NEW_n12_1520,(ac)^k a (ce)^k cacedfd (ef)^k (af)^k efbf,12,8,4
+NEW_n12_1521,acace (ca)^k (ce)^k dfd (ef)^k (af)^k efbf,12,8,4
+NEW_n12_1522,(ac)^k acaced (ce)^k (fe)^k fdefb (fa)^k f,12,8,4
+NEW_n12_1523,aca (fb)^k (cd)^k cedfd (ef)^k efbf (ac)^k,12,8,4
+NEW_n12_1524,acace (dc)^k d (fa)^k fd (ea)^k e (ab)^k fbf,12,8,4
+NEW_n12_1525,acace (db)^k (df)^k dfd (fa)^k e (ab)^k fbf,12,8,4
+NEW_n12_1526,aca (cace)^k cedfde (fefa)^k fbf,12,8,2
+NEW_n12_1527,(ac)^k aca (ce)^k cedfd (ef)^k e (fa)^k fbf,12,8,4
+NEW_n12_1528,aca (fb)^k c (bd)^k edf (de)^k d (ef)^k efbf,12,8,4
+NEW_n12_1529,aca (bd)^k cedfdefb (fd)^k (fa)^k f (ab)^k,12,8,4
+NEW_n12_1530,acace (dc)^k d (fa)^k fdefb (ae)^k (ab)^k f,12,8,4
+NEW_n12_1531,(ac)^k acace (dfdf)^k dfdef (ac)^k bf,12,8,3
+NEW_n12_1532,acaefecd (fe)^k (cb)^k (db)^k (ab)^k cdbc,12,8,4
+NEW_n12_1533,ac (ae)^k aefe (cecb)^k cdcdbc (ae)^k,12,8,3
+NEW_n12_1534,ac (ae)^k aefe (dbdb)^k cdcdbc (ae)^k,12,8,3
+NEW_n12_1535,acae (fa)^k fe (cd)^k cd (ce)^k (cb)^k cdbc,12,8,4
+NEW_n12_1536,ac (bf)^k aefe (fd)^k (cd)^k cdcd (bc)^k bc,12,8,4
+NEW_n12_1537,ac (af)^k aef (dc)^k e (cd)^k cdcdb (fa)^k c,12,8,4
+NEW_n12_1538,acaef (ea)^k (ec)^k e (cb)^k cdcdbc (ab)^k,12,8,4
+NEW_n12_1539,ac (bf)^k aef (ec)^k ecd (ce)^k cd (bf)^k bc,12,8,4
+NEW_n12_1540,aca (bf)^k ef (ec)^k ecdcd (ec)^k (bf)^k bc,12,8,4
+NEW_n12_1541,acae (fa)^k f (dc)^k (ec)^k ecd (cb)^k cdbc,12,8,4
+NEW_n12_1542,acae (fbfd)^k fecd (cdcb)^k cdbc,12,8,2
+NEW_n12_1543,acae (fb)^k (fd)^k fe (cd)^k cd (cb)^k cdbc,12,8,4
+NEW_n12_1544,ac (ab)^k a (ed)^k (fd)^k efecdcdb (cd)^k c,12,8,4
+NEW_n12_1545,a (bd)^k cbdedfa (fd)^k eae (af)^k (ba)^k f,12,8,4
+NEW_n12_1546,acbde (db)^k (df)^k d (fa)^k fae (ab)^k aef,12,8,4
+NEW_n12_1547,ac (bd)^k bdedfa (fd)^k eae (af)^k (ab)^k f,12,8,4
+NEW_n12_1548,a (bd)^k cbdedfaeae (df)^k (af)^k (ba)^k f,12,8,4
+NEW_n12_1549,ac (bd)^k bde (df)^k d (fa)^k faeae (ab)^k f,12,8,4
+NEW_n12_1550,a (cace)^k cbdedfaeae (fefa)^k f,12,8,2
+NEW_n12_1551,(ac)^k a (ce)^k cbdedfaea (ef)^k e (fa)^k f,12,8,4
+NEW_n12_1552,(ac)^k acbd (ec)^k edfa (ef)^k eae (fa)^k f,12,8,4
+NEW_n12_1553,acb (ce)^k ded (ea)^k f (ab)^k aeaef (bc)^k,12,8,4
+NEW_n12_1554,ac (bd)^k bdedfae (df)^k (af)^k ae (ab)^k f,12,8,4
+NEW_n12_1555,ac (bd)^k b (df)^k dedfae (af)^k ae (ab)^k f,12,8,4
+NEW_n12_1556,acb (ac)^k ded (ce)^k (fe)^k fae (af)^k aef,12,8,4
+NEW_n12_1557,acbde (dc)^k d (fa)^k f (ae)^k ae (ab)^k aef,12,8,4
+NEW_n12_1558,acb (dc)^k de (af)^k d (ea)^k faeae (ab)^k f,12,8,4
+NEW_n12_1559,acb (ca)^k (ce)^k d (ef)^k edfaeae (fa)^k f,12,8,4
+NEW_n12_1560,acb (de)^k dedf (ab)^k (ac)^k ae (af)^k aef,12,8,4
+NEW_n12_1561,a (cb)^k cbd (ef)^k e (df)^k dfae (af)^k aef,12,8,4
+NEW_n12_1562,ac (bd)^k bdedfaeae (df)^k (af)^k (ab)^k f,12,8,4
+NEW_n12_1563,(ac)^k acbd (edea)^k edfeafab (ac)^k,12,8,3
+NEW_n12_1564,ac (ba)^k b (de)^k dedfe (df)^k afab (dc)^k,12,8,4
+NEW_n12_1565,acb (ce)^k d (ea)^k edfeaf (ba)^k (bc)^k ab,12,8,4
+NEW_n12_1566,acb (dc)^k ded (fa)^k fe (af)^k afab (dc)^k,12,8,4
+NEW_n12_1567,(ac)^k acb (df)^k de (df)^k dfeaf (ac)^k ab,12,8,4
+NEW_n12_1568,a (cb)^k cbd (ef)^k (df)^k edfe (af)^k afab,12,8,4
+NEW_n12_1569,acbd (bc)^k ed (fe)^k fea (fe)^k fa (bc)^k b,12,8,4
+NEW_n12_1570,acb (ac)^k (df)^k dedfe (df)^k af (ac)^k ab,12,8,4
+NEW_n12_1571,(ac)^k acbde (dfdf)^k dfeafab (ac)^k,12,8,3
+NEW_n12_1572,acb (dc)^k ded (fa)^k feaf (ae)^k (ab)^k ab,12,8,4
+NEW_n12_1573,acbd (bc)^k (ef)^k edfea (fe)^k f (bc)^k ab,12,8,4
+NEW_n12_1574,acb (ac)^k de (df)^k dfe (df)^k afab (ac)^k,12,8,4
+NEW_n12_1575,ac (bd)^k bded (ea)^k feaf (ae)^k a (bd)^k b,12,8,4
+NEW_n12_1576,a (cd)^k cbded (fafa)^k feafab (dc)^k,12,8,3
+NEW_n12_1577,(ac)^k acbded (fece)^k feafab (ac)^k,12,8,3
+NEW_n12_1578,acbdefd (ce)^k (ae)^k f (ba)^k ea (bc)^k bc,12,8,4
+NEW_n12_1579,a (bd)^k cbdef (ae)^k d (ea)^k feabc (db)^k,12,8,4
+NEW_n12_1580,acbde (cd)^k (fa)^k fdfeab (fa)^k (cd)^k c,12,8,4
+NEW_n12_1581,acb (ac)^k def (deae)^k dfe (ac)^k abc,12,8,3
+NEW_n12_1582,acb (dc)^k d (fa)^k efdfe (af)^k a (cd)^k bc,12,8,4
+NEW_n12_1583,(ab)^k ac (ed)^k bdef (de)^k df (ba)^k eabc,12,8,4
+NEW_n12_1584,(ac)^k acbdefd (fece)^k feab (ca)^k c,12,8,3
+NEW_n12_1585,acb (de)^k de (ab)^k fdfe (fb)^k a (bc)^k bc,12,8,4
+NEW_n12_1586,ac (bd)^k bdef (ae)^k df (ea)^k eabc (db)^k,12,8,4
+NEW_n12_1587,(ac)^k acbde (fdfd)^k fdfeab (ca)^k c,12,8,3
+NEW_n12_1588,(ac)^k acbdef (ec)^k d (fe)^k feabc (af)^k,12,8,4
+NEW_n12_1589,(ac)^k acb (df)^k defdfe (df)^k ab (ca)^k c,12,8,4
+NEW_n12_1590,(ac)^k acb (de)^k defd (fa)^k fea (bd)^k bc,12,8,4
+NEW_n12_1591,a (bd)^k cbd (ea)^k efdf (ea)^k eabc (db)^k,12,8,4
+NEW_n12_1592,acb (dc)^k de (fa)^k fdfe (af)^k ab (cd)^k c,12,8,4
+NEW_n12_1593,(ac)^k acbd (efec)^k efdfeab (ca)^k c,12,8,3
+NEW_n12_1594,ac (bd)^k bd (ea)^k efdf (ea)^k ea (bd)^k bc,12,8,4
+NEW_n12_1595,acb (ac)^k def (de)^k dfe (af)^k abc (db)^k,12,8,4
+NEW_n12_1596,ac (bdfd)^k bdefdfe (abaf)^k abc,12,8,2
+NEW_n12_1597,ac (bd)^k (fd)^k bdefdfeab (af)^k (ab)^k c,12,8,4
+NEW_n12_1598,ac (bd)^k bdef (ae)^k d (ea)^k fea (bd)^k bc,12,8,4
+NEW_n12_1599,(ac)^k a (ce)^k cbdefdfea (ef)^k b (fa)^k c,12,8,4
+NEW_n12_1600,(ab)^k acbdef (dede)^k dfeabc (ab)^k,12,8,3
+NEW_n12_1601,(ab)^k acb (de)^k def (de)^k dfe (ab)^k abc,12,8,4
+NEW_n12_1602,(ac)^k acb (df)^k de (fd)^k fdfe (ac)^k abc,12,8,4
+NEW_n12_1603,acbde (cd)^k fd (fa)^k f (ea)^k (ba)^k eabc,12,8,4
+NEW_n12_1604,acbde (cd)^k fd (fa)^k feab (ae)^k (ab)^k c,12,8,4
+NEW_n12_1605,a (ce)^k cbd (ea)^k efdf (ba)^k ea (bc)^k bc,12,8,4
+NEW_n12_1606,a (bd)^k cbd (ea)^k efd (ea)^k fea (bd)^k bc,12,8,4
+NEW_n12_1607,acbd (bc)^k (ef)^k efdfea (ef)^k (bc)^k bc,12,8,4
+NEW_n12_1608,acb (ac)^k de (fd)^k fdfe (df)^k ab (ca)^k c,12,8,4
+NEW_n12_1609,a (cb)^k cbd (ef)^k e (fd)^k fdfeab (fa)^k c,12,8,4
+NEW_n12_1610,acb (ac)^k (df)^k defdfe (df)^k (ac)^k abc,12,8,4
+NEW_n12_1611,a (bd)^k cbde (fd)^k fd (fa)^k feabc (ab)^k,12,8,4
+NEW_n12_1612,(ac)^k acbdef (deae)^k dfeab (ca)^k c,12,8,3
+NEW_n12_1613,a (cb)^k cbd (ef)^k efd (fe)^k fea (bc)^k bc,12,8,4
+NEW_n12_1614,(ac)^k acbd (ec)^k efd (fe)^k feab (fa)^k c,12,8,4
+NEW_n12_1615,a (cd)^k cbde (fa)^k f (ae)^k dfeabc (ab)^k,12,8,4
+NEW_n12_1616,acb (ce)^k d (ea)^k efdfe (ab)^k a (bc)^k bc,12,8,4
+NEW_n12_1617,acb (dbdf)^k defdfe (afab)^k abc,12,8,2
+NEW_n12_1618,ac (bd)^k b (df)^k defdfe (af)^k (ab)^k abc,12,8,4
+NEW_n12_1619,acb (ac)^k de (fdfd)^k fdfe (ac)^k abc,12,8,3
+NEW_n12_1620,a (cb)^k cbd (ef)^k e (fd)^k fedfb (af)^k ab,12,8,4
+NEW_n12_1621,(ac)^k acb (df)^k defe (df)^k dfb (ac)^k ab,12,8,4
+NEW_n12_1622,acbde (cd)^k (fa)^k fed (ea)^k (ba)^k fbab,12,8,4
+NEW_n12_1623,acb (dc)^k de (fa)^k fed (fa)^k fba (cd)^k b,12,8,4
+NEW_n12_1624,(ac)^k a (ce)^k cbd (ef)^k efedfbab (af)^k,12,8,4
+NEW_n12_1625,a (bd)^k cb (df)^k defed (fa)^k f (ba)^k bab,12,8,4
+NEW_n12_1626,a (cb)^k cbd (ef)^k efed (fe)^k fba (bc)^k b,12,8,4
+NEW_n12_1627,a (bd)^k cbd (ea)^k efed (ea)^k fba (bd)^k b,12,8,4
+NEW_n12_1628,acb (de)^k def (ba)^k ed (fb)^k fba (bc)^k b,12,8,4
+NEW_n12_1629,(ac)^k acbdefed (ce)^k (fe)^k fbab (af)^k,12,8,4
+NEW_n12_1630,acb (dc)^k defe (af)^k (bf)^k dfba (ef)^k b,12,8,4
+NEW_n12_1631,a (cd)^k cbde (fa)^k (ea)^k fedf (ba)^k bab,12,8,4
+NEW_n12_1632,acb (ac)^k de (fd)^k fe (df)^k dfb (ac)^k ab,12,8,4
+NEW_n12_1633,acbde (cd)^k (fa)^k fedfb (af)^k a (cd)^k b,12,8,4
+NEW_n12_1634,(ab)^k acb (de)^k def (ed)^k edf (ba)^k bab,12,8,4
+NEW_n12_1635,ac (bdfd)^k bdefed (faba)^k fbab,12,8,2
+NEW_n12_1636,ac (bd)^k (fd)^k bdefed (fa)^k (ba)^k fbab,12,8,4
+NEW_n12_1637,ac (bd)^k bd (ea)^k efedf (ea)^k ba (bd)^k b,12,8,4
+NEW_n12_1638,acb (dc)^k d (fa)^k fdeafd (ea)^k e (ab)^k f,12,8,4
+NEW_n12_1639,acbdf (dc)^k d (fa)^k eafd (ea)^k (ba)^k ef,12,8,4
+NEW_n12_1640,acb (dc)^k dfd (fa)^k (bf)^k (ef)^k eafdef,12,8,4
+NEW_n12_1641,acb (dc)^k dfd (fa)^k eaf (ae)^k de (ab)^k f,12,8,4
+NEW_n12_1642,ac (bd)^k b (df)^k dfde (af)^k afde (ab)^k f,12,8,4
+NEW_n12_1643,acb (ceae)^k dfdfedf (babc)^k ab,12,8,2
+NEW_n12_1644,acb (ce)^k (ae)^k dfdfedf (ba)^k (bc)^k ab,12,8,4
+NEW_n12_1645,acb (dc)^k d (fa)^k fdfed (ea)^k f (ab)^k ab,12,8,4
+NEW_n12_1646,acb (af)^k dfdfe (cd)^k (ec)^k d (cb)^k fab,12,8,4
+NEW_n12_1647,(ac)^k acbdfd (fece)^k fedf (ac)^k ab,12,8,3
+NEW_n12_1648,acb (dc)^k d (fa)^k fdfed (fa)^k fa (cd)^k b,12,8,4
+NEW_n12_1649,(ac)^k acbd (ce)^k fd (fe)^k fed (fa)^k fab,12,8,4
+NEW_n12_1650,a (cace)^k cbdfdfed (fafe)^k fab,12,8,2
+NEW_n12_1651,(ac)^k a (ce)^k cbdfdfedfa (fe)^k (fa)^k b,12,8,4
+NEW_n12_1652,(ac)^k acbdfdfed (ce)^k (fe)^k fab (af)^k,12,8,4
+NEW_n12_1653,(ac)^k acb (deae)^k dfdfedf (ac)^k ab,12,8,3
+NEW_n12_1654,(ab)^k acbdf (dede)^k dfedf (ab)^k ab,12,8,3
+NEW_n12_1655,(ac)^k acbdf (deae)^k dfedf (ac)^k ab,12,8,3
+NEW_n12_1656,(ac)^k acbd (fece)^k fdfedf (ac)^k ab,12,8,3
+NEW_n12_1657,a (cb)^k cbd (fe)^k fdfed (fe)^k fa (bc)^k b,12,8,4
+NEW_n12_1658,(ac)^k acb (dfdf)^k dfdfedf (ac)^k ab,12,8,3
+NEW_n12_1659,acb (ac)^k (df)^k dfdfe (df)^k df (ac)^k ab,12,8,4
+NEW_n12_1660,(ab)^k acbdf (ed)^k (ce)^k dfed (fe)^k fab,12,8,4
+NEW_n12_1661,acb (dc)^k dfd (fa)^k f (ea)^k edf (ab)^k ab,12,8,4
+NEW_n12_1662,ac (bd)^k bdf (ea)^k edef (ae)^k abc (db)^k,12,8,4
+NEW_n12_1663,a (bd)^k cbdfe (df)^k d (fa)^k efabc (ab)^k,12,8,4
+NEW_n12_1664,acb (dbdf)^k dfedef (afab)^k abc,12,8,2
+NEW_n12_1665,ac (bd)^k b (df)^k dfede (fa)^k f (ab)^k abc,12,8,4
+NEW_n12_1666,acb (dc)^k d (fa)^k fede (fa)^k fa (cd)^k bc,12,8,4
+NEW_n12_1667,(ac)^k a (ce)^k cbdfedefa (ef)^k b (fa)^k c,12,8,4
+NEW_n12_1668,(ac)^k acbdfe (dfdf)^k defab (ca)^k c,12,8,3
+NEW_n12_1669,acb (dc)^k dfe (af)^k de (fa)^k fab (cd)^k c,12,8,4
+NEW_n12_1670,(ac)^k acb (de)^k dfed (fa)^k efa (bd)^k bc,12,8,4
+NEW_n12_1671,a (cb)^k cbd (fe)^k fed (ef)^k efa (bc)^k bc,12,8,4
+NEW_n12_1672,acb (ac)^k (df)^k dfede (fd)^k f (ac)^k abc,12,8,4
+NEW_n12_1673,(ac)^k acb (df)^k dfe (df)^k def (ac)^k abc,12,8,4
+NEW_n12_1674,acb (ac)^k d (ce)^k fed (ef)^k e (fa)^k fabc,12,8,4
+NEW_n12_1675,(ac)^k acb (df)^k dfede (fd)^k fab (ca)^k c,12,8,4
+NEW_n12_1676,acb (ce)^k d (ea)^k fedef (ab)^k a (bc)^k bc,12,8,4
+NEW_n12_1677,(ab)^k acb (de)^k df (ed)^k edef (ab)^k abc,12,8,4
+NEW_n12_1678,ac (bd)^k bdf (ea)^k ed (ea)^k efa (bd)^k bc,12,8,4
+NEW_n12_1679,(ac)^k acbdf (edea)^k edefab (ca)^k c,12,8,3
+NEW_n12_1680,ac (bdfd)^k bdfede (faba)^k fabc,12,8,2
+NEW_n12_1681,ac (bd)^k (fd)^k bdfede (fa)^k (ba)^k fabc,12,8,4
+NEW_n12_1682,ac (bd)^k (fd)^k bdfedefab (af)^k (ab)^k c,12,8,4
+NEW_n12_1683,acbdf (db)^k (df)^k ede (fa)^k (ba)^k fabc,12,8,4
+NEW_n12_1684,acbdf (db)^k (df)^k edefab (af)^k (ab)^k c,12,8,4
+NEW_n12_1685,(ab)^k acbdf (eded)^k edefabc (ab)^k,12,8,3
+NEW_n12_1686,(ac)^k acbdfe (dfdf)^k dfeacb (ac)^k,12,8,3
+NEW_n12_1687,ac (bd)^k bdf (ea)^k edf (ea)^k eac (bd)^k b,12,8,4
+NEW_n12_1688,acbdf (dc)^k e (af)^k dfeac (af)^k b (dc)^k,12,8,4
+NEW_n12_1689,ac (bdfd)^k bdfedfe (abaf)^k acb,12,8,2
+NEW_n12_1690,acb (dc)^k d (fa)^k fedfe (af)^k a (cd)^k cb,12,8,4
+NEW_n12_1691,acb (dbdf)^k dfedfe (afab)^k acb,12,8,2
+NEW_n12_1692,ac (bd)^k b (df)^k dfedfe (af)^k (ab)^k acb,12,8,4
+NEW_n12_1693,a (cb)^k cbd (fe)^k fed (fe)^k fea (cb)^k cb,12,8,4
+NEW_n12_1694,a (bd)^k cbdfe (df)^k d (fa)^k feac (ba)^k b,12,8,4
+NEW_n12_1695,(ab)^k acbdf (eded)^k edfeac (ba)^k b,12,8,3
+NEW_n12_1696,(ac)^k acb (df)^k dfe (df)^k dfe (ac)^k acb,12,8,4
+NEW_n12_1697,acbd (ce)^k fedf (ac)^k (af)^k eacb (fe)^k,12,8,4
+NEW_n12_1698,acb (dc)^k dfe (af)^k dfe (af)^k acb (dc)^k,12,8,4
+NEW_n12_1699,(ab)^k ac (ed)^k bdf (ed)^k edf (ba)^k eacb,12,8,4
+NEW_n12_1700,(ac)^k acbdf (edea)^k edfeacb (ac)^k,12,8,3
+NEW_n12_1701,(ab)^k acb (de)^k df (ed)^k edfe (ab)^k acb,12,8,4
+NEW_n12_1702,acb (ac)^k (df)^k dfedfe (df)^k (ac)^k acb,12,8,4
+NEW_n12_1703,ac (db)^k dbdfe (df)^k (af)^k aeaf (ba)^k e,12,8,4
+NEW_n12_1704,(ac)^k ac (df)^k dbdfeae (df)^k (ac)^k afe,12,8,4
+NEW_n12_1705,(ac)^k acdb (cefe)^k dfeaeafe (ac)^k,12,8,3
+NEW_n12_1706,ac (db)^k dbdfeae (df)^k (af)^k af (ba)^k e,12,8,4
+NEW_n12_1707,acdbdf (ed)^k e (abab)^k aea (ed)^k fe,12,8,3
+NEW_n12_1708,ac (ab)^k dbdf (eded)^k eaeaf (ba)^k e,12,8,3
+NEW_n12_1709,acdb (ceae)^k dfeaeaf (bcba)^k e,12,8,2
+NEW_n12_1710,acdbdf (ed)^k e (ab)^k aea (fb)^k (cb)^k fe,12,8,4
+NEW_n12_1711,acdb (de)^k dfe (abab)^k aeaf (ed)^k e,12,8,3
+NEW_n12_1712,a (bd)^k cdbdfe (df)^k ae (af)^k af (ba)^k e,12,8,4
+NEW_n12_1713,acdb (de)^k df (ba)^k eae (ab)^k af (ed)^k e,12,8,4
+NEW_n12_1714,(ac)^k acdbdf (ec)^k (ef)^k efaeac (af)^k,12,8,4
+NEW_n12_1715,acdbd (ce)^k fef (ae)^k (ab)^k aea (cb)^k c,12,8,4
+NEW_n12_1716,acdb (ac)^k (de)^k dfe (fa)^k faea (bd)^k c,12,8,4
+NEW_n12_1717,a (bd)^k cdb (df)^k dfe (fa)^k faeac (ab)^k,12,8,4
+NEW_n12_1718,ac (db)^k db (df)^k dfe (fa)^k fae (ab)^k ac,12,8,4
+NEW_n12_1719,acdb (dc)^k d (fa)^k fef (ae)^k aeac (ab)^k,12,8,4
+NEW_n12_1720,acdb (ac)^k d (ce)^k (fe)^k fe (fa)^k faeac,12,8,4
+NEW_n12_1721,(ac)^k acdbd (ce)^k (fe)^k fefae (af)^k ac,12,8,4
+NEW_n12_1722,a (cb)^k cdbd (fefe)^k fefaea (cb)^k c,12,8,3
+NEW_n12_1723,ac (db)^k dbdf (eaea)^k efaea (bd)^k c,12,8,3
+NEW_n12_1724,acdbdfef (de)^k (ab)^k (fb)^k (cb)^k aeac,12,8,4
+NEW_n12_1725,a (cb)^k c (ef)^k dbd (fe)^k fef (bc)^k aeac,12,8,4
+NEW_n12_1726,acdb (dc)^k d (fa)^k fefae (af)^k a (cd)^k c,12,8,4
+NEW_n12_1727,acdb (ceae)^k dfefae (abcb)^k ac,12,8,2
+NEW_n12_1728,acdb (ce)^k (ae)^k dfefae (ab)^k (cb)^k ac,12,8,4
+NEW_n12_1729,(ac)^k acdb (df)^k dfe (fd)^k fae (ac)^k ac,12,8,4
+NEW_n12_1730,ac (ab)^k dbdf (eded)^k efae (ab)^k ac,12,8,3
+NEW_n12_1731,(ac)^k ac (df)^k dbdfe (fd)^k f (ac)^k aeac,12,8,4
+NEW_n12_1732,a (bd)^k cdb (df)^k dfefae (af)^k (ab)^k ac,12,8,4
+NEW_n12_1733,a (ce)^k cdbdf (ea)^k e (ab)^k faea (cb)^k c,12,8,4
+NEW_n12_1734,acdbdf (ed)^k e (ab)^k f (ac)^k aeac (af)^k,12,8,4
+NEW_n12_1735,(ab)^k acdb (de)^k dfef (de)^k aeac (ab)^k,12,8,4
+NEW_n12_1736,(ab)^k acdbdf (eded)^k efaeac (ab)^k,12,8,3
+NEW_n12_1737,ac (ab)^k (de)^k dbdfef (de)^k (ab)^k aeac,12,8,4
+NEW_n12_1738,a (cb)^k cdbd (fe)^k fe (fd)^k fae (af)^k ac,12,8,4
+NEW_n12_1739,(ac)^k acdb (de)^k dfefae (af)^k a (bd)^k c,12,8,4
+NEW_n12_1740,ac (db)^k dce (df)^k (af)^k aeafe (ab)^k ab,12,8,4
+NEW_n12_1741,(ac)^k acdceae (dfdf)^k afeab (ac)^k,12,8,3
+NEW_n12_1742,a (cb)^k cdc (ef)^k eae (df)^k (af)^k afeab,12,8,4
+NEW_n12_1743,(ac)^k acdc (df)^k eaeafe (df)^k (ac)^k ab,12,8,4
+NEW_n12_1744,(ac)^k acdcea (fd)^k e (df)^k afe (ac)^k ab,12,8,4
+NEW_n12_1745,ac (ab)^k dcea (eded)^k eafe (ab)^k ab,12,8,3
+NEW_n12_1746,ac (db)^k dceae (afdf)^k afea (bd)^k b,12,8,3
+NEW_n12_1747,(ac)^k acdc (eaed)^k eaeafeab (ac)^k,12,8,3
+NEW_n12_1748,(ac)^k a (ce)^k cdcea (ef)^k eafeab (af)^k,12,8,4
+NEW_n12_1749,ac (db)^k dcea (efbf)^k eafea (bd)^k b,12,8,3
+NEW_n12_1750,(ac)^k acdce (df)^k aea (fd)^k fe (ac)^k ab,12,8,4
+NEW_n12_1751,acdc (bd)^k (ea)^k eaeaf (ea)^k ea (bd)^k b,12,8,4
+NEW_n12_1752,ac (db)^k dc (eaea)^k eaeafea (bd)^k b,12,8,3
+NEW_n12_1753,ac (db)^k dceae (df)^k (af)^k afe (ab)^k ab,12,8,4
+NEW_n12_1754,a (bd)^k cdce (df)^k ae (af)^k afe (ab)^k ab,12,8,4
+NEW_n12_1755,acdc (ed)^k e (ab)^k aeafea (bf)^k (bc)^k b,12,8,4
+NEW_n12_1756,acdc (ed)^k eae (ab)^k (ac)^k (af)^k afeab,12,8,4
+NEW_n12_1757,a (cb)^k cdc (ef)^k e (df)^k (af)^k aeafeab,12,8,4
+NEW_n12_1758,(ac)^k acdce (df)^k a (fd)^k eafeab (ac)^k,12,8,4
+NEW_n12_1759,ac (db)^k dc (efbf)^k eaeafea (bd)^k b,12,8,3
+NEW_n12_1760,a (bd)^k c (df)^k dceaeafeab (af)^k (ab)^k,12,8,4
+NEW_n12_1761,ac (db)^k dce (afdf)^k aeafea (bd)^k b,12,8,3
+NEW_n12_1762,acdc (ed)^k e (ab)^k aeafe (ac)^k ab (af)^k,12,8,4
+NEW_n12_1763,acd (ca)^k (ce)^k cea (ef)^k (af)^k eafeab,12,8,4
+NEW_n12_1764,acdc (ed)^k e (ab)^k afef (ac)^k ac (af)^k b,12,8,4
+NEW_n12_1765,ac (db)^k dcea (fefb)^k fefac (bd)^k b,12,8,3
+NEW_n12_1766,acdcea (fdbd)^k fefac (abaf)^k b,12,8,2
+NEW_n12_1767,ac (db)^k dc (ea)^k eaf (ea)^k efa (bd)^k cb,12,8,4
+NEW_n12_1768,acdc (df)^k ea (fb)^k fef (bc)^k acb (dc)^k,12,8,4
+NEW_n12_1769,a (cb)^k cdc (ef)^k e (df)^k (af)^k afefacb,12,8,4
+NEW_n12_1770,a (cb)^k cdc (ef)^k eafe (fd)^k fac (af)^k b,12,8,4
+NEW_n12_1771,(ac)^k acdc (df)^k eafe (fd)^k f (ac)^k acb,12,8,4
+NEW_n12_1772,acdc (ed)^k e (ab)^k afefa (fb)^k (cb)^k cb,12,8,4
+NEW_n12_1773,a (cb)^k cdc (ef)^k ea (fe)^k fefa (cb)^k cb,12,8,4
+NEW_n12_1774,ac (db)^k dcea (fd)^k fe (fa)^k fac (ba)^k b,12,8,4
+NEW_n12_1775,a (cd)^k cdce (af)^k afe (fa)^k facb (dc)^k,12,8,4
+NEW_n12_1776,ac (db)^k dc (ea)^k eafef (ae)^k ac (bd)^k b,12,8,4
+NEW_n12_1777,acdc (bdfd)^k eafef (afab)^k acb,12,8,2
+NEW_n12_1778,acdc (bd)^k (fd)^k eafe (fa)^k f (ab)^k acb,12,8,4
+NEW_n12_1779,ac (db)^k dceaf (eaea)^k efac (bd)^k b,12,8,3
+NEW_n12_1780,a (bf)^k (bd)^k cdcef (de)^k aefb (fe)^k ac,12,8,4
+NEW_n12_1781,acdc (bd)^k (ea)^k efaef (ea)^k ba (bd)^k c,12,8,4
+NEW_n12_1782,acdc (ef)^k ef (bc)^k aefb (ac)^k a (cd)^k c,12,8,4
+NEW_n12_1783,a (bd)^k c (df)^k dcefaefb (af)^k ac (ab)^k,12,8,4
+NEW_n12_1784,(ab)^k acdcef (dede)^k aef (ba)^k bac,12,8,3
+NEW_n12_1785,(ac)^k ac (de)^k dcefaefb (af)^k a (bd)^k c,12,8,4
+NEW_n12_1786,acdce (cd)^k (fa)^k (ea)^k fae (ab)^k fbac,12,8,4
+NEW_n12_1787,acdce (cd)^k fae (af)^k (ae)^k (ab)^k fbac,12,8,4
+NEW_n12_1788,a (bd)^k cdce (fdfa)^k faefba (bd)^k c,12,8,3
+NEW_n12_1789,ac (db)^k dce (fafd)^k faefbac (db)^k,12,8,3
+NEW_n12_1790,acdc (df)^k efa (bf)^k ef (bc)^k ba (cd)^k c,12,8,4
+NEW_n12_1791,a (cb)^k cdc (ef)^k (df)^k e (fa)^k faefbac,12,8,4
+NEW_n12_1792,acdcef (de)^k (ab)^k ae (fb)^k f (bc)^k bac,12,8,4
+NEW_n12_1793,acd (ce)^k cef (ae)^k ae (ab)^k fba (cb)^k c,12,8,4
+NEW_n12_1794,ac (db)^k dcef (aeae)^k aefbac (db)^k,12,8,3
+NEW_n12_1795,ac (db)^k dce (fd)^k (fa)^k faefbac (ab)^k,12,8,4
+NEW_n12_1796,acdce (cd)^k (fa)^k faefb (af)^k a (cd)^k c,12,8,4
+NEW_n12_1797,a (cd)^k cdce (fa)^k f (ae)^k aef (ba)^k bac,12,8,4
+NEW_n12_1798,acdc (ef)^k ef (bc)^k aefbac (db)^k (ab)^k,12,8,4
+NEW_n12_1799,ac (dbdf)^k dcefaef (bafa)^k bac,12,8,2
+NEW_n12_1800,ac (db)^k (df)^k dcefaefb (af)^k (ab)^k ac,12,8,4
+NEW_n12_1801,ac (db)^k dcefa (efbf)^k efbac (db)^k,12,8,3
+NEW_n12_1802,(ab)^k acdcef (de)^k (ce)^k aefb (fe)^k ac,12,8,4
+NEW_n12_1803,acdce (cd)^k (fa)^k faefb (ae)^k ac (ab)^k,12,8,4
+NEW_n12_1804,acd (ce)^k cefaefb (ae)^k (ab)^k a (cb)^k c,12,8,4
+NEW_n12_1805,a (cb)^k cdc (ef)^k (df)^k e (fa)^k fbfaefe,12,8,4
+NEW_n12_1806,a (cb)^k c (ef)^k dc (ef)^k efbf (bc)^k aefe,12,8,4
+NEW_n12_1807,ac (ab)^k (de)^k dcefbf (de)^k ae (ab)^k fe,12,8,4
+NEW_n12_1808,ac (db)^k dc (df)^k e (fa)^k fbfaef (ba)^k e,12,8,4
+NEW_n12_1809,acdc (df)^k efbfa (cbfb)^k (fd)^k efe,12,8,3
+NEW_n12_1810,ac (dbdf)^k dcefbfae (afab)^k fe,12,8,2
+NEW_n12_1811,ac (db)^k (df)^k dcefbfae (af)^k (ab)^k fe,12,8,4
+NEW_n12_1812,a (cd)^k cdce (fa)^k fbf (ae)^k aef (ba)^k e,12,8,4
+NEW_n12_1813,ac (db)^k dce (fd)^k fb (fa)^k faef (ba)^k e,12,8,4
+NEW_n12_1814,acdc (ef)^k efbf (bc)^k (db)^k ae (ab)^k fe,12,8,4
+NEW_n12_1815,a (cb)^k cdc (ef)^k e (fd)^k fb (fa)^k faefe,12,8,4
+NEW_n12_1816,a (bd)^k cdeacaeae (df)^k (af)^k de (ab)^k,12,8,4
+NEW_n12_1817,(ac)^k a (ce)^k cdeaca (fe)^k fdfd (fa)^k e,12,8,4
+NEW_n12_1818,a (bd)^k cdeaca (fd)^k fd (fa)^k fde (ab)^k,12,8,4
+NEW_n12_1819,a (cb)^k cd (ef)^k ecea (fe)^k fa (bc)^k bae,12,8,4
+NEW_n12_1820,ac (db)^k (df)^k deceafab (af)^k ae (ab)^k,12,8,4
+NEW_n12_1821,acdec (ed)^k e (ab)^k afab (ac)^k ae (af)^k,12,8,4
+NEW_n12_1822,ac (ab)^k (de)^k deceaf (de)^k (ab)^k abae,12,8,4
+NEW_n12_1823,acdecea (fe)^k f (bc)^k ab (ac)^k (dc)^k ae,12,8,4
+NEW_n12_1824,acd (ecea)^k eceafa (babc)^k bae,12,8,2
+NEW_n12_1825,acd (ec)^k (ea)^k eceaf (ab)^k a (bc)^k bae,12,8,4
+NEW_n12_1826,acdecea (ec)^k (ea)^k f (ab)^k a (bc)^k bae,12,8,4
+NEW_n12_1827,ac (db)^k d (ea)^k eceaf (ae)^k a (bd)^k bae,12,8,4
+NEW_n12_1828,(ab)^k ac (de)^k decea (ed)^k f (ab)^k abae,12,8,4
+NEW_n12_1829,acdec (bdfd)^k eaf (afab)^k abae,12,8,2
+NEW_n12_1830,acdec (bd)^k (fd)^k e (af)^k af (ab)^k abae,12,8,4
+NEW_n12_1831,acd (bc)^k (ef)^k eceafa (ef)^k (bc)^k bae,12,8,4
+NEW_n12_1832,(ac)^k a (ce)^k cdecea (fe)^k fabae (af)^k,12,8,4
+NEW_n12_1833,a (cb)^k c (ef)^k decea (fe)^k f (bc)^k abae,12,8,4
+NEW_n12_1834,a (cd)^k cd (fa)^k ece (af)^k afa (cd)^k bae,12,8,4
+NEW_n12_1835,a (bd)^k cd (ea)^k ec (ea)^k eafa (bd)^k bae,12,8,4
+NEW_n12_1836,a (bd)^k c (df)^k deceafabae (af)^k (ab)^k,12,8,4
+NEW_n12_1837,acdeceaf (de)^k (ab)^k (fb)^k (cb)^k abae,12,8,4
+NEW_n12_1838,ac (db)^k dec (df)^k (af)^k eafabae (ab)^k,12,8,4
+NEW_n12_1839,acdecea (fd)^k fa (bf)^k (bc)^k b (dc)^k ae,12,8,4
+NEW_n12_1840,(ac)^k ac (df)^k decea (fd)^k f (ac)^k abae,12,8,4
+NEW_n12_1841,acdec (ed)^k e (ab)^k af (ab)^k aba (ed)^k e,12,8,4
+NEW_n12_1842,acdece (df)^k (ac)^k afab (ac)^k a (fd)^k e,12,8,4
+NEW_n12_1843,acd (bc)^k ecea (fefe)^k fabf (bc)^k b,12,8,3
+NEW_n12_1844,ac (ab)^k dec (ed)^k (fd)^k eafabfb (dc)^k,12,8,4
+NEW_n12_1845,a (cb)^k c (ef)^k decea (fe)^k f (bc)^k abfb,12,8,4
+NEW_n12_1846,acdec (bdfd)^k eaf (afab)^k abfb,12,8,2
+NEW_n12_1847,acdec (bd)^k (fd)^k e (af)^k af (ab)^k abfb,12,8,4
+NEW_n12_1848,a (bd)^k cdec (eaea)^k eafabf (bd)^k b,12,8,3
+NEW_n12_1849,ac (ab)^k dec (ed)^k eaf (de)^k abf (ba)^k b,12,8,4
+NEW_n12_1850,a (bd)^k cd (ea)^k ec (ea)^k eafa (bd)^k bfb,12,8,4
+NEW_n12_1851,a (cb)^k cd (ef)^k ecea (fe)^k fa (bc)^k bfb,12,8,4
+NEW_n12_1852,(ab)^k ac (de)^k decea (ed)^k f (ab)^k abfb,12,8,4
+NEW_n12_1853,a (bd)^k cdece (afdf)^k afabf (bd)^k b,12,8,3
+NEW_n12_1854,a (bd)^k cdec (efbf)^k eafabf (bd)^k b,12,8,3
+NEW_n12_1855,ac (ab)^k (de)^k deceaf (de)^k (ab)^k abfb,12,8,4
+NEW_n12_1856,acdec (ea)^k eaf (bcec)^k abfb (ae)^k,12,8,3
+NEW_n12_1857,acdec (ef)^k eaf (bcbc)^k abfb (fe)^k,12,8,3
+NEW_n12_1858,acd (bc)^k (ef)^k eceafa (ef)^k (bc)^k bfb,12,8,4
+NEW_n12_1859,a (cd)^k cd (fa)^k ece (af)^k afa (cd)^k bfb,12,8,4
+NEW_n12_1860,acdec (ed)^k e (ab)^k afa (bf)^k bf (bc)^k b,12,8,4
+NEW_n12_1861,(ab)^k acdec (ed)^k ea (ed)^k fabf (ba)^k b,12,8,4
+NEW_n12_1862,a (cb)^k cdec (ef)^k ea (fe)^k fabf (bc)^k b,12,8,4
+NEW_n12_1863,ac (db)^k d (ea)^k eceaf (ae)^k a (bd)^k bfb,12,8,4
+NEW_n12_1864,(ac)^k ac (df)^k decea (fd)^k f (ac)^k abfb,12,8,4
+NEW_n12_1865,a (bd)^k cdece (df)^k (af)^k afabf (ba)^k b,12,8,4
+NEW_n12_1866,(ac)^k acde (fd)^k cea (fd)^k fab (ca)^k fb,12,8,4
+NEW_n12_1867,(ac)^k acdec (df)^k ea (fd)^k fabf (ac)^k b,12,8,4
+NEW_n12_1868,(ac)^k acdece (df)^k a (fd)^k fabfb (ac)^k,12,8,4
+NEW_n12_1869,(ac)^k acdec (eaed)^k eafabfb (ac)^k,12,8,3
+NEW_n12_1870,ac (db)^k dec (ea)^k eaf (ae)^k abf (bd)^k b,12,8,4
+NEW_n12_1871,ac (db)^k de (fd)^k ceafab (fa)^k f (ba)^k b,12,8,4
+NEW_n12_1872,acd (ecea)^k eceafa (babc)^k bfb,12,8,2
+NEW_n12_1873,acd (ec)^k (ea)^k eceaf (ab)^k a (bc)^k bfb,12,8,4
+NEW_n12_1874,acdecea (ec)^k (ea)^k f (ab)^k a (bc)^k bfb,12,8,4
+NEW_n12_1875,a (cd)^k cdece (afaf)^k afabfb (dc)^k,12,8,3
+NEW_n12_1876,acdeceaf (de)^k (ab)^k (fb)^k (cb)^k abfb,12,8,4
+NEW_n12_1877,(ab)^k acdec (ed)^k e (df)^k afabfb (dc)^k,12,8,4
+NEW_n12_1878,acd (ecea)^k edfbaf (babc)^k acb,12,8,2
+NEW_n12_1879,acd (ec)^k (ea)^k edfbaf (ba)^k (bc)^k acb,12,8,4
+NEW_n12_1880,acded (fa)^k fba (cd)^k f (dc)^k acb (af)^k,12,8,4
+NEW_n12_1881,a (cb)^k cd (fe)^k (fd)^k edfbafacb (af)^k,12,8,4
+NEW_n12_1882,acdedf (ea)^k (bd)^k bafac (bd)^k b (ae)^k,12,8,4
+NEW_n12_1883,acded (fe)^k f (bc)^k bafacb (ac)^k (dc)^k,12,8,4
+NEW_n12_1884,a (cd)^k cded (fa)^k fb (ae)^k af (ab)^k acb,12,8,4
+NEW_n12_1885,a (cb)^k cd (ef)^k edfb (fe)^k af (bc)^k acb,12,8,4
+NEW_n12_1886,a (bd)^k cded (fbfe)^k fbafac (bd)^k b,12,8,3
+NEW_n12_1887,acded (fe)^k f (bc)^k bafac (bd)^k (ba)^k b,12,8,4
+NEW_n12_1888,a (ce)^k cd (ea)^k edfbaf (ba)^k (cb)^k acb,12,8,4
+NEW_n12_1889,acded (fe)^k f (bc)^k bafa (cb)^k cb (fe)^k,12,8,4
+NEW_n12_1890,a (bd)^k cdedf (ea)^k b (ae)^k afac (bd)^k b,12,8,4
+NEW_n12_1891,ac (db)^k dedf (ea)^k baf (ae)^k ac (bd)^k b,12,8,4
+NEW_n12_1892,acded (fa)^k fb (dc)^k afa (cd)^k cb (af)^k,12,8,4
+NEW_n12_1893,acded (ea)^k f (bd)^k bafa (bd)^k cb (ae)^k,12,8,4
+NEW_n12_1894,acd (ec)^k edfb (ae)^k af (ab)^k a (cb)^k cb,12,8,4
+NEW_n12_1895,a (bd)^k cded (ea)^k fb (ae)^k afa (bd)^k cb,12,8,4
+NEW_n12_1896,a (cd)^k cded (fa)^k fbf (ae)^k (ab)^k abac,12,8,4
+NEW_n12_1897,ac (df)^k ded (fb)^k fbf (bc)^k aba (cd)^k c,12,8,4
+NEW_n12_1898,a (bd)^k cdedf (ea)^k b (ae)^k fabac (db)^k,12,8,4
+NEW_n12_1899,a (cb)^k cded (fe)^k fb (fe)^k faba (cb)^k c,12,8,4
+NEW_n12_1900,acded (fe)^k f (bc)^k bfa (bd)^k (ba)^k bac,12,8,4
+NEW_n12_1901,(ac)^k acde (df)^k dfb (fd)^k fab (ac)^k ac,12,8,4
+NEW_n12_1902,(ac)^k ac (df)^k dedfb (fd)^k f (ac)^k abac,12,8,4
+NEW_n12_1903,(ac)^k acded (ce)^k fb (fe)^k fab (af)^k ac,12,8,4
+NEW_n12_1904,ac (db)^k d (ea)^k edfbf (ae)^k a (bd)^k bac,12,8,4
+NEW_n12_1905,acdedfbf (de)^k (ab)^k (fb)^k (cb)^k abac,12,8,4
+NEW_n12_1906,ac (db)^k (df)^k dedfb (fa)^k fabac (ab)^k,12,8,4
+NEW_n12_1907,a (ce)^k cdedf (ea)^k (ba)^k bfaba (cb)^k c,12,8,4
+NEW_n12_1908,ac (db)^k ded (ea)^k fbf (ae)^k aba (bd)^k c,12,8,4
+NEW_n12_1909,ac (db)^k de (df)^k dfb (fa)^k f (ab)^k abac,12,8,4
+NEW_n12_1910,a (cd)^k cded (fa)^k fb (fa)^k faba (cd)^k c,12,8,4
+NEW_n12_1911,a (cb)^k c (ef)^k dedfb (fe)^k f (bc)^k abac,12,8,4
+NEW_n12_1912,acdedf (ea)^k (bd)^k bfabac (db)^k (ae)^k,12,8,4
+NEW_n12_1913,a (bd)^k cded (fbfe)^k fbfabac (db)^k,12,8,3
+NEW_n12_1914,acded (fe)^k f (bc)^k bfabac (db)^k (ab)^k,12,8,4
+NEW_n12_1915,acded (ce)^k fbf (ae)^k (ab)^k aba (cb)^k c,12,8,4
+NEW_n12_1916,acdedfb (fd)^k fa (bf)^k (bc)^k b (dc)^k ac,12,8,4
+NEW_n12_1917,a (cd)^k cd (fa)^k edfb (fa)^k fa (cd)^k bac,12,8,4
+NEW_n12_1918,acd (bc)^k (ef)^k edfbfa (ef)^k (bc)^k bac,12,8,4
+NEW_n12_1919,a (cb)^k cd (ef)^k edfb (fe)^k fa (bc)^k bac,12,8,4
+NEW_n12_1920,(ac)^k ac (de)^k dedfb (fa)^k fabac (db)^k,12,8,4
+NEW_n12_1921,a (cb)^k cd (fe)^k (fd)^k edfbfabac (af)^k,12,8,4
+NEW_n12_1922,a (cb)^k cded (fe)^k fb (fd)^k fab (af)^k ac,12,8,4
+NEW_n12_1923,ac (db)^k dedf (ea)^k b (ae)^k faba (bd)^k c,12,8,4
+NEW_n12_1924,acded (fe)^k f (bc)^k bfab (ac)^k a (cd)^k c,12,8,4
+NEW_n12_1925,ac (ab)^k (de)^k dedfbf (de)^k (ab)^k abac,12,8,4
+NEW_n12_1926,a (bd)^k cde (df)^k dfb (fa)^k fabac (ab)^k,12,8,4
+NEW_n12_1927,a (bd)^k cded (ea)^k fbf (ae)^k abac (db)^k,12,8,4
+NEW_n12_1928,acdedfb (fe)^k f (bc)^k ab (ac)^k (dc)^k ac,12,8,4
+NEW_n12_1929,acd (ecea)^k edfbfa (babc)^k bac,12,8,2
+NEW_n12_1930,acd (ec)^k (ea)^k edfbf (ab)^k a (bc)^k bac,12,8,4
+NEW_n12_1931,ac (db)^k ded (fbfe)^k fbfaba (bd)^k c,12,8,3
+NEW_n12_1932,a (cd)^k cde (af)^k dfb (fa)^k fab (dc)^k ac,12,8,4
+NEW_n12_1933,acd (ec)^k (ea)^k fde (ab)^k abfbd (bc)^k b,12,8,4
+NEW_n12_1934,a (bd)^k cdfd (ea)^k eabf (ea)^k (bd)^k bdb,12,8,4
+NEW_n12_1935,a (cd)^k cdfde (af)^k abf (ea)^k (ba)^k bdb,12,8,4
+NEW_n12_1936,a (cd)^k cdfde (af)^k (ae)^k (ab)^k abfbdb,12,8,4
+NEW_n12_1937,(ab)^k acdf (dede)^k de (ab)^k abfbdb,12,8,3
+NEW_n12_1938,acdfdea (ef)^k (bc)^k bf (bd)^k bd (ba)^k b,12,8,4
+NEW_n12_1939,a (bd)^k cdf (ae)^k d (ea)^k ea (bd)^k bfbdb,12,8,4
+NEW_n12_1940,a (cb)^k c (ef)^k dfdea (ef)^k (bc)^k bfbdb,12,8,4
+NEW_n12_1941,acdf (db)^k de (df)^k abfb (af)^k (ab)^k db,12,8,4
+NEW_n12_1942,acd (ecea)^k fdeabf (babc)^k bdb,12,8,2
+NEW_n12_1943,acd (ec)^k (ea)^k fdeabf (ba)^k (bc)^k bdb,12,8,4
+NEW_n12_1944,acdfdea (ef)^k (bc)^k bfbdb (ac)^k (dc)^k,12,8,4
+NEW_n12_1945,acdfdea (ef)^k (bc)^k bfb (ac)^k (dc)^k db,12,8,4
+NEW_n12_1946,acdfd (ec)^k (ea)^k e (ab)^k abf (bc)^k bdb,12,8,4
+NEW_n12_1947,acdfd (ef)^k ea (bc)^k (bd)^k bf (ba)^k bdb,12,8,4
+NEW_n12_1948,(ac)^k acdf (de)^k d (fa)^k ea (bd)^k bfbdb,12,8,4
+NEW_n12_1949,acdf (de)^k de (ab)^k a (bf)^k bf (bc)^k bdb,12,8,4
+NEW_n12_1950,a (bd)^k cdfd (efbf)^k efbabc (bd)^k b,12,8,3
+NEW_n12_1951,acdf (dc)^k defb (afaf)^k abcb (dc)^k,12,8,3
+NEW_n12_1952,acdf (de)^k de (ab)^k fba (bf)^k (bc)^k bcb,12,8,4
+NEW_n12_1953,acdfd (ec)^k (ea)^k e (ab)^k fba (bc)^k bcb,12,8,4
+NEW_n12_1954,a (cd)^k cdfde (af)^k (ae)^k (ab)^k fbabcb,12,8,4
+NEW_n12_1955,a (bd)^k cdfd (fdfa)^k efbabc (bd)^k b,12,8,3
+NEW_n12_1956,(ac)^k acdf (de)^k defb (af)^k a (bd)^k bcb,12,8,4
+NEW_n12_1957,acdfd (ef)^k ef (bc)^k babc (bd)^k (ba)^k b,12,8,4
+NEW_n12_1958,a (bd)^k cdfdef (ea)^k b (ae)^k abc (bd)^k b,12,8,4
+NEW_n12_1959,a (bd)^k cdfd (ea)^k efb (ae)^k a (bd)^k bcb,12,8,4
+NEW_n12_1960,acdfd (ef)^k ef (bc)^k babcb (ac)^k (dc)^k,12,8,4
+NEW_n12_1961,a (cd)^k cd (fa)^k fdefb (af)^k a (cd)^k bcb,12,8,4
+NEW_n12_1962,(ab)^k acdf (dede)^k de (ab)^k fbabcb,12,8,3
+NEW_n12_1963,a (bd)^k cdfd (eaea)^k efbabc (bd)^k b,12,8,3
+NEW_n12_1964,acd (ecea)^k fdefba (babc)^k bcb,12,8,2
+NEW_n12_1965,acd (ec)^k (ea)^k fdef (ba)^k ba (bc)^k bcb,12,8,4
+NEW_n12_1966,acecbdfe (cd)^k (fa)^k (ea)^k (ba)^k fafe,12,8,4
+NEW_n12_1967,acecb (acec)^k dfe (fefa)^k fafe,12,8,2
+NEW_n12_1968,acecb (ac)^k (ec)^k d (fe)^k fe (fa)^k fafe,12,8,4
+NEW_n12_1969,(ac)^k acecbd (fece)^k fefafe (ac)^k,12,8,3
+NEW_n12_1970,acecbdf (ec)^k ef (ae)^k (ab)^k a (cb)^k fe,12,8,4
+NEW_n12_1971,(ab)^k ac (ed)^k ecbdf (ed)^k ef (ab)^k afe,12,8,4
+NEW_n12_1972,a (bfbd)^k cecbd (fede)^k fefafe,12,8,2
+NEW_n12_1973,a (bf)^k (bd)^k cecbdf (ed)^k (ef)^k efafe,12,8,4
+NEW_n12_1974,(ac)^k acecb (dfdf)^k dfefafe (ac)^k,12,8,3
+NEW_n12_1975,(ac)^k acecb (deae)^k dfefafe (ac)^k,12,8,3
+NEW_n12_1976,a (cb)^k c (ef)^k ecbd (fe)^k fef (bc)^k afe,12,8,4
+NEW_n12_1977,acec (bdfd)^k bdfef (afab)^k afe,12,8,2
+NEW_n12_1978,acec (bd)^k (fd)^k bdfe (fa)^k f (ab)^k afe,12,8,4
+NEW_n12_1979,acecbdf (db)^k (df)^k e (fa)^k f (ab)^k afe,12,8,4
+NEW_n12_1980,acecbdf (ed)^k e (ab)^k fa (fb)^k (cb)^k fe,12,8,4
+NEW_n12_1981,acec (de)^k de (ab)^k afbfa (bf)^k (bc)^k b,12,8,4
+NEW_n12_1982,a (cb)^k c (ef)^k ecdea (fe)^k f (bc)^k bfab,12,8,4
+NEW_n12_1983,(acec)^k acecdeafb (fefa)^k fab,12,8,2
+NEW_n12_1984,(ac)^k (ec)^k acecdeafb (fe)^k (fa)^k fab,12,8,4
+NEW_n12_1985,ace (ca)^k (ce)^k cdeafb (fe)^k (fa)^k fab,12,8,4
+NEW_n12_1986,a (cb)^k cec (ef)^k dea (fe)^k fbf (bc)^k ab,12,8,4
+NEW_n12_1987,a (bd)^k cecd (efbf)^k eafbfa (bd)^k b,12,8,3
+NEW_n12_1988,(ab)^k acec (de)^k (df)^k deafbfa (cd)^k b,12,8,4
+NEW_n12_1989,(ac)^k acec (dfdf)^k deafbfab (ac)^k,12,8,3
+NEW_n12_1990,acec (df)^k dea (fb)^k f (bc)^k bfab (dc)^k,12,8,4
+NEW_n12_1991,ac (dbdf)^k ecdeafbf (afab)^k ab,12,8,2
+NEW_n12_1992,ac (db)^k (df)^k ecdeafb (fa)^k f (ab)^k ab,12,8,4
+NEW_n12_1993,a (cd)^k cecde (afaf)^k afbfab (dc)^k,12,8,3
+NEW_n12_1994,(ac)^k acec (df)^k dea (fd)^k fbf (ac)^k ab,12,8,4
+NEW_n12_1995,a (bd)^k c (ea)^k ecd (ea)^k eaf (bd)^k bfab,12,8,4
+NEW_n12_1996,ace (cd)^k cde (af)^k afb (fa)^k fab (dc)^k,12,8,4
+NEW_n12_1997,acecdea (fd)^k (fb)^k f (bc)^k bfa (cd)^k b,12,8,4
+NEW_n12_1998,a (cd)^k cecd (fa)^k e (af)^k afbfa (cd)^k b,12,8,4
+NEW_n12_1999,(ac)^k acec (ecef)^k deafbfab (ac)^k,12,8,3
+NEW_n12_2000,(ac)^k acec (deae)^k deafbfab (ac)^k,12,8,3
+NEW_n12_2001,a (bd)^k cecde (afdf)^k afbfa (bd)^k b,12,8,3
+NEW_n12_2002,ace (cd)^k cd (fa)^k eaf (ea)^k (ba)^k bfab,12,8,4
+NEW_n12_2003,acecdea (fe)^k f (bc)^k b (ca)^k fa (cd)^k b,12,8,4
+NEW_n12_2004,acec (df)^k (bf)^k deafbf (bc)^k (dc)^k ab,12,8,4
+NEW_n12_2005,acec (db)^k d (ea)^k eafbf (ae)^k a (bd)^k b,12,8,4
+NEW_n12_2006,ac (bd)^k ecd (ea)^k eaf (ea)^k bfa (bd)^k b,12,8,4
+NEW_n12_2007,(ab)^k ac (ed)^k ecdea (ed)^k f (ba)^k bfab,12,8,4
+NEW_n12_2008,ace (cd)^k cde (af)^k afbf (ae)^k (ab)^k ab,12,8,4
+NEW_n12_2009,(ab)^k acec (de)^k dea (ed)^k fbf (ab)^k ab,12,8,4
+NEW_n12_2010,a (bd)^k cecd (fdfa)^k eafbfa (bd)^k b,12,8,3
+NEW_n12_2011,a (bd)^k cecd (eaea)^k eafbfa (bd)^k b,12,8,3
+NEW_n12_2012,ace (cd)^k cd (fa)^k eafb (fa)^k fa (cd)^k b,12,8,4
+NEW_n12_2013,(ac)^k acecde (df)^k a (fd)^k fbfab (ac)^k,12,8,4
+NEW_n12_2014,ac (bd)^k (ea)^k ecdeaf (ea)^k (bd)^k bfab,12,8,4
+NEW_n12_2015,(ab)^k acec (de)^k de (df)^k afbfab (dc)^k,12,8,4
+NEW_n12_2016,a (cb)^k cecd (ef)^k ea (fe)^k fbfa (bc)^k b,12,8,4
+NEW_n12_2017,a (bd)^k cecde (df)^k (af)^k afbf (ab)^k ab,12,8,4
+NEW_n12_2018,acec (de)^k de (ab)^k afbf (ac)^k ab (af)^k,12,8,4
+NEW_n12_2019,a (cb)^k cecd (fe)^k (df)^k (af)^k eafbfab,12,8,4
+NEW_n12_2020,ace (cd)^k cd (fa)^k ef (ae)^k (ab)^k abafb,12,8,4
+NEW_n12_2021,a (cb)^k cecd (ef)^k efa (ef)^k baf (bc)^k b,12,8,4
+NEW_n12_2022,ac (bd)^k ecd (ea)^k ef (ae)^k abaf (bd)^k b,12,8,4
+NEW_n12_2023,acecdef (de)^k (ab)^k aba (fb)^k (cb)^k fb,12,8,4
+NEW_n12_2024,acec (df)^k defa (bf)^k (bc)^k bafb (dc)^k,12,8,4
+NEW_n12_2025,acec (db)^k def (ae)^k ab (ae)^k af (bd)^k b,12,8,4
+NEW_n12_2026,a (cb)^k cecd (fe)^k (df)^k (af)^k efabafb,12,8,4
+NEW_n12_2027,a (cb)^k c (ef)^k ecdefa (ef)^k (bc)^k bafb,12,8,4
+NEW_n12_2028,a (bd)^k cecd (fdfa)^k efabaf (bd)^k b,12,8,3
+NEW_n12_2029,ace (cd)^k cde (fa)^k fab (af)^k afb (dc)^k,12,8,4
+NEW_n12_2030,acec (de)^k de (ab)^k fab (ac)^k (af)^k afb,12,8,4
+NEW_n12_2031,acec (de)^k de (ab)^k faba (fb)^k f (bc)^k b,12,8,4
+NEW_n12_2032,a (bd)^k cecd (eaea)^k efabaf (bd)^k b,12,8,3
+NEW_n12_2033,(ac)^k acec (deae)^k defabafb (ac)^k,12,8,3
+NEW_n12_2034,a (bd)^k cecd (efbf)^k efabaf (bd)^k b,12,8,3
+NEW_n12_2035,a (bd)^k c (ea)^k ecd (ea)^k efa (bd)^k bafb,12,8,4
+NEW_n12_2036,acec (db)^k d (ea)^k efabaf (ea)^k (bd)^k b,12,8,4
+NEW_n12_2037,(ac)^k acec (ecef)^k defabafb (ac)^k,12,8,3
+NEW_n12_2038,(ac)^k acec (dfdf)^k defabafb (ac)^k,12,8,3
+NEW_n12_2039,ac (bd)^k (ea)^k ecdef (ae)^k a (bd)^k bafb,12,8,4
+NEW_n12_2040,ace (cd)^k cd (fa)^k (ea)^k fae (ab)^k acae,12,8,4
+NEW_n12_2041,ace (cd)^k cdfae (af)^k (ae)^k (ab)^k acae,12,8,4
+NEW_n12_2042,a (cb)^k cec (ef)^k dfa (fd)^k eacae (af)^k,12,8,4
+NEW_n12_2043,acecdfa (ec)^k (ea)^k eac (ab)^k (cb)^k ae,12,8,4
+NEW_n12_2044,a (cb)^k cec (ef)^k dfae (df)^k ac (af)^k ae,12,8,4
+NEW_n12_2045,ace (cd)^k cd (fa)^k f (ae)^k aeac (ab)^k ae,12,8,4
+NEW_n12_2046,acec (de)^k df (ab)^k ae (ac)^k ac (af)^k ae,12,8,4
+NEW_n12_2047,ac (db)^k (df)^k ecdfae (af)^k ac (ab)^k ae,12,8,4
+NEW_n12_2048,acec (db)^k (df)^k d (fa)^k faeac (ab)^k ae,12,8,4
+NEW_n12_2049,acec (dbdf)^k dfae (afab)^k acae,12,8,2
+NEW_n12_2050,acec (db)^k (df)^k dfae (af)^k (ab)^k acae,12,8,4
+NEW_n12_2051,acecdf (de)^k (ab)^k ae (ac)^k acae (af)^k,12,8,4

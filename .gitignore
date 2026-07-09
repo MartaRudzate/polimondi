@@ -9,7 +9,7 @@ polyforms/tests/*.txt
 polyforms/dist/
 **/.ipynb_checkpoints/
 source-material/
-docs/polimondi
+docs/polimondi/perfect*.txt
 konstrukcijas/aaa
 konstrukcijas/bbb
 konstrukcijas/ccc
@@ -20,7 +20,12 @@ konstrukcijas/ccc
 source-data/
 docs/obtuse_new/obtuse_48.txt
 papers/bw-problem/*
+papers/2026-03-20/*
+*.bcf
+*.toc
+*.run.xml
 
+scripts/sequences/out/*
 papers/2024-02-14/*.pdf
 sources/*.pdf
 sources/subdir/*.pdf

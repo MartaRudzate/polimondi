@@ -1,0 +1,1165 @@
+\documentclass[utf8]{ludis2022}
+
+
+%%% Info Dokumenta pirmajai & dokumentārajai lapai
+\fakultate{Eksakto zinātņu un tehnoloģiju}
+\katedra{Matemātikas nodaļa}
+\nosaukums{Perfekto polimondu eksistence}
+\darbaveids{Bakalaura} %dokumentarajai lapai
+\DARBAVEIDS{KURSA DARBS} 
+\autors{Marta Rudzāte}
+\studapl{mr18118}
+\vaditajs{prof. Dr. math. Andrejs Cibulis}
+% ???
+\recenzents{...}
+\vieta{Rīga}
+\gads{2025}
+
+%%% Valodu atbalsts ir stila failā, kur galvenā valoda - latviešu, bet te var pievienot papildu valodas
+\setotherlanguages{english}
+
+%%% Darbam noderīgas pakas
+\usepackage[table,xcdraw]{xcolor} %Ja lieto krāsu tekstu
+%\usepackage{mathtools}
+\sloppy %Neļauj formulām iziet ārpus paragrāfa
+\usepackage{float}
+
+\usepackage{comment}
+\usepackage{fancyvrb}
+% Bibliogrāfijai:
+\usepackage[style=trad-plain, maxbibnames=99]{biblatex} %Imports biblatex package
+% Savieno autorus litertūras sarakstā
+\DeclareDelimFormat{finalnamedelim}{\addspace un\space}
+%\bibliographystyle{plain}
+\addbibresource{litsaraksts.bib} 
+% tabulas hline thickness
+\usepackage{makecell}
+
+ 
+%%% Te var pievienot matemātisko operatoru saīsnes
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+\usepackage{hyperref} 
+
+\begin{document}
+\maketitle
+\newpage
+
+
+
+\section*{Anotācija}
+
+\firstparskip Darbs veltīts perfektu polimondu izpētei, galvenokārt apskatot eksistences jautājumu. Līdz šim eksistence perfektiem polimondiem ar nepāra malu skaitu ir ļoti maz aprakstīta, tāpēc tiek uzrādītas vairākas konstrukcijas šiem polimondiem. Šīs konstrukcijas ir aprakstītas ar paralēlām bezkonteksta gramatikām. Darba gaitā arī tika izveidotas datorprogrammas, kas spēj atrast visus perfektos polimondus dotam malu skaitam. 
+
+\vspace{0.5cm}
+\textbf{Atslēgas vārdi:} izogoni, goligoni, polimino, polimondi, bezkonteksta gramatika, paralēlā bezkonteksta gramatika.
+
+\vspace{0.25cm}
+\textbf{Keywords:} isogons, golygons, polyomino, polyiamonds, context-free grammar, parallel context-free grammar.
+
+\begin{comment}
+    
+\vspace{40pt}
+
+\section*{Abstract}
+\begin{english}
+English abstracts
+
+\vspace{0.5cm}
+\textbf{Keywords:} .
+\end{english}
+
+\end{comment}
+
+\newpage
+
+
+\renewcommand{\contentsname}{Satura rādītājs}
+\tableofcontents
+
+\newpage
+\specnodala{Definīcijas}
+
+{\bf{1. definīcija.}} Par polimino (angl. {\em polyomino}) sauc plaknes figūru, kas sastāv no vienības kvadrātiem, kuri pievienoti 
+viens otram pa vesela garuma malām.
+
+\vspace{10pt}
+
+\noindent
+{\bf{2. definīcija.}} Par polimondu (angl. {\em polyiamond}) sauc plaknes figūru, kas sastāv no regulāriem vienības trijstūriem, 
+kuri pievienoti viens otram pa vesela garuma malām.
+
+\vspace{10pt}
+
+\noindent
+{\bf{3. definīcija.}} Ja daudzstūra (polimino vai polimonda) visi malu garumi, sākot ar vienu virsotni, iet 
+pēc kārtas augošā secībā no $1$ līdz $n$, tad tādu daudzstūri sauc par perfektu.
+
+\vspace{10pt}
+\noindent
+{\bf{4. definīcija.}} Par 90 grādu secīgu
+izogonu (angl. {\em serial isogon of 90 degrees}) sauc daudzstūri, kurš satur tikai taisnus leņķus, un kura malu garumi, sākot no kādas virsotnes, ir naturāli skaitļi augošā secībā no $1$ līdz $n$. Šādu daudzstūri sauc arī par goligonu (angl. {\em golygon}).
+
+
+
+
+
+
+\begin{comment}
+    
+\begin{definicija} $n$-stūru polimino ir slēgta lauzta līnija, kas sastāv no $n$ posmiem. Šie posmi viens otru nekrusto un nepieskaras. Polimino virsotnes atrodas kvadrātu režģa punktos, bet tā malas iet pa kvadrātu režģa līnijām. \end{definicija}
+
+\begin{definicija} $n$-stūru polimino sauc par perfektu, ja tā visu malu garumi ir dažādi un veido secību no $1$ līdz $n$. \end{definicija}
+
+\begin{definicija} $n$-stūru polimonds ir slēgta lauzta līnija, kas sastāv no $n$ posmiem, kuri viens otru nekrusto un nepieskaras. Polimonda virsotnes atrodas trijstūru režģa punktos, un tā malas iet pa trijstūru režģa līnijām. \end{definicija}
+
+\begin{definicija} $n$-stūru polimondu sauc par perfektu, ja tā visu malu garumi ir dažādi un veido secību no $1$ līdz $n$. \end{definicija}
+
+
+\end{comment}
+
+\newpage
+\specnodala{Ievads}
+
+\firstparskip Kursa darbā tiek aplūkoti perfektie polimondi, par kuriem zinātniskajā literatūrā ir pieejama ļoti ierobežota informācija. 1988. gadā Lī Salovs ({\em Lee Sallows}) definēja $90$ grādu secīgu izogonu. Visi polimino ir arī izogoni, tomēr ne visi izogoni ir polimino. Polimino klasē tiek pētīti vairāki saturīgi uzdevumi, kādu nav izogonu klasē, piemēram, jautājums par maksimālo un minimālo laukumu, kā arī, vai ar polimino ir iespējams pārklāt plakni. 
+
+Pirmais jautājums, kurš rodas pēc perfektu polimino un polimondu definēšanas, ir to eksistence jebkuram malu skaitam. Atbildi uz šo jautājumu ir daļēji devuši Lī Salovs kopā ar Martinu Garneru ({\em Martin Gardner}), uzrādot konstrukciju perfektiem polimino. Latvijas Universitātes pasniedzēja Elīna Buliņa savā bakalaura un maģistra darbā ir uzrādījusi konstrukcijas perfektiem polimondiem, kuru malu skaitu var izteikt ar $8k$ un $8k-2$. Perfektu polimondu konstrukcija katram pāra malu skaitam $n \geq 6$ ir atrodama rakstā \cite{cibulis_bulina}.
+
+Darba mērķis ir pierādīt eksistenci perfektiem polimondiem ar nepāra malu skaitu $n\geq 5$. Mērķa sasniegšanai tika izvirzīti šādi darba uzdevumi:
+
+\vspace{-15pt}
+\begin{enumerate}
+\item iepazīties ar literatūru, kas pieejama par perfektiem polimino un polimondiem;
+\vspace{-10pt}
+\item uzrakstīt datorprogrammu, kas izveido visus perfektos polimondus dotam malu skaitam;
+\vspace{-10pt}
+\item atrast konstrukcijas, kas veido perfektos polimondus;
+\vspace{-10pt}
+\item aprakstīt konstrukcijas ar bezkonteksta un paralēlām bezkonteksta gramatikām;
+\vspace{-10pt}
+\item pierādīt konstrukciju korektumu. 
+\end{enumerate}
+
+\vspace{-10pt}
+Darbs sastāv no trīs nodaļām, definīciju saraksta un diviem pielikumiem. Pirmā nodaļa veltīta pāra skaita malu figūrām: izogoniem, polimino un polimondiem. Otrā nodaļa veltīta polimondu aprakstīšanai ar bezkonteksta gramatikām, bet trešā nodaļa -- polimondu aprakstīšanai ar paralēlām bezkonteksta gramatikām. Darbā iekļauta $1$ tabula, $23$ attēli, $2$ pielikumi un $8$ literatūras avoti.
+
+
+
+
+
+
+
+
+\newpage \section{Pāra skaita malu figūras}
+
+\subsection{Izogoni un goligoni}
+
+\firstparskip Rakstā \cite{sallows1991serial} L. Salovs definēja $90$ grādu secīgu izogonu kā ceļu, kurš sākas ar vienu garuma vie\-nī\-bu, pēc tam pagriežas $90°$ jebkurā virzienā un iet divas vienības uz priekšu, tad atkal pagriežas $90°$ jebkurā virzienā un tagad jau iet trīs vienības uz priekšu, un tā tālāk. Beigās ir jāatgriežas sākumpunktā, veidojot taisnu leņķi ar pirmo posmu. Izogonam ir atļauts sevi krustot, pieskarties stūros un pārklāties posmos. Šajā rakstā ir arī aprakstītas un pamatotas vairākas interesantas lietas par šiem izogoniem.
+
+Algebriski ir pamatots, ka $90°$ secīgam izogonam malu skaitam ir jābūt $8k$, kur $k\geq 1$. To pašu M. Gārners pamato vizuāli ar specifiski iekrāsotu rūtiņu režģi. Metodes ideju var redzēt \ref{fig:8k_visual}. attēlā, kur jau ir iezīmēts izogons ar $8$ malām. Izogona ceļš jāsāk horizontāli no iekrāsotas rūtiņas. Izogons atkārtoti (virziena izvēles brīdī) nokļūs iekrāsotā rūtiņā, kas ir vertikāli sākuma iekrāsotajai rūtiņai, tad un tikai tad, ja malu skaits dalīsies ar $8$. Lai pamatotu, ka katram malu skaitam $8k$ eksistē izogons, ir dota konstrukcija. Šī konstrukcija sevi vienmēr krustos, kad \linebreak $k>1$. Bet ir dota arī otra konstrukcija, kas veido polimino: Pirmajos $N/4$ posmos iet tikai austrumu un ziemeļu virzienā (pirmajā posmā iet uz austrumiem), tad nākamajos $N/2$ posmos iet tikai rietumu un dienvidu virzienā, atlikušos $N/4$ posmos atkal iet tikai austrumu un ziemeļu virzienā. \ref{fig:8k_visual}. attēlā ir iezīmēts polimonds, kurš atbilst šai konstrukcijai, kad $N=8$, bet \ref{fig:polimino}. attēlā, kad $N=16$.
+
+
+\begin{figure}[H]
+\center
+\includegraphics[width=7cm]{attēli/8k_grid_vizual.png}
+\caption{Iekrāsots rūtiņu režģis ar izogonu}\label{fig:8k_visual}
+\end{figure}
+
+Donands Knuts ({\em Donald Knuth}) šajā pašā rakstā ir devis procedūru, ar kuras palīdzību var saskaitīt, cik izogonu eksistē, ja fiksē tā posmu skaitu. Šī procedūra ir nedaudz piņķerīga, tāpēc Ričards Kenets Gajs ({\em Richard Kenneth Guy}) ir devis formulu, kurā vien ievietojot malu skaitu, uzreiz iegūst atbildi, tomēr tā ir tikai aptuvena.
+
+L. Salovs ir arī pavisam nedaudz aplūkojis perfektus polimondus: ir pateikts, ka $N$-stūru polimondi, kuri satur tikai $60$ un $300$ grādu leņķus, eksistē, ja $N>9$ un $N\not\equiv 1$ mod $3$, bet polimondi, kas satur tikai $120$ un $240$ grādu leņķus, eksistē, ja $N=6n$. 
+
+
+1990.gada rakstā \cite{dewdney1990odd} Aleksandrs Djūdnijs ({\em Alexander Dewdney}) $90$ grādu secīgu izogonu pārdēvē par goligonu un citiem vārdiem apraksta  rakstā \cite{sallows1991serial} dotos pierādījumus.
+
+
+\begin{comment}
+    
+
+1: tiling with 8 izogon,
+
+algebriski pamatots, ka izogonam malu skaits dalās ar 8,
+
+Martins Gardners to pašu pamato vizuāli ar specifiski iekrāsotu rūtiņu gridu.
+
+iedota konstrukcija, kā konstruēt 8k malu izogonu k>=1
+
+dota konstrukcija, kā konstruēt 8k malu izgonu, kas arī veido polimondu. (tā pati konstukcija, ko apraksta Elīna Buliņa)
+
+ceturtais autors parādījis procedūru, ar kuru var saskaitīt, cik izogonu eksistē katram 8k malu skaitam.
+
+Trešais autors tam pašam devis formulu, ar kuras palīdzību skaitu var aprēķināt daudz ātrāk, tomēr tikai aptuveni. 
+
+pavisam nedaudz apskatīti perfektie polimondi: pateikts, ka polimondi, kuri satur tikai 60 un 300 grādu leņķus eksistē, ja N>9 un n not congruent 1 mod 3, bet polimondi, kas satur tikai 120 un 240 grādu leņķus eksistē ja N=6n. doti divi veidi kā to tile gridu ar perfektu 5-stūru polimondu.
+
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Polimino un polimondi}
+
+
+\firstparskip Elīnas Buliņas bakalaura darbā \cite{bulicna2016magiskie} un Valmieras 11. Studentu konferences rakstu krājumā \cite{bulicna2017magiskie} ir detalizēti aprakstīta metode, kā konstruēt perfektu $8k$-stūru polimino, kur $k \geq 1$, kā arī ir pierādīts, ka šī konstrukcija vienmēr dos slēgtu figūru. Šī ir tā pati konstrukcija, kura tika aprakstīta 1991.gada rakstā \cite{sallows1991serial}, vien polimondi ir apgriezti spoguļattēlā un par $90°$ pagriezti pulksteņa rādītāja kustības virzienā. 
+
+Polimino veidošanas shēma izskatās šādi:
+
+\vspace{10pt}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+
+\begin{enumerate}
+    \item izvēlas $n=8k$,
+    \item malu garumus sadala pa kopām:
+    \begin{itemize}
+        \item $H = \{2, 4, ..., 8k\}$
+        \item $V=\{1, 3, ..., 8k-1\}$
+        \item $H_1 = \{2k+2, 2k+4, ... , 2k+4k\}$
+        \item $H_2=H\textbackslash H_1$
+        \item $V_1=\{2k+1, 2k+3, ...,6k-1\}$
+        \item $V_2=V\textbackslash V_1$
+    \end{itemize}
+    \item zīmē perfektu polimino:
+    \begin{itemize}
+        \item malas ar garumiem no kopas $H_1$ liek uz rietumiem;
+        \item malas ar garumiem no kopas $H_2$ liek uz austrumiem;
+        \item malas ar garumiem no kopas $V_1$ liek uz dienvidiem;
+        \item malas ar garumiem no kopas $V_2$ liek uz ziemeļiem.
+    \end{itemize}
+\end{enumerate}
+
+}%
+}
+
+\vspace{10pt}
+
+\ref{fig:polimino}. attēlā ir attēlots $16$-stūru perfekts polimino, veidots pēc dotās shēmas.
+
+\begin{figure}[H]
+\center
+\includegraphics[width=11.1cm]{attēli/polimino16.png}
+\caption{$16$-stūru perfekts polimino}\label{fig:polimino}
+\end{figure}
+
+Tā kā katru polimino var reducēt uz diviem dažādiem polimondiem, visas vertikālās malas pagriežot par $60°$ pa labi, otrā gadījumā visas vertikālās malas pagriežot par $60°$ pa kreisi, ir iegūtas divas konstrukcijas $8k$-stūru perfektiem polimondiem, kur $k\geq 1$. Šo konstrukciju pirmie polimondi ir attēloti \ref{fig:konst_80a}. un \ref{fig:konst_80b}. attēlā.
+
+\begin{figure}[H]
+\center
+\includegraphics[width=13cm]{attēli/konstr_80a.png}
+\caption{$8k$-stūru perfektie polimondi, kur $k\geq 1$}\label{fig:konst_80a}
+\end{figure}
+
+\begin{figure}[H]
+\center
+\includegraphics[width=13cm]{attēli/konstr_80b.png}
+\caption{$8k$-stūru perfektie polimondi, kur $k\geq 1$}\label{fig:konst_80b}
+\end{figure}
+
+
+E. Buliņas maģistra darbā \cite{bulicna2018magiskie} ir dota shēma, kā konstruēt $(8k-2)$-stūru perfektu polimondu, kur $k\geq 1$. \ref{fig:konst_82a}. un \ref{fig:konst_82b}. attēlā ir šīs konstrukcijas polimondi, kad $k$ ir attiecīgi $1$ un $2$.
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=.7\textwidth]{attēli/konstr_82a.png}
+    \caption{$6$-stūru perfektie polimonds}\label{fig:konst_82a}
+  \end{minipage}
+  \hfill
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=0.7\textwidth]{attēli/konstr_82b.png}
+    \caption{$14$-stūru perfektie polimonds}\label{fig:konst_82b}
+  \end{minipage}
+\end{figure}
+
+2022. gada ATEE ikgadējās konferences ``
+Būt vai nebūt lieliskam izglītotājam'' (angl. {\em To be or not to be a great educator}) rakstu krājumā \cite{cibulis_bulina} Elīna Buliņa ar Andreju Cibuli ir parādījuši perfektu polimondu eksistenci katram pāra malu skaitam $n\geq 6$. 
+
+Polimondi tiek iedalīti četrās kategorijās: $n=6+8k$, $n=8+8k$, $n=10+8k$ un $n=12+8k$, kur $k\geq 0$. Polimonds tiek veidots no divām daļām, \ref{fig:para_konstr}. attēlā var redzēt daļu veidošanas ideju. Lai izveidotu perfektu polimondu $n=6+8k$ malu skaitam, veido divas A veida lauztas līnijas, priekš perfektiem polimondiem ar $n=8+8k$, $n=10+8k$ un $n=12+8k$ malu skaitu veido attiecīgi B, C un D veida lauztas līnijas. Katrā no lauztajām līnijām jābūt $\frac{n}{2}$ nogriežņiem, tāpēc, skatoties uz \ref{fig:para_konstr}. attēlu, katra veida lauztajai līnijai ir jāsatur $4k$ raustītos, zilā krāsā iekrāsotos nogriežņus. 
+Beigās šāda veida divas lauztās līnijas savieno kopā līniju galapunktos un, sākot no viena savienojuma punkta, sāk zīmēt malas secīgi ar garumiem no $1$ lidz $n$. Šī metode izmanto invariantu īpašību, galapunkti nemainās, ja katru no malām vienādi daudz pagarina.
+
+\ref{fig:konst_82a}. attēlā var redzēt, kā izskatīsies $6$-stūru perfekts polimonds, bet
+\ref{fig:konst_82b}. attēlā -- $14$-stūru perfekts polimonds.
+
+
+
+\begin{figure}[H]
+\center
+\includegraphics[width=10cm]{attēli/para_poly_konstr_2.png}
+\caption{Pāra skaita malu polimondu veidošana}\label{fig:para_konstr}
+\end{figure}
+
+
+
+
+\firstparskip Ar datorprogrammas palīdzību līdz malu skaitam $23$ tika saskaitīts perfekto polimondu skaits. Rezultāti ir parādīti \ref{tab:tab1}. tabulā. Priekš lielākām $n$ vērtībām datorprogramma vairs netika darbināta, jo aprēķini prasītu pārāk daudz resursu.
+
+Šī datorprogramma izmanto rekursīvu atkāpšanos (angl. {\em backtracking}), lai izveidotu visus polimondus dotam malu skaitam; sk. \href{https://martarudzate.github.io/polimondi/}{GitHub projektu}. Lieliem $n$ $n$-stūru perfekto polimondu pārlase ar jebkuru metodi kļūst lēna, jo to skaits strauji pieaug. ``Backtracking" algoritmu var daudz kur izmantot, piemēram, sudoku mīklu vai dažādu šaha problēmu risināšanā. Pielikumā ir pievienoti divi datorprogrammu kodi. \ref{app:kods2} pielikumā ir kods, kas, izmantojot \ref{app:kods1} pielikumā esošo ``backtracking'' algoritmu, atrod visus perfektos polimondus dotam malu skaitam $n$. 
+
+
+\begin{comment}
+
+\begin{table}[H]
+\centering
+\caption{Perfekto polimondu skaits atkarībā no malu skaita}\label{tab:tab1}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$\textbf{n}$      & $5$ & $7$ & $9$ & $11$ & $13$  & $15$   & $17$   & $19$    & $21$     & $23$      \\ \hline
+\textbf{Skaits} & $1$ & $2$ & $3$ & $21$ & $288$ & $1335$ & $8599$ & $67068$ & $526694$ & $4284617$ \\ \hline
+\end{tabular}
+\end{table}
+
+\end{comment}
+
+\begin{table}[H]
+\centering
+\caption{Perfekto polimondu skaits atkarībā no malu skaita}\label{tab:tab1}
+\setlength{\tabcolsep}{5.1pt}
+\begin{tabular}{!{\vrule width 1.5pt}l!{\vrule width 1.5pt}l|l|l|l|l|l|l|l|l|l!{\vrule width 1.5pt}}
+\Xhline{1.5pt}
+$\textbf{n}$            & $5$ & $6$    & $7$    & $8$     & $9$     & $10$     & $11$     & $12$ & $13$      & $14$  \\ \hline
+\textbf{Skaits} & $1$        & $1$    & $2$    & $9$     & $3$     & $4$      & $21$     & $87$ & $288$     & $477$ \\ \Xhline{1.5pt}
+$\textbf{n}$                     & 15         & $16$   & $17$   & $18$    & $19$    & $20$     & $21$     & $22$ & $23$      &     \\ \hline
+\textbf{Skaits} & $1335$       & $4026$ & $8599$ & $22326$ & $67068$ & $193445$ & $526694$ & $1464978$   & $4284617$ &     \\ \Xhline{1.5pt}
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\section{Bezkonteksta gramatikas}
+
+\firstparskip Rakstā \cite{cfg_def} bezkonteksta gramatika (angl. {\em context-free grammar}, CFG) $G$ ir definēta kā četru elementu kopa: $G=(V, T, P, S)$, kur $V$ ir netermināļu (angl. {\em non-terminals}) kopa, $T$ ir termināļu (angl. {\em terminals}) kopa, $P$ ir nosacījumu (angl. {\em rules}) kopa un $S$ ir sākuma simbols. Valodas, kuras ir ģenerētas no bezkonteksta gramatikām, sauc par bezkonteksta valodām (angl. {\em context-free languages}, CFL).
+
+
+Termināļi ir simboli, kas veido valodas elementus, un netermināļi palīdz izveidot šos elementus. Nosacījumi sastāv no trīs daļām: viena netermināļa, simbola ``$\rightarrow$'', nulles elementa vai termināļu un netermināļu kombinācijas. Netermināli aizstāj ar kombināciju, kas seko pēc bultas.  
+
+\subsection{Polimondu iegūšana ar bezkonteksta gramatiku}
+
+
+\firstparskip Lai aprakstītu perfektu polimondu, var izmantot koordinātu sistēmu, kas attēlota \ref{fig:cord1}. attēlā. Tā kā var pieņemt, ka polimonds sākas ar garāko malu un turpinās dilstošā secībā, tad jebkuru perfektu polimondu var aprakstīt ar burtiem $a, b, c, d, e, f$ vienā vienīgā veidā, kā arī katrai burtu virknei atbilst viens un tas pats polimonds. Šie seši burti veido termināļu kopu $T= \{a, b, c, d, e, f\}$ bezkonteksta gramatikai, kas veido perfektus polimondus. 
+
+\begin{figure}[H]
+\center
+\includegraphics[width=5cm]{attēli/cordinates3.png}
+\caption{Koordinātu sistēma trijstūru režģī}\label{fig:cord1}
+\end{figure}
+
+Rakstā \cite{cibulis_bulina} dotās perfekto polimondu konstrukcijas var aprakstīt ar bezkonteksta gramatikām. Piemēram, konstrukciju A, kura veido perfektu polimondu ar malu skaitu $n=8k+6$, kur $k\geq 0$, var aprakstīt šādi:
+
+\vspace{10pt}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+            \bf{S} $\rightarrow$ \bf{P}$ fdb$\\
+            \bf{P} $\rightarrow$ $cbcb $ \bf{P}$ fefe$ \\
+            \bf{P} $\rightarrow$ $cae$
+    \end{minipage}
+}
+
+\vspace{10pt}
+Šajā gadījumā {\bf{P}} ir gramatikas neterminālis, kuru var aizstāt ar $cbcb $ {\bf{P}}$ fefe$ vai $cae$. Šie divi likumi veido nosacījumu kopu $P$. Bezkonteksta valodas elementi tiek veidoti, sākot ar sākuma simbolu {\bf{S}}, pēc tam tiek pielietoti nosacījumi. Brīdī, kad virkne vairs nesatur nevienu netermināli, ir iegūts elements, kas pieder bezkonteksta valodai, kas ģenerēta ar konkrēto bezkonteksta gramatiku. 
+
+Ja pirmajā izvēlē tiek pielietots pēdējais likums, iegūst burtu virni $caefdb$. Ja polimonds tiek veidots, sākot ar garāko malu, pēc tam malu garumus samazinot, pēc \ref{fig:cord1}. attēla apzīmējumiem, šī burtu virkne atbilst polimondam \ref{fig:konst_82a}. attēlā.
+
+Ja pirmajā izvēlē tomēr sākumā pielieto pirmspēdējo likumu un tikai pēc tam pēdējo likumu, tad iegūst burtu $cbcbcaefefe$. Šī virkne apraksta $14$-stūru perfektu polimondu, kurš ir attēlots \ref{fig:konst_82b}. attēlā ($n=8k+6$, kur $k=1$). Tomēr no šī brīža ir nepieciešams pieminēt, ka polimonds jāsāk veidot no malas ar garumu $2k$ dilstošā secībā (pēc malas ar garumu $1$ vienība, jāturpina ar malu garumā $n$ un tālāk atkal jāturpina dilstoši). Šis fakts ir jāatceras arī veidojot visus pārējos polimondus no virknēm, kas iegūtas ar doto bezkonteksta gramatiku, kā arī rakstā \cite{cibulis_bulina} dotajām konstrukcijām B, C un D, izveidojot bezkonteksta gramatikas, perfektais polimonds arī jāsāk veidot no malas ar garumu $2k$, turpinot dilstošā secībā. Šādi izskatās bezkonteksta gramatikas konstrukcijām B, C un D:
+
+\vspace{10pt}
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.33\textwidth}{%    
+            Konstrukcija B\\
+            $n=8k+8, k\geq 0$\\
+            \bf{S} $\rightarrow$ \bf{P}$ fecb$\\
+            \bf{P} $\rightarrow$ $cbcb $ \bf{P}$ fefe$ \\
+            \bf{P} $\rightarrow$ $cbfe$
+        }
+        \hfill
+        \parbox{0.33\textwidth}{%
+            Konstrukcija C\\
+            $n=8k+10, k\geq 1$\\
+            \bf{S} $\rightarrow$ \bf{P} $ aedca$\\
+            \bf{P} $\rightarrow$ $cbcb $ \bf{P}$ fefe$ \\
+            \bf{P} $\rightarrow$ $dbafd$
+        }
+        \hfill
+        \parbox{0.3\textwidth}{%
+            Konstrukcija D\\
+            $n=8k+12, k\geq 1$\\
+            \bf{S} $\rightarrow$ \bf{P} $ aececa$\\
+            \bf{P} $\rightarrow$ $cbcb $ \bf{P}$ fefe$ \\
+            \bf{P} $\rightarrow$ $dbfbfd$
+        }
+    \end{minipage}
+}
+
+\vspace{10pt}
+
+2024.gadā Kalvis Apsītis \href{https://conferences.lu.lv/event/493/contributions/2217/}{diskrētās matemātikas konferencē} prezentēja trīs konstrukcijas, kuras arī var aprakstīt ar bezkonteksta gramatikām. Šīs gramatikas veido termināļu virknes, kuras veido polimondu, sākot no garākās malas un turpinot dilstošā secībā. Konstrukcija, kas veido perfektu polimondu malu garumam $n=8k+1$, kur $k\geq 2$, izskatās šādi:
+
+\vspace{10pt}
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.20\textwidth}{%  
+            \bf{S} $\rightarrow$  $acec$ \bf{P} $db$\\
+            \bf{P} $\rightarrow$ $ecea$ \bf{P} $abcb$ \\
+            \bf{P} $\rightarrow$ $eaf$
+        } 
+        \hfill
+        \parbox{0.8\textwidth}{%
+            \centering
+            \includegraphics[width=0.8\textwidth]{attēli/konstr_89.png}
+            \captionof{figure}{ ($8k+1$)-stūru perfektie polimondi, kur $k\geq 2$}
+            \label{fig:konstr_83c}
+        }
+    \end{minipage}
+}
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\section{Paralēlās bezkonteksta gramatikas}
+
+
+\firstparskip Rakstā \cite{pcg_def} ir definēta paralēlā bezkonteksta gramatika (angl. {\em parallel context-free grammar}, PCG), izmantojot bezkonteksta gramatiku $G = (V, T, P, S)$. $G$ ir paralēlā bezkonteksta gramatika, ja $\forall  w_1 \overset{G}{\implies} w_2$ un $\forall A \in V$, 
+kur $w_1 = x_1Ax_2A ... Ax_r$, $w_2 = x_1\alpha x_2\alpha ... \alpha x_r$, $r \geq 1$, $A \to \alpha \in P$ 
+un $x_1, \ldots, x_r$ nesatur $A$. Šī definīcija pasaka, ka visi virknes saturošie netermināļi ir vienlaikus jāaizstāj ar vieniem un tiem pašiem nosacījumiem. Valodu $L=L(G)$ sauc par paralēlo bezkonteksta valodu (angl. {\em parallel context-free language}, PCL), ja $L$ ir ģenerēta ar paralēlo bezkonteksta gramatiku $G$.
+
+Paralēlā bezkonteksta gramatikā var saskatīt līdzības ar Lindenmaiera sistēmām (angl. {\em  Lindenmayer systems}) jeb L--sistēmām. Vienīgi L--sistēmās malu skaits parasti aug eksponenciāli, pazīstams piemērs ir Koha sniegpārsla. 
+
+\subsection{Polimondu iegūšana ar paralēlo bezkonteksta gramatiku}
+
+\firstparskip Detalizēti aplūkosim ($8k-3$)-stūru perfekto polimondu konstrukciju, kura ir aprakstīta ar šādu paralēlo bezkonteksta gramatiku: 
+
+
+
+\vspace{10pt}
+
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.36\textwidth}{%  
+            ${\bf{S }} \to a {\bf{P}}_1\ cacd\ {\bf{P}}_2\ e\ {\bf{P}}_2\ fdfdfa\ {\bf{P}}_1\ b$\\
+            ${\bf{P}}_1 \to ca \ {\bf{P}}_1$\\
+            ${\bf{P}}_2 \to fd \ {\bf{P}}_2$\\
+            
+        }
+        \hfill
+        \parbox{0.63\textwidth}{%
+            \centering
+            \includegraphics[width=0.63\textwidth]{attēli/konstr_85a.png}
+            \captionof{figure}{ ($8k-3$)-stūru perfektie polimondi, kur $k\geq 2$}
+            \label{fig:konstr_85a}
+        }
+    \end{minipage}
+}
+
+\vspace{10pt}
+
+\begin{comment}
+    
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+
+\bf{Aksioma:} $a \textcolor{blue}{S_1} cacd\textcolor{blue}{S_2}e\textcolor{blue}{S_2}fdfdfa\textcolor{blue}{S_1}b$
+
+
+\bf{Nosacījumi:} \{ $\textcolor{blue}{S_1} \to ca\textcolor{blue}{S_1}$, \\
+\hspace*{2.5cm} $\textcolor{blue}{S_2} \to fd\textcolor{blue}{S_2}$ \}
+}%
+}
+
+\vspace{10pt}
+
+Zilā krāsā iekrāsotie lielie burti ar indeksu ir netermināļi (angl. {\em nonterminals}), bet burti melnā krāsā ir termināļi (angl. {\em terminals}). Netermināļus var aizstāt ar termināļu un netermināļu kombinācijām, bet termināļus var uzskatīt kā virzienu apzīmējumus no \ref{fig:cord1}. attēla.
+
+Aksioma ir pats konstrukcijas sākums. Ir divas iespējas, ko ar aksiomu var darīt -- izdzēst no tās visus netermināļus vai arī katru netermināli aizstāt ar nosacījumos norādīto termināļu un netermināļu kombināciju. 
+\end{comment}
+
+
+
+Šajā gadījumā nosacījumu kopa ir $P=\{ {\bf{P}}_1, {\bf{P}}_2\}$. Ir divas iespējas, ko ar sākuma virkni (sauc arī par aksiomu)  var darīt -- izdzēst no tās visus netermināļus vai arī katru netermināli aizstāt ar nosacījumos norādīto termināļu un netermināļu kombināciju (vienlaikus ir jāaizstāj katrs neterminālis).
+
+Ja pirmajā izvēlē izvēlas izdzēst netermināļus, tad iegūst termināļu virkni $acacdefdfdfab$. Šajā un visās nākamajās konstrukcijās pieņemam, ka polimonds vienmēr tiks veidots, sākot ar garāko malu, pēc tam malu garumus samazinot. Tādā gadījumā pēc \ref{fig:cord1}. attēla apzīmējumiem, šī burtu virkne atbilst tieši mazākajam polimondam \ref{fig:konstr_85a}. attēlā.
+
+Ja pirmajā izvēlē tomēr izvēlas izpildīt nosacījumus, tad iegūst virkni: $acacac {\bf{P}}_1 dfd {\bf{P}}_2 efdf {\bf{P}}_2 dfdfaca {\bf{P}}_1 b$. Tagad atkal var izvēlēties jebkuru no iepriekš minētajām divām darbībām. Ja izdzēš visus netermināļus, tad iegūst vidējo polimondu \ref{fig:konstr_85a}. attēlā. Var arī turpināt pielietot nosacījumus neierobežoti ilgi. Ja $n$ reizes tiek izvēlēts katru virknes netermināli aizstāt ar nosacījumos norādīto termināļu un netermināļu kombināciju, tad beigās, no virknes izdzēšot visus četrus netermināļus, tiks iegūts perfekts polimonds ar malu skaitu $8(n+2)-3$.
+
+\subsection{Konstrukciju korektums}
+
+\firstparskip Paralēlās bezkonteksta gramatikas pielietojums iespējams ir viskompaktākais veids, kas ļoti ātri un viegli iedod burtu virkni perfektam $(8k-3)$-stūru polimondam, kur $k\geq 2$. Tomēr ir arī citi veidi, kā aprakstīt šo konstrukciju. Apskatīsim vienu no šiem veidiem, jo tas palīdzēs pēc tam viegli pamatot, ka šī konstrukcija vienmēr dos polimondus, kuri beigās atgriezīsies tajā pašā punktā, kur sākās.
+
+\ref{fig:konstr_85a}. attēlā attēlotos polimondus un visus nākamos šīs pašas konstrukcijas polimondus var iegūt arī pēc šādas shēmas:
+
+\vspace{10pt}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+\begin{enumerate}
+    \item izvēlas $k\geq 2$,
+    \item malas ar garumiem no $8k-3$ līdz $6k-2$ pēc kārtas liek uz $a, c, a, c,$ ... ,
+    \item malas ar garumiem no $6k-3$ līdz $4k+1$ 
+pēc kārtas liek uz $d, f, d, f,$ ... ,
+    \item malu ar garumu $4k$ liek $e$ virzienā,
+    \item malas ar garumiem no $4k-1$ līdz $2k-1$
+pēc kārtas liek uz $f, d, f, d,$ ... ,
+    \item malu ar garumu $2k-2$ liek $a$ virzienā,
+    \item malas ar garumiem no $2k-3$ līdz $2$,
+pēc kārtas liek uz $c, a, c, a$ ... ,
+    \item malu ar garumu $1$ vienība liek $b$ virzienā.
+\end{enumerate}
+}
+}
+
+\vspace{10pt}
+
+Tagad pierādīsim, ka polimonds beigās atgriezīsies sākumpunktā.
+
+\begin{proof}
+Ja $b$ un $c$ virzienā likto malu garumu summa būs vienāda ar $e$ un $f$ virzienā likto malu garumu summu, tad sanāk, ka tik vienības, cik polimonds ir pagājis uz augšu, tikpat tas ir pagājis uz leju.
+
+Ja $a$ virzienā likto malu garumu summa un $b$ un $f$ virzienā likto malu garumu pussumma kopā būs vienāda ar $d$ virzienā likto malu garumu summu un $c$ un $e$ virzienā likto malu garumu pussummu kopā, tad ir zināms, ka tik vienības, cik polimonds ir pagājis pa labi, tikpat tas ir pagājis pa kreisi.
+
+
+Lai aprēķinātu uz katru virzienu likto malu garumu summu, izmantosim divas zināmas formulas:
+
+\begin{equation}\label{eq:oddsum0}
+1+3+5+...+(2n-1)=n^{2} ,
+\end{equation}
+
+\begin{equation}\label{eq:evensum0}
+2+4+6+...+2n=n(n+1) .
+\end{equation}
+
+No šīm formulām varam iegūt šādas formulas:
+
+\begin{equation}\label{eq:oddsum}
+(2m-1)+(2m+1)+...(2n-3)+(2n-1)=n^{2}-(m-1)^2 ,
+\end{equation}
+
+\begin{equation}\label{eq:evensum}
+2m+(2m+2)+...+(2n-2)+2n=n(n+1)-m(m-1) .
+\end{equation}
+
+
+\vspace{20pt}
+
+Virzienā $a$ tiek liktas nepāra garuma malas ar garumiem no $8k-3$ līdz $6k-1$. Pēc formulas \eqref{eq:oddsum} varam aprēķināt šo malu garumu summu:
+
+$$(4k-1)^{2} - (3k-1)^{2} = 7k^{2}-2k.$$
+
+Vēl virzienā $a$ tiek liktas  pāra garuma malas ar garumiem no $2$ līdz $2k-2$. Pēc formulas \eqref{eq:evensum} varam aprēķināt šo malu garumu summu:
+
+$$(k-1)k = k^{2} - k.$$
+
+Kopā virzienā $a$ likto malu garumu summa ir:
+
+$$7k^{2}-2k + k^{2} - k = 8k^{2} -3k.$$
+
+Tieši tādā pašā veidā, skatoties uz shēmu un formulām, varam aprēķināt visos pārējos virzienos likto malu garumu summas.
+$b$ virzienā tiek likta tikai viena mala, kuras garums ir $1$ vienība,
+$c$ virzienā likto malu garumu summa sanāk $ 8k^{2}-5k$, $d$ virzienā: $8k^{2}-7k+1$, $e$ virzienā tiek likta tikai viena mala, kuras garums ir $4k$, bet
+$f$ virzienā likto malu garumu summa ir $8k^{2} -9k+1$. 
+
+
+Saskaitot kopā $b$ un $c$ virzienā likto malu garumu summas, iegūst $8k^{2}-5k+1$. Saskaitot kopā $e$ un $f$ virzienā likto malu garumu summas, arī iegūst $8k^{2}-5k+1$. Tas nozīmē, ka tik, cik tika paiets uz augšu, tikpat arī tika paiets uz leju, kas nozīmē, ka mala ar garumu $1$ vertikāli beidzas turpat, kur sākas garākā mala.
+
+Saskaitot kopā $b$ un $f$ virzienā likto malu garumu pussummu ar $a$ virzienā likto malu garumiem, iegūst $12k^{2}-7.5k+1$. Tādu pašu summu iegūst arī saskaitot $c$ un $e$ virzienā likto malu garumu pussummu ar $d$ virzienā likto malu garumiem. Tas nozīmē, ka tik, cik tika paiets pa labi, tikpat tika paiets pa kreisi, kas nozīmē, ka mala ar garumu $1$ horizontāli beidzas turpat, kur sākas mala ar garumu $8k-3$.
+
+\vspace{10pt}
+
+Tā kā mala ar garumu $1$ gan horizontāli, gan vertikāli beidzas turpat, kur sākas mala ar garumu $8k-3$, tad konstruējot polimondu, iegūst slēgtu figūru.
+\end{proof}
+
+\subsection{Pārējās konstrukcijas}
+
+\firstparskip Tieši tādā pašā veidā, kā iepriekšējā sadaļā, var pierādīt arī visām pārējām $13$ atrastajām konstrukcijām, ka tās vienmēr dos slēgtas figūras.
+
+Lai apgalvotu, ka šīs konstrukcijas tiešām ir korektas un dod perfektus polimondus, vajadzētu arī pierādīt, ka tās sev nekad nepieskaras un sevi nekrusto. Šis pagaidām vēl nav pierādīts. Tomēr vairākām konstrukcijām, vien paskatoties uz pirmajiem perfektajiem polimondiem, uzreiz ir skaidrs, ka polimondi sevi nekad nekrustos un sev nekad nepieskarsies (sk., piemēram, \ref{fig:konstr_85b}., \ref{fig:konstr_83b}., \ref{fig:konstr_83e}. un \ref{fig:konstr_43b}. attēlu).
+
+\vspace{10pt}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.39\textwidth}{%           
+            \bf{Aksioma:} $ a\textcolor{blue}{S_1}cd\textcolor{blue}{S_2} efa\textcolor{blue}{S_2}\textcolor{blue}{S_1}c$\\
+            \bf{Nosacījumi:} \{ $\textcolor{blue}{S_1} \to cd\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to fa\textcolor{blue}{S_2}$ \}
+        }
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.6\textwidth]{attēli/konstr_87a.png}
+            \captionof{figure}{ ($8k-1$)-stūru perfektie polimondi, kur $k\geq 1$}
+            \label{fig:konstr_87a}
+        }
+    \end{minipage}
+}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{%  
+            \bf{Aksioma:} $a\textcolor{blue}{S_1}cbcdefe\textcolor{blue}{S_2} aefe\textcolor{blue}{S_2} a\textcolor{blue}{S_1}cb$\\
+            \bf{Nosacījumi:} \{ $\textcolor{blue}{S_1} \to cb\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to fe\textcolor{blue}{S_2}$ \}
+        }
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_87b.png}
+            \captionof{figure}{ ($8k-1$)-stūru perfektie polimondi, kur $k\geq 2$}
+            \label{fig:konstr_87b}
+        }
+    \end{minipage}
+}
+
+
+
+\begin{comment}
+
+Šīs trīs konstrukcijas sakrīt ar 4k-1  konstrukcijām.
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{%$  
+            \bf{Aksioma:} $a$\textcolor{blue}{$S_1$}$cbcdfef$\textcolor{blue}{$S_2$}$ dfef\textcolor{blue}{S_2} a\textcolor{blue}{S_1}cb$\\
+            \bf{Nosacījumi:} \{ \textcolor{blue}{$S_1$} \to cb\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to ef\textcolor{blue}{S_2} \}
+        }
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{ludis2024/konstr_87c.png}
+            \captionof{figure}{ ($8k-1$)-stūru perfektie polimondi, kur $k\geq 2$}
+            \label{fig:konstr_87c}
+        }
+    \end{minipage}
+}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{%$  
+            \bf{Aksioma:} $a$\textcolor{blue}{$S_1$}$bcbdefe$\textcolor{blue}{$S_2$}$ defe\textcolor{blue}{S_2} a\textcolor{blue}{S_1}bc$\\
+            \bf{Nosacījumi:} \{ \textcolor{blue}{$S_1$} \to bc\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to fe\textcolor{blue}{S_2} \}
+        }
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{ludis2024/konstr_87d.png}
+            \captionof{figure}{ ($8k-1$)-stūru perfektie polimondi, kur $k\geq 2$}
+            \label{fig:konstr_87d}
+        }
+    \end{minipage}
+}
+\end{comment}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{%  
+            \bf{Aksioma:}~$a$\textcolor{blue}{$S_1$}$bcbcdea\textcolor{blue}{S_2} efed\textcolor{blue}{S_2} efefabd\textcolor{blue}{S_1}bc $ \\
+            \bf{Nosacījumi:} \{$ \textcolor{blue}{S_1} \to bc\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to ef\textcolor{blue}{S_2}$ \}
+        }
+        \hfill
+        \parbox{0.62\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_85b.png}
+            \captionof{figure}{ ($8k-3$)-stūru perfektie polimondi, kur $k\geq 3$}
+            \label{fig:konstr_85b}
+        }
+    \end{minipage}
+}
+
+
+
+
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{% 
+            \bf{Aksioma:}~$a\textcolor{blue}{S_1}bdbdcea\textcolor{blue}{S_2} efdfdfa\textcolor{blue}{S_2} f\textcolor{blue}{S_1}bdb$\\
+            \bf{Nosacījumi:} \{$ \textcolor{blue}{S_1} \to bd\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to ea\textcolor{blue}{S_2}$ \}
+        }
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_83a.png}
+            \captionof{figure}{ ($8k-5$)-stūru perfektie polimondi, kur $k\geq 3$}
+            \label{fig:konstr_83a}
+        }
+    \end{minipage}
+}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{% 
+            \bf{Aksioma:}~$a\textcolor{blue}{S_1}bcdf\textcolor{blue}{S_2} ed\textcolor{blue}{S_2} efac\textcolor{blue}{S_1}$\\
+            \bf{Nosacījumi:} \{$ \textcolor{blue}{S_1} \to bc\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to ef\textcolor{blue}{S_2}$ \}
+        }
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_83b.png}
+            \captionof{figure}{ ($8k-5$)-stūru perfektie polimondi, kur $k\geq 2$}
+            \label{fig:konstr_83b}          
+        }
+    \end{minipage}
+}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{%  
+            \bf{Aksioma:}~$a\textcolor{blue}{S_1}bcde\textcolor{blue}{S_2} fd\textcolor{blue}{S_2} feac\textcolor{blue}{S_1}$\\
+            \bf{Nosacījumi:} \{$ \textcolor{blue}{S_1} \to bc\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to fe\textcolor{blue}{S_2} $\}
+        } 
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_83c.png}
+            \captionof{figure}{ ($8k-5$)-stūru perfektie polimondi, kur $k\geq 2$}
+            \label{fig:konstr_83c}
+        }
+    \end{minipage}
+}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{%  
+            \bf{Aksioma:}~$a\textcolor{blue}{S_1}cbdf\textcolor{blue}{S_2} ed\textcolor{blue}{S_2} efab\textcolor{blue}{S_1}$\\
+            \bf{Nosacījumi:} \{$ \textcolor{blue}{S_1} \to cb\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to ef\textcolor{blue}{S_2}$ \}
+        } 
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_83d.png}
+            \captionof{figure}{ ($8k-5$)-stūru perfektie polimondi, kur $k\geq 2$}
+            \label{fig:konstr_83d}
+        }
+    \end{minipage}
+}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{%  
+            \bf{Aksioma:}~$a\textcolor{blue}{S_1}cbde\textcolor{blue}{S_2} fd\textcolor{blue}{S_2} feab\textcolor{blue}{S_1}$\\
+            \bf{Nosacījumi:} \{ $\textcolor{blue}{S_1} \to cb\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to fe\textcolor{blue}{S_2}$ \}
+        } 
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_83e.png}
+            \captionof{figure}{ ($8k-5$)-stūru perfektie polimondi, kur $k\geq 2$}
+            \label{fig:konstr_83e}
+        }
+    \end{minipage}
+}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{%
+            \bf{Aksioma:}~$a\textcolor{blue}{S_1}cace\textcolor{blue}{S_2} dfdfea\textcolor{blue}{S_1}cacdbf$\\
+            \bf{Nosacījumi:} \{ $\textcolor{blue}{S_1} \to ca\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to dfdf\textcolor{blue}{S_2} $\}
+        } 
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_81a.png}
+            \captionof{figure}{ ($8k-7$)-stūru perfektie polimondi, kur $k\geq 3$}
+            \label{fig:konstr_81a}
+        }
+    \end{minipage}
+}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{%  
+            \bf{Aksioma:}~$a\textcolor{blue}{S_1}cbcdea\textcolor{blue}{S_2}fed\textcolor{blue}{S_2}fefabd \textcolor{blue}{S_1}c$\\
+            \bf{Nosacījumi:} \{$ \textcolor{blue}{S_1} \to cb\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to fe\textcolor{blue}{S_2} $\}
+        } 
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_81b.png}
+            \captionof{figure}{ ($8k-7$)-stūru perfektie polimondi, kur $k\geq 3$}
+            \label{fig:konstr_81b}
+        }
+    \end{minipage}
+}
+
+\vspace{10pt}
+
+Šīs ir visas līdz šim atrastās konstrukcijas ar indukcijas soli $8$. Tomēr pietiek arī ar tikai četrām konstrukcijām, pa vienai katrā kategorijā ($8k-1$, $8k-3$, $8k-5$ un $8k-7$), lai būtu veids, kā konstruēt perfektu polimondu jebkuram nepāra malu skaitam.
+
+Vēlāk tika atrastas arī konstrukcijas ar indukcijas soli $4$, kas nozīmē, ka pietiek vien ar divām konstrukcijām, lai spētu uzkonstruēt polimondu katram nepāra malu skaitam (sākot no $17$). Zemāk ir parādītas šo konstrukciju shēmas un šo konstrukciju pirmie trīs polimondi.
+
+\vspace{10pt}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{%  
+            \bf{Aksioma:}~$acb\textcolor{blue}{S_1}dfe\textcolor{blue}{S_2} dfe\textcolor{blue}{S_2}ac \textcolor{blue}{S_3}$\\
+            \bf{Nosacījumi:} \{ $\textcolor{blue}{S_1} \to c\textcolor{blue}{T_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to f\textcolor{blue}{T_2}, \\
+            \hspace*{2.55cm} \textcolor{blue}{S_3} \to b\textcolor{blue}{T_3}, \\
+            \hspace*{2.55cm} \textcolor{blue}{T_1} \to b\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{T_2} \to e\textcolor{blue}{S_2}, \\
+            \hspace*{2.55cm} \textcolor{blue}{T_3} \to c\textcolor{blue}{S_3}$ \}
+        } 
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_43a.png}
+            \captionof{figure}{ ($4k-1$)-stūru perfektie polimondi, kur $k\geq 3$}
+            \label{fig:konstr_43a}
+        }
+    \end{minipage}
+}
+
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{%  
+            \bf{Aksioma:}~$abc\textcolor{blue}{S_1}def\textcolor{blue}{S_2} def\textcolor{blue}{S_2}ab \textcolor{blue}{S_3}$\\
+            \bf{Nosacījumi:} \{ $\textcolor{blue}{S_1} \to b\textcolor{blue}{T_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to e\textcolor{blue}{T_2}, \\
+            \hspace*{2.55cm} \textcolor{blue}{S_3} \to c\textcolor{blue}{T_3}, \\
+            \hspace*{2.55cm} \textcolor{blue}{T_1} \to c\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{T_2} \to f\textcolor{blue}{S_2}, \\
+            \hspace*{2.55cm} \textcolor{blue}{T_3} \to b\textcolor{blue}{S_3}$ \}
+        } 
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_43b.png}
+            \captionof{figure}{ ($4k-1$)-stūru perfektie polimondi, kur $k\geq 3$}
+            \label{fig:konstr_43b}
+        }
+    \end{minipage}
+}
+
+\noindent
+\fbox{%
+    \begin{minipage}{\textwidth}
+        \parbox{0.41\textwidth}{% 
+            \bf{Aksioma:}~$acbc\textcolor{blue}{S_1}deaef\textcolor{blue}{S_2} dfef\textcolor{blue}{S_2}abdb \textcolor{blue}{S_3}$\\
+            \bf{Nosacījumi:} \{ $\textcolor{blue}{S_1} \to b\textcolor{blue}{T_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{S_2} \to e\textcolor{blue}{T_2}, \\
+            \hspace*{2.55cm} \textcolor{blue}{S_3} \to c\textcolor{blue}{T_3}, \\
+            \hspace*{2.55cm} \textcolor{blue}{T_1} \to c\textcolor{blue}{S_1},\\
+            \hspace*{2.55cm} \textcolor{blue}{T_2} \to f\textcolor{blue}{S_2}, \\
+            \hspace*{2.55cm} \textcolor{blue}{T_3} \to b\textcolor{blue}{S_3} $\}
+        } 
+        \hfill
+        \parbox{0.6\textwidth}{%
+            \centering
+            \includegraphics[width=0.65\textwidth]{attēli/konstr_41a.png}
+            \captionof{figure}{ ($4k-3$)-stūru perfektie polimondi, kur $k\geq 5$}
+            \label{fig:konstr_41a}
+        }
+    \end{minipage}
+}
+
+
+
+
+
+
+
+\newpage
+
+
+
+\specnodala{Secinājumi}
+
+\firstparskip Kursa darbā aplūkotie perfektie polimondi ir diezgan maz apskatīta tēma, tomēr perfektos polimondus ir vērts pētīt, jo ar viņiem var formulēt dažādus olimpiāžu, kā arī kombinatorikas un programmēšanas uzdevumus.
+
+Ir atrastas vairākas dažādas metodes, kas veido perfektus polimondus jebkuram malu skaitam -- gan pāra, gan nepāra. Lai gan visas šīs metodes, konstrukcijas līdz šim vienmēr ir devušas korektus polimondus, nav pilnībā pierādīts, ka tās tiešām ir pareizas, nav noliegts apgalvojums, ka kaut kad (varbūt bezgalīgi lielam malu skaitam) izveidosies polimonds, kas posmos sev pieskarsies vai sevi krustos, 
+vai sevi pārklās.
+
+Iespējams, varētu arī atrast daudz dažādu sakarību, ja 
+nedaudz paplašinātu perfekto polimondu klasi un  apskatītu izogonus, tomēr tikai tos, kuri sevi nekrusto (drīkst pārklāties un pieskarties posmos). Šī izogonu apakšklase līdz šim vēl nav tikusi definēta un pētīta.
+
+
+
+
+
+\begin{comment}
+
+Vecā versija, ak vai:    
+
+\firstparskip Tika atrastas $14$ konstrukcijas, kas veido perfektus polimondus ar nepāra skaita malu skaitu. $11$ no tām katrā solī pievieno $8$ jaunas malas, bet pārējās $3$ konstrukcijas katrā solī tiek pievienotas vien $4$ jaunas malas. Visas šīs konstrukcijas tika aprakstītas ar shēmām, kas paskaidro, kur jāliek jaunās malas. Šīm visām konstrukcijām vienādā veidā var pierādīt, ka veidotā figūra beigās atgriezīsies sākumpunktā. Pilns pierādījums tika dots tikai vienai konstrukcijai. Lai pamatotu konstrukciju korektumu, nepieciešams arī pierādīt, ka polimondi sevi nekad nekrustos, sev nepieskarsies. Šis šobrīd paliek atklāts jautājums, kuru varētu pētīt turpmākos darbos.
+
+\end{comment}
+
+\newpage
+
+% Literatūras saraksts LU stilā ar \literatura
+\clearpage
+\addcontentsline{toc}{section}{Izmantotā literatūra un avoti}
+\printbibliography[title=Izmantotā literatūra un avoti] 
+
+% ---------------------------------------------------------------
+
+\newpage
+
+
+
+\specnodala{Pateicības}
+
+\begin{itemize}
+    \item Latvijas Universitātes Eksakto zinātņu un tehnoloģiju fakultātes docentam K. Apsītim par labojumiem un sniegto palīdzību darba izstrādē, datorprogrammu izveidē, kā arī konstrukciju aprakstīšanā.
+    \item Kursa darba vadītājam -- profesoram A. Cibulim par palīdzību tēmas izvēlē un labojumiem.
+\end{itemize}
+
+
+
+
+
+
+%----------------------------------------------------------------
+% Pielikumi
+\appendix
+\specnodala{Pielikumi}
+
+\section{``Backtracking" algoritms}\label{app:kods1} %etiķete atsaucei
+
+
+
+\begin{Verbatim}[frame=single,numbers=left]
+
+class Backtrack:
+
+    # Backtracker objekts(nepabeigts šaha galdiņš, polimonds
+    # vai kas cits).
+    b = None
+
+    # Konstruktors tikai iekopē padoto objektu
+    def __init__(self, b):
+        self.b = b
+
+    # Mēģina risināt uzdevumu, atrodoties koka līmenī "level".
+    # level=0 ir pašā augšā - pirms izdarīti "gājieni".
+    def attempt(self, level):
+        successful = False
+        moveIterator = self.b.moves(level)
+
+        for move in moveIterator:
+            successful = False
+            if self.b.valid(level, move):
+                self.b.record(level, move)
+                if self.b.done(level):
+                    successful = True
+                else:
+                    successful = self.attempt(level+1)
+                    if not successful:
+                        self.b.undo(level, move)
+            if successful:
+                self.b.display()
+                self.b.undo(level, move)
+                
+\end{Verbatim}
+
+
+
+\section{Polimondu problēmas kods}\label{app:kods2} 
+
+\begin{Verbatim}[frame=single,numbers=left]
+from backtrackk import *
+
+class Polimondi:
+    liss = []
+    mysett = []
+    
+    def __init__(self, n):
+        self.N = n
+        self.liss.append([0, self.N])
+        for i in range(1, self.N+1):
+            self.mysett.append([i, 0, -i])
+
+    # Funkcija 22.rindā pārbauda, vai nogrieznis ar garumu 1 
+    # nav novietots horizontāli.
+    # Visa pārējā funkcija sataisa jaunu sarakstu (new_mysett_elem), 
+    # kur ir ieliktas iespējamās jauno malu koordinātas. 
+    # 47. rinda pārbauda, vai neviens no jaunajiem punktiem
+    # jau neatrodas sarakstā mysett.
+    def checks(self, move, level):
+        self.level = level
+        self.move = move
+        if move[0] == 0 and (move[1] == 1 or move[1] == -1):
+            return False
+        new_mysett_elem = []
+        ped = self.mysett[-1]
+        ll0 = self.move[0]
+        ll1 = self.move[1]
+        for k in range(self.N-self.level):
+            if ll0 == 0 and ll1 > 0:
+                new_mysett_elem.append(
+                    [(k+1+ped[0]), (ped[1]), (ped[2]-(k+1))])
+            elif ll0 == 0 and ll1 < 0:
+                new_mysett_elem.append(
+                    [(ped[0]-(k+1)), (ped[1]), (k+1+ped[2])])
+            elif ll0 > 0 and ll1 > 0:
+                new_mysett_elem.append(
+                    [(k+1+ped[0]), (ped[1])-(k+1), (ped[2])])
+            elif ll0 < 0 and ll1 < 0:
+                new_mysett_elem.append(
+                    [(ped[0])-(k+1), (k+1+ped[1]), (ped[2])])
+            elif ll0 < 0 and ll1 > 0:
+                new_mysett_elem.append(
+                    [(ped[0]), (k+1+ped[1]), (ped[2])-(k+1)])
+            elif ll0 > 0 and ll1 < 0:
+                new_mysett_elem.append(
+                    [(ped[0]), (ped[1])-(k+1), (k+1+ped[2])])
+        if all(a not in self.mysett for a in new_mysett_elem) == False:
+            return False
+        else:
+            self.new_mysett_elem = new_mysett_elem
+            # print(self.liss)
+            # print(self.new_mysett_elem)
+            # print(self.mysett)
+            # print(" ")
+            return True
+
+    # Funkcija pārbauda, vai pievienojot jauno malu, ir iespējams 
+    # atgriezties atpakaļ sākumpunktā ar atlikušajām malām.
+    # d-jau izveidotā polimonda augstums, v-platums.
+    def checks2(self, move, level):
+        self.level = level
+        self.move = move
+        self.list1 = self.liss.copy()
+        self.list1.append(move)
+        d = 0
+        v = 0
+        for k in self.list1:
+            d += k[0]
+            v += k[1]
+        m = self.N - self.level - 1
+        mm = (m*(m+1))/2
+        # self.debugstate2(mm, v, d, m, self.level)
+        if (mm < abs(d)) or (mm < abs(v)):
+            return False
+        return True
+
+    def valid(self, level, move):
+        self.p = move
+        # self.debugstate(move, level)
+        c1 = self.checks(move, level)
+        c2 = self.checks2(move, level)
+        # print("c1={}, c2={}".format(c1, c2))
+        return c1 and c2
+
+    def done(self, level):
+        # if level == self.N - 1:
+        #     return True
+        # return False
+        return (level == self.N - 1)
+
+    # Pievienojam jauno malu sarakstā liss un šīs malas visus punktus 
+    # sarakstā mysett.
+    def record(self, level, move):
+        self.liss.append(move)
+        for k in self.new_mysett_elem:
+            self.mysett.append(k)
+
+    # Parāpjamies atpakaļ, ja bija sasniegts strupceļš.
+    def undo(self, level, move):
+        self.liss = self.liss[:-1]
+        self.mysett = self.mysett[:-(self.N-(level))]
+        self.new_mysett_elem = []
+        self.list1 = []
+
+    # Izvada risinājumu.
+    def display(self):
+        print("{},".format(self.liss))
+
+    # Atgriež četrus (pirmājā solī divus) iespējamos gājienus, 
+    # kā polimondu no dotā punkta var turpināt.
+    def moves(self, level):
+        self.level = level
+        if self.level == 1:
+            x111 = self.N - 1
+            li1 = [[x111, -x111 / 2], [x111, x111 / 2]]
+        else:
+            x1 = self.N - self.level
+            p = self.p
+            if p[0] == 0 and p[1] > 0 or p[0] == 0 and p[1] < 0:
+                li1 = [[x1, -x1 / 2], [x1, x1 / 2],
+                       [-x1, -x1 / 2], [-x1, x1 / 2]]
+            elif p[0] < 0 and p[1] > 0 or p[0] > 0 and p[1] < 0:
+                li1 = [[0, -x1], [x1, x1 / 2], [0, x1], [-x1, -x1 / 2]]
+            elif p[0] < 0 and p[1] < 0 or p[0] > 0 and p[1] > 0:
+                li1 = [[0, -x1], [x1, -x1 / 2], [0, x1], [-x1, x1 / 2]]
+        return li1
+
+def main():
+    q = Polimondi(n)
+    b = Backtrack(q)
+    if b.attempt(1):
+        q.display()
+
+if __name__ == '__main__':
+    main()
+    
+\end{Verbatim}
+
+
+
+\let\clearpage\relax
+
+\end{document}
