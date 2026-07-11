@@ -119,11 +119,11 @@ def trace (s : Sides) : List Pt :=
 /-- `CyclicChain' R l`: the relation `R` holds between all *cyclically*
 consecutive entries of `l` (including between the last and the first). -/
 def CyclicChain' {α : Type*} (R : α → α → Prop) (l : List α) : Prop :=
-  List.Chain' R (l ++ l.take 1)
+  List.IsChain R (l ++ l.take 1)
 
 instance {α : Type*} (R : α → α → Prop) [DecidableRel R] (l : List α) :
     Decidable (CyclicChain' R l) :=
-  inferInstanceAs (Decidable (List.Chain' R (l ++ l.take 1)))
+  inferInstanceAs (Decidable (List.IsChain R (l ++ l.take 1)))
 
 /-- Two cyclically consecutive sides make a genuine polygon vertex: the
 direction changes, and does not simply reverse.  (Reversal is in fact already
@@ -184,6 +184,16 @@ def IsPerfectPolyiamond (w : List Dir) : Prop :=
 instance (w : List Dir) : Decidable (IsPerfectPolyiamond w) :=
   inferInstanceAs (Decidable (IsPolyiamond (perfectSides w)))
 
+/-- The unit-step form of the boundary vector sum of a perfect polyiamond
+equals its weighted form: side `i` (of length `n − i`, where `n = w.length`)
+contributes `(n − i) • vec wᵢ`. -/
+lemma sum_unitSteps_perfectSides (w : List Dir) :
+    ((unitSteps (perfectSides w)).map Dir.vec).sum =
+      ∑ i : Fin w.length, (w.length - i.val) • (w.get i).vec := by
+  induction w with
+  | nil => simp [perfectSides, unitSteps]
+  | cons d w ih => simp [perfectSides, unitSteps, Fin.sum_univ_succ, ih]
+
 /-- The closure condition of a perfect polyiamond in the weighted-sum form
 used in the source text: `∑_{i<n} (n − i) · vec wᵢ = 0`
 (the `i`-th letter carries the side length `n − i`; reading the word from its
@@ -191,7 +201,13 @@ short end instead gives the equivalent form `∑ (i+1) · vec (w.reverse)ᵢ = 0
 theorem isPerfect_closes_iff_weightedSum (w : List Dir) :
     ((unitSteps (perfectSides w)).map Dir.vec).sum = 0 ↔
       ∑ i : Fin w.length, ((w.length : ℤ) - (i.val : ℤ)) • (w.get i).vec = 0 := by
-  sorry
+  have h : ∀ i : Fin w.length, ((w.length : ℤ) - (i.val : ℤ)) • (w.get i).vec
+      = (w.length - i.val) • (w.get i).vec := fun i => by
+    rw [← natCast_zsmul]
+    congr 1
+    have := i.isLt
+    omega
+  rw [sum_unitSteps_perfectSides, Finset.sum_congr rfl fun i _ => h i]
 
 /-! ### Angle conditions -/
 
@@ -396,14 +412,15 @@ noncomputable def toPlane (p : Pt) : ℝ × ℝ :=
 /-! ### Sanity checks
 
 All predicates above are decidable, so concrete instances can be certified by
-computation once the theory is set up, e.g.:
+computation, as done for `wordA 0` below; larger instances can be explored with
 
-* `example : IsPerfectObtusePolyiamond (wordA 0) := by native_decide`
 * `#eval decide (IsPerfectObtusePolyiamond (wordA 2))`
 * `#eval trace (perfectSides (wordA 0))`   -- the 78 boundary points + origin
 
-(`native_decide` is recommended over `decide`: the boundary of an `n`-gon
-visits `n(n+1)/2` points and the `Nodup` check is quadratic in that.)
+(The boundary of an `n`-gon visits `n(n+1)/2` points and the `Nodup` check is
+quadratic in that; for `n = 12` the kernel handles it — `decide +kernel`, the
+plain `decide` elaborator hits its recursion limit — but for larger instances
+`native_decide` is recommended.)
 
 The `n = 6` non-existence is *not* syntactically decidable in the form
 `¬ ∃ w : List Dir, …` (the existential ranges over the infinite type
@@ -411,10 +428,23 @@ The `n = 6` non-existence is *not* syntactically decidable in the form
 tuples, e.g. `∀ v : Fin 6 → Dir, ¬ IsPerfectObtusePolyiamond (List.ofFn v)`,
 which is decidable. -/
 
+open Dir in
+/-- `wordA 0` spelled out: the word `abcdedefafab`. -/
+lemma wordA_zero : wordA 0 = [a, b, c, d, e, d, e, f, a, f, a, b] := rfl
+
 /-- The smallest perfect obtuse polyiamond, `abcdedefafab` (12 sides).
-Expected to be provable by `native_decide`; left as `sorry` here so that the
-file elaborates without a compiled environment. -/
+Each field is a finite check, certified by the kernel via `decide`:
+the word `abcdedefafab` (see `wordA_zero`) has 12 letters, all
+cyclically consecutive letters differ by one step of `±60°` rotation,
+the weighted direction vectors sum to `0`, and the `78` boundary points
+(a 12-gon with sides `12, 11, …, 1`) are pairwise distinct. -/
 example : IsPerfectObtusePolyiamond (wordA 0) := by
-  sorry
+  refine ⟨⟨?_, ?_, ?_, ?_, ?_⟩, ?_⟩
+  · decide  -- `3 ≤ 12`: at least three sides
+  · decide  -- all sides have positive length
+  · decide  -- consecutive sides meet in genuine vertices
+  · decide  -- the boundary closes: the side vectors sum to `0`
+  · decide +kernel  -- simplicity: the visited grid points are pairwise distinct
+  · decide  -- every turn is `±60°`, i.e. every angle is `120°` or `240°`
 
 end Polyiamond
