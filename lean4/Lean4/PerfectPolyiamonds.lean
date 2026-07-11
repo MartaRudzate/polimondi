@@ -43,10 +43,12 @@
     interpretations, so the predicate is orientation-independent).
     Likewise `60°/300°` becomes a `±120°` rotation.
 
-  Everything below the definitions is *statements only*: the main theorems are
-  left as `sorry`, small bookkeeping lemmas are proved.  All predicates are
-  decidable, so concrete instances (e.g. the smallest `12`-gon `abcdedefafab`)
-  can eventually be certified by `decide` / `native_decide`.
+  Below the definitions, the necessity theorems and the two infinite-family
+  theorems are still left as `sorry`; proved so far are the weighted-sum form
+  of the closure condition, the closure of both families `wordA k` / `wordB k`
+  for every `k`, the `n = 6` non-existence, and (all predicates being
+  decidable) the concrete instance of the smallest `12`-gon `abcdedefafab`,
+  certified by `decide`.
 -/
 import Mathlib
 
@@ -209,6 +211,41 @@ theorem isPerfect_closes_iff_weightedSum (w : List Dir) :
     omega
   rw [sum_unitSteps_perfectSides, Finset.sum_congr rfl fun i _ => h i]
 
+/-! #### Weighted vector sums
+
+`wsum` is the workhorse for closure computations: it evaluates the boundary
+vector sum of consecutive sides of lengths `n, n − 1, …` side by side, so that
+sums over subwords compose (`wsum_append`) and sums over periodic subwords
+have arithmetic-progression closed forms (`wsum_rep_pair` below). -/
+
+/-- `wsum n w` is the boundary vector sum of consecutive sides of lengths
+`n, n − 1, …` in directions `w₀, w₁, …`, i.e.
+`n • vec w₀ + (n − 1) • vec w₁ + ⋯`.  The weight is an integer so that sums
+of subwords can be manipulated without truncated subtraction. -/
+def wsum : ℤ → List Dir → Pt
+  | _, [] => 0
+  | n, d :: w => n • d.vec + wsum (n - 1) w
+
+@[simp] lemma wsum_nil (n : ℤ) : wsum n [] = 0 := rfl
+
+@[simp] lemma wsum_cons (n : ℤ) (d : Dir) (w : List Dir) :
+    wsum n (d :: w) = n • d.vec + wsum (n - 1) w := rfl
+
+lemma wsum_append (u v : List Dir) (n : ℤ) :
+    wsum n (u ++ v) = wsum n u + wsum (n - u.length) v := by
+  induction u generalizing n with
+  | nil => simp
+  | cons d u ih =>
+    have h : n - 1 - (u.length : ℤ) = n - ((u.length : ℤ) + 1) := by ring
+    simp [ih, h, add_assoc]
+
+/-- The unit-step boundary sum of a perfect polyiamond in `wsum` form. -/
+lemma sum_map_vec_unitSteps_eq_wsum (w : List Dir) :
+    ((unitSteps (perfectSides w)).map Dir.vec).sum = wsum w.length w := by
+  induction w with
+  | nil => simp [perfectSides, unitSteps]
+  | cons d w ih => simp [perfectSides, unitSteps, ih, ← natCast_zsmul]
+
 /-! ### Angle conditions -/
 
 /-- One *obtuse* step: the next side direction is obtained from the previous
@@ -324,6 +361,21 @@ def rep (u : List Dir) : ℕ → List Dir
   | zero => simp [rep]
   | succ k ih => simp only [rep, List.length_append, ih]; ring
 
+/-- Arithmetic-progression formula: in `(xy)^k` traced with weights
+`n, n − 1, …, n − 2k + 1`, the letter `x` collects the weights
+`n, n − 2, …` summing to `k(n − k + 1)`, and `y` the weights
+`n − 1, n − 3, …` summing to `k(n − k)`. -/
+lemma wsum_rep_pair (x y : Dir) (k : ℕ) (n : ℤ) :
+    wsum n (rep [x, y] k)
+      = ((k : ℤ) * (n - k + 1)) • x.vec + ((k : ℤ) * (n - k)) • y.vec := by
+  induction k generalizing n with
+  | zero => simp [rep]
+  | succ k ih =>
+    have h : rep [x, y] (k + 1) = x :: y :: rep [x, y] k := rfl
+    rw [h, wsum_cons, wsum_cons, ih]
+    push_cast
+    module
+
 open Dir in
 /-- The first family, `n = 12k + 12` (i.e. `n = 12, 24, 36, …`):
 `(ab)^k · abc · (de)^k · de · (dc)^k · de · (fa)^k · fa · (fe)^k · fa · (bc)^k · b`.
@@ -357,13 +409,40 @@ def wordB (k : ℕ) : List Dir :=
     List.length_nil]
   omega
 
+/-- The boundary of `wordA k` closes, for every `k`: the word splits into six
+`rep`-segments and six short joints, each evaluated by `wsum_append` /
+`wsum_rep_pair`, and the resulting linear combination of the six direction
+vectors cancels — checked componentwise by `ring`, with `k` symbolic. -/
+theorem closes_wordA (k : ℕ) :
+    ((unitSteps (perfectSides (wordA k))).map Dir.vec).sum = 0 := by
+  rw [sum_map_vec_unitSteps_eq_wsum, wordA_length]
+  simp only [wordA, wsum_append, wsum_rep_pair, wsum_cons, wsum_nil,
+    rep_length, List.length_append, List.length_cons, List.length_nil]
+  simp only [Dir.vec, Prod.smul_mk, smul_eq_mul, Prod.ext_iff, Prod.fst_add,
+    Prod.snd_add, Prod.fst_zero, Prod.snd_zero]
+  push_cast
+  refine ⟨by ring, by ring, by ring⟩
+
+/-- The boundary of `wordB k` closes, for every `k` (same method as
+`closes_wordA`). -/
+theorem closes_wordB (k : ℕ) :
+    ((unitSteps (perfectSides (wordB k))).map Dir.vec).sum = 0 := by
+  rw [sum_map_vec_unitSteps_eq_wsum, wordB_length]
+  simp only [wordB, wsum_append, wsum_rep_pair, wsum_cons, wsum_nil,
+    rep_length, List.length_append, List.length_cons, List.length_nil]
+  simp only [Dir.vec, Prod.smul_mk, smul_eq_mul, Prod.ext_iff, Prod.fst_add,
+    Prod.snd_add, Prod.fst_zero, Prod.snd_zero]
+  push_cast
+  refine ⟨by ring, by ring, by ring⟩
+
 /-- The first infinite family: every `wordA k` encodes a perfect obtuse
-`(12k + 12)`-polyiamond. -/
+`(12k + 12)`-polyiamond.  (Closure is `closes_wordA`; the positivity, corner
+and obtuse-turn conditions are routine; simplicity is the open part.) -/
 theorem isPerfectObtuse_wordA (k : ℕ) : IsPerfectObtusePolyiamond (wordA k) := by
   sorry
 
 /-- The second infinite family: every `wordB k` encodes a perfect obtuse
-`(12k + 18)`-polyiamond. -/
+`(12k + 18)`-polyiamond.  (Closure is `closes_wordB`.) -/
 theorem isPerfectObtuse_wordB (k : ℕ) : IsPerfectObtusePolyiamond (wordB k) := by
   sorry
 
@@ -375,14 +454,32 @@ theorem exists_obtuse_of_six_dvd {n : ℕ} (h₆ : 6 ∣ n) (h₁₂ : 12 ≤ n)
     ∃ w : List Dir, w.length = n ∧ IsPerfectObtusePolyiamond w := by
   sorry
 
-/-- No perfect obtuse hexagon exists.  (Finite check over the `6^6` candidate
-words; alternatively: the total turning of a simple closed curve is `±360°`,
-so all six turns would have the same sign, making the hexagon equiangular
-with sides `6, 5, 4, 3, 2, 1` — and an equiangular hexagon must satisfy
-`s₁ − s₄ = s₅ − s₂ = s₃ − s₆`, which fails.) -/
+/-- No word of length 6 is both cyclically obtuse and closed: a finite check
+over the `6^6` candidates, certified by the kernel.  (Simplicity is not needed
+for the contradiction: *no* hexagonal boundary with only `120°`/`240°` angles
+and sides `6, 5, 4, 3, 2, 1` returns to its starting point.  This is stronger
+than the classical argument via the total turning of a simple closed curve,
+which would only reduce the candidates to the equiangular words
+`x · x±60° · x±120° · ⋯` and still needs closure to fail for those.) -/
+lemma no_obtuse_closed_six : ∀ d₁ d₂ d₃ d₄ d₅ d₆ : Dir,
+    ¬ (CyclicChain' ObtuseStep [d₁, d₂, d₃, d₄, d₅, d₆] ∧
+       wsum 6 [d₁, d₂, d₃, d₄, d₅, d₆] = 0) := by
+  decide +kernel
+
+/-- No perfect obtuse hexagon exists: writing the word as its six letters,
+`no_obtuse_closed_six` contradicts the obtuse-turn and closure conditions. -/
 theorem not_exists_obtuse_six :
     ¬ ∃ w : List Dir, w.length = 6 ∧ IsPerfectObtusePolyiamond w := by
-  sorry
+  rintro ⟨w, hlen, h⟩
+  obtain ⟨v, rfl⟩ : ∃ v : Fin 6 → Dir, w = List.ofFn v := by
+    refine ⟨fun i => w[(i : ℕ)]'(by rw [hlen]; exact i.isLt), ?_⟩
+    exact List.ext_getElem (by simp [hlen]) (fun i h1 h2 => (List.getElem_ofFn h2).symm)
+  have e : List.ofFn v = [v 0, v 1, v 2, v 3, v 4, v 5] := by simp [List.ofFn_succ]
+  rw [e] at h
+  refine no_obtuse_closed_six (v 0) (v 1) (v 2) (v 3) (v 4) (v 5) ⟨h.obtuse, ?_⟩
+  have hc := h.perfect.closes
+  rw [sum_map_vec_unitSteps_eq_wsum] at hc
+  simpa using hc
 
 /-- **Full characterization**: a perfect obtuse `n`-polyiamond exists *iff*
 `6 ∣ n` and `12 ≤ n`.  (The forward direction combines
@@ -424,9 +521,9 @@ plain `decide` elaborator hits its recursion limit — but for larger instances
 
 The `n = 6` non-existence is *not* syntactically decidable in the form
 `¬ ∃ w : List Dir, …` (the existential ranges over the infinite type
-`List Dir`); to check it by computation, reformulate over the finite type of
-tuples, e.g. `∀ v : Fin 6 → Dir, ¬ IsPerfectObtusePolyiamond (List.ofFn v)`,
-which is decidable. -/
+`List Dir`); `not_exists_obtuse_six` above therefore goes through the
+decidable reformulation over the six letters of the word
+(`no_obtuse_closed_six`). -/
 
 open Dir in
 /-- `wordA 0` spelled out: the word `abcdedefafab`. -/
