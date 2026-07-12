@@ -43,12 +43,18 @@
     interpretations, so the predicate is orientation-independent).
     Likewise `60°/300°` becomes a `±120°` rotation.
 
-  Below the definitions, the necessity theorems and the two infinite-family
-  theorems are still left as `sorry`; proved so far are the weighted-sum form
-  of the closure condition, the closure of both families `wordA k` / `wordB k`
-  for every `k`, the `n = 6` non-existence, and (all predicates being
-  decidable) the concrete instance of the smallest `12`-gon `abcdedefafab`,
-  certified by `decide`.
+  This file contains the *general* definitions and the family-independent
+  results (the weighted-sum form of the closure condition, the `wsum`/`rep`
+  machinery for evaluating boundary sums of periodic words, the necessity
+  theorems — still `sorry` — and the `n = 6` non-existence).  The explicit
+  infinite families live in separate files that import this one:
+
+  * `Lean4.Perfect12k`   — the perfect *obtuse* families `wordA k`
+    (`n = 12k + 12`) and `wordB k` (`n = 12k + 18`), and the sufficiency /
+    characterization statements built from them;
+  * `Lean4.Perfect8k_8`  — the perfect (but *not* obtuse: it has two `60°`
+    angles) family `wordE k` (`n = 8k + 8`),
+    `E(k) = ab(ab)^k dede(dede)^k ab(ab)^k`.
 -/
 import Mathlib
 
@@ -344,11 +350,13 @@ theorem colour_pair_step {w : List Dir} (h : IsPerfectObtusePolyiamond w)
     colour (vertexAfter w (2 * i + 2)) = colour (vertexAfter w (2 * i)) + 1 := by
   sorry
 
-/-! ### The sufficient condition: two explicit infinite families
+/-! ### Repeated subwords
 
-`wordA k` and `wordB k` are the boundary words of the two arithmetic
-progressions `12, 24, 36, …` and `18, 30, 42, …` of the source
-(`Apgalvojums` in `kursadarbs.tex`). -/
+The explicit infinite families (`wordA`/`wordB` in `Lean4.Perfect12k`,
+`wordE` in `Lean4.Perfect8k_8`) are all built from periodically repeated
+two-letter blocks; `rep` and the arithmetic-progression formula
+`wsum_rep_pair` are the shared machinery for evaluating their boundary
+sums with the parameter `k` symbolic. -/
 
 /-- `rep u k` is the word `u` repeated `k` times (`u^k` in string notation). -/
 def rep (u : List Dir) : ℕ → List Dir
@@ -375,84 +383,6 @@ lemma wsum_rep_pair (x y : Dir) (k : ℕ) (n : ℤ) :
     rw [h, wsum_cons, wsum_cons, ih]
     push_cast
     module
-
-open Dir in
-/-- The first family, `n = 12k + 12` (i.e. `n = 12, 24, 36, …`):
-`(ab)^k · abc · (de)^k · de · (dc)^k · de · (fa)^k · fa · (fe)^k · fa · (bc)^k · b`.
-For `k = 0` this is `abcdedefafab`, the unique smallest serial `120°` isogon. -/
-def wordA (k : ℕ) : List Dir :=
-  rep [a, b] k ++ [a, b, c] ++
-  rep [d, e] k ++ [d, e] ++
-  rep [d, c] k ++ [d, e] ++
-  rep [f, a] k ++ [f, a] ++
-  rep [f, e] k ++ [f, a] ++
-  rep [b, c] k ++ [b]
-
-open Dir in
-/-- The second family, `n = 12k + 18` (i.e. `n = 18, 30, 42, …`):
-`(ab)^k · abaf · (ed)^k · eded · (ef)^k · ed · (cb)^k · cbcb · (cd)^k · cb · (af)^k · ab`. -/
-def wordB (k : ℕ) : List Dir :=
-  rep [a, b] k ++ [a, b, a, f] ++
-  rep [e, d] k ++ [e, d, e, d] ++
-  rep [e, f] k ++ [e, d] ++
-  rep [c, b] k ++ [c, b, c, b] ++
-  rep [c, d] k ++ [c, b] ++
-  rep [a, f] k ++ [a, b]
-
-@[simp] lemma wordA_length (k : ℕ) : (wordA k).length = 12 * k + 12 := by
-  simp only [wordA, List.length_append, rep_length, List.length_cons,
-    List.length_nil]
-  omega
-
-@[simp] lemma wordB_length (k : ℕ) : (wordB k).length = 12 * k + 18 := by
-  simp only [wordB, List.length_append, rep_length, List.length_cons,
-    List.length_nil]
-  omega
-
-/-- The boundary of `wordA k` closes, for every `k`: the word splits into six
-`rep`-segments and six short joints, each evaluated by `wsum_append` /
-`wsum_rep_pair`, and the resulting linear combination of the six direction
-vectors cancels — checked componentwise by `ring`, with `k` symbolic. -/
-theorem closes_wordA (k : ℕ) :
-    ((unitSteps (perfectSides (wordA k))).map Dir.vec).sum = 0 := by
-  rw [sum_map_vec_unitSteps_eq_wsum, wordA_length]
-  simp only [wordA, wsum_append, wsum_rep_pair, wsum_cons, wsum_nil,
-    rep_length, List.length_append, List.length_cons, List.length_nil]
-  simp only [Dir.vec, Prod.smul_mk, smul_eq_mul, Prod.ext_iff, Prod.fst_add,
-    Prod.snd_add, Prod.fst_zero, Prod.snd_zero]
-  push_cast
-  refine ⟨by ring, by ring, by ring⟩
-
-/-- The boundary of `wordB k` closes, for every `k` (same method as
-`closes_wordA`). -/
-theorem closes_wordB (k : ℕ) :
-    ((unitSteps (perfectSides (wordB k))).map Dir.vec).sum = 0 := by
-  rw [sum_map_vec_unitSteps_eq_wsum, wordB_length]
-  simp only [wordB, wsum_append, wsum_rep_pair, wsum_cons, wsum_nil,
-    rep_length, List.length_append, List.length_cons, List.length_nil]
-  simp only [Dir.vec, Prod.smul_mk, smul_eq_mul, Prod.ext_iff, Prod.fst_add,
-    Prod.snd_add, Prod.fst_zero, Prod.snd_zero]
-  push_cast
-  refine ⟨by ring, by ring, by ring⟩
-
-/-- The first infinite family: every `wordA k` encodes a perfect obtuse
-`(12k + 12)`-polyiamond.  (Closure is `closes_wordA`; the positivity, corner
-and obtuse-turn conditions are routine; simplicity is the open part.) -/
-theorem isPerfectObtuse_wordA (k : ℕ) : IsPerfectObtusePolyiamond (wordA k) := by
-  sorry
-
-/-- The second infinite family: every `wordB k` encodes a perfect obtuse
-`(12k + 18)`-polyiamond.  (Closure is `closes_wordB`.) -/
-theorem isPerfectObtuse_wordB (k : ℕ) : IsPerfectObtusePolyiamond (wordB k) := by
-  sorry
-
-/-- **Sufficiency**: for every `n ≥ 12` divisible by `6` there is a perfect
-obtuse `n`-polyiamond.  (From the two families: if `n ≡ 0 (mod 12)` then
-`n = 12k + 12` for some `k`, and if `n ≡ 6 (mod 12)` with `n ≥ 12` then
-`n ≥ 18`, so `n = 12k + 18` for some `k`.) -/
-theorem exists_obtuse_of_six_dvd {n : ℕ} (h₆ : 6 ∣ n) (h₁₂ : 12 ≤ n) :
-    ∃ w : List Dir, w.length = n ∧ IsPerfectObtusePolyiamond w := by
-  sorry
 
 /-- No word of length 6 is both cyclically obtuse and closed: a finite check
 over the `6^6` candidates, certified by the kernel.  (Simplicity is not needed
@@ -481,15 +411,6 @@ theorem not_exists_obtuse_six :
   rw [sum_map_vec_unitSteps_eq_wsum] at hc
   simpa using hc
 
-/-- **Full characterization**: a perfect obtuse `n`-polyiamond exists *iff*
-`6 ∣ n` and `12 ≤ n`.  (The forward direction combines
-`six_dvd_of_exists_obtuse`, `not_exists_obtuse_six`, and `IsPolyiamond.three_le`
-which rules out `n = 0`.) -/
-theorem exists_obtuse_iff (n : ℕ) :
-    (∃ w : List Dir, w.length = n ∧ IsPerfectObtusePolyiamond w) ↔
-      6 ∣ n ∧ 12 ≤ n := by
-  sorry
-
 /-! ### Optional bridge to Euclidean geometry
 
 Should a fully geometric statement ever be wanted, the grid plane embeds into
@@ -509,10 +430,9 @@ noncomputable def toPlane (p : Pt) : ℝ × ℝ :=
 /-! ### Sanity checks
 
 All predicates above are decidable, so concrete instances can be certified by
-computation, as done for `wordA 0` below; larger instances can be explored with
-
-* `#eval decide (IsPerfectObtusePolyiamond (wordA 2))`
-* `#eval trace (perfectSides (wordA 0))`   -- the 78 boundary points + origin
+computation; see the `k = 0` instances in `Lean4.Perfect12k` (the smallest
+serial `120°` isogon `abcdedefafab`) and `Lean4.Perfect8k_8` (the smallest
+member `abdedeab` of the `8k + 8` family).
 
 (The boundary of an `n`-gon visits `n(n+1)/2` points and the `Nodup` check is
 quadratic in that; for `n = 12` the kernel handles it — `decide +kernel`, the
@@ -524,24 +444,5 @@ The `n = 6` non-existence is *not* syntactically decidable in the form
 `List Dir`); `not_exists_obtuse_six` above therefore goes through the
 decidable reformulation over the six letters of the word
 (`no_obtuse_closed_six`). -/
-
-open Dir in
-/-- `wordA 0` spelled out: the word `abcdedefafab`. -/
-lemma wordA_zero : wordA 0 = [a, b, c, d, e, d, e, f, a, f, a, b] := rfl
-
-/-- The smallest perfect obtuse polyiamond, `abcdedefafab` (12 sides).
-Each field is a finite check, certified by the kernel via `decide`:
-the word `abcdedefafab` (see `wordA_zero`) has 12 letters, all
-cyclically consecutive letters differ by one step of `±60°` rotation,
-the weighted direction vectors sum to `0`, and the `78` boundary points
-(a 12-gon with sides `12, 11, …, 1`) are pairwise distinct. -/
-example : IsPerfectObtusePolyiamond (wordA 0) := by
-  refine ⟨⟨?_, ?_, ?_, ?_, ?_⟩, ?_⟩
-  · decide  -- `3 ≤ 12`: at least three sides
-  · decide  -- all sides have positive length
-  · decide  -- consecutive sides meet in genuine vertices
-  · decide  -- the boundary closes: the side vectors sum to `0`
-  · decide +kernel  -- simplicity: the visited grid points are pairwise distinct
-  · decide  -- every turn is `±60°`, i.e. every angle is `120°` or `240°`
 
 end Polyiamond
