@@ -19,12 +19,16 @@
   part, as for the other families) is left as `sorry`.
 
   The area of these polyiamonds, measured in unit triangles (`area` in
-  `Lean4.PerfectPolyiamonds`), is claimed to be the cubic polynomial
+  `Lean4.PerfectPolyiamonds`), is the cubic polynomial
 
     `P(k) = 144k³ + 232k² + 124k + 19`
 
-  (`area_wordF`, left as `sorry`); the instances `P(0) = 19` and
-  `P(1) = 519` are certified by `decide`.
+  (`area_wordF`, proved for every `k` with `k` symbolic: the `csum` shoelace
+  machinery of `Lean4.PerfectPolyiamonds` splits the boundary along the four
+  blocks of `wordF`, the periodic blocks get polynomial closed forms
+  `csum_rep_bdfd`/`csum_rep_afab` by induction on `k`, and the pieces sum to
+  `−P(k)`, the boundary being traced clockwise); the instances `P(0) = 19`
+  and `P(1) = 519` are also certified by `decide`.
 -/
 import Lean4.PerfectPolyiamonds
 
@@ -73,14 +77,78 @@ families of `Lean4.Perfect12k` and `Lean4.Perfect8k_8`.) -/
 theorem isPerfect_wordF (k : ℕ) : IsPerfectPolyiamond (wordF k) := by
   sorry
 
+/-! ### The area polynomial
+
+The area is computed by the `csum` machinery of `Lean4.PerfectPolyiamonds`:
+`shoelace_trace_perfectSides` turns `area` into the weighted shoelace sum
+`csum n 0 (wordF k)` with `n = 8k + 5`, `csum_append` splits it along the
+four blocks of `wordF`, and the two periodic blocks are evaluated by the
+closed forms below (proved by induction on `k`, with `n` and the starting
+point `p` symbolic; the induction step peels one period off the front and
+closes with `ring`). -/
+
+open Dir in
+/-- Closed form of the shoelace sum along the block `(bdfd)^k`, with the
+start weight `n` and the start point `p` symbolic. -/
+lemma csum_rep_bdfd (k : ℕ) (n : ℤ) (p : Pt) :
+    csum n p (rep [b, d, f, d] k)
+      = -4 * (k : ℤ) ^ 3 + 4 * (k : ℤ) ^ 2 * n + 8 * (k : ℤ) ^ 2
+          - (k : ℤ) * n ^ 2 - 4 * (k : ℤ) * n - 2 * (k : ℤ) * p.1
+          + (-2 * (k : ℤ) ^ 2 + (k : ℤ) * n - 2 * (k : ℤ)) * p.2.1 := by
+  induction k generalizing n p with
+  | zero => norm_num [rep]
+  | succ k ih =>
+    simp only [rep]
+    rw [csum_append, ih]
+    simp only [csum_cons, csum_nil, wsum_cons, wsum_nil, List.length_cons,
+      List.length_nil, Dir.vec, cross, Prod.smul_mk, smul_eq_mul,
+      Prod.mk_add_mk, Prod.fst_add, Prod.snd_add, Prod.fst_zero, Prod.snd_zero,
+      add_zero, zero_add]
+    push_cast
+    ring
+
+open Dir in
+/-- Closed form of the shoelace sum along the block `(afab)^k`, with the
+start weight `n` and the start point `p` symbolic. -/
+lemma csum_rep_afab (k : ℕ) (n : ℤ) (p : Pt) :
+    csum n p (rep [a, f, a, b] k)
+      = -12 * (k : ℤ) ^ 3 + 12 * (k : ℤ) ^ 2 * n - 4 * (k : ℤ) ^ 2
+          - 3 * (k : ℤ) * n ^ 2 + 2 * (k : ℤ) * n + 5 * (k : ℤ)
+          + 2 * (k : ℤ) * p.1
+          + (6 * (k : ℤ) ^ 2 - 3 * (k : ℤ) * n - (k : ℤ)) * p.2.1 := by
+  induction k generalizing n p with
+  | zero => norm_num [rep]
+  | succ k ih =>
+    simp only [rep]
+    rw [csum_append, ih]
+    simp only [csum_cons, csum_nil, wsum_cons, wsum_nil, List.length_cons,
+      List.length_nil, Dir.vec, cross, Prod.smul_mk, smul_eq_mul,
+      Prod.mk_add_mk, Prod.fst_add, Prod.snd_add, Prod.fst_zero, Prod.snd_zero,
+      add_zero, zero_add]
+    push_cast
+    ring
+
 /-- **The area polynomial**: the area of the perfect polyiamond `wordF k`,
 measured in unit triangles, is the cubic polynomial
-`P(k) = 144k³ + 232k² + 124k + 19`.  (The instances `k = 0` and `k = 1`
-are certified by `decide` below.) -/
+`P(k) = 144k³ + 232k² + 124k + 19`, for every `k`.  The boundary is traced
+clockwise, so its shoelace sum is `−P(k)`; the area is `|−P(k)| = P(k)`. -/
 theorem area_wordF (k : ℕ) :
     area (perfectSides (wordF k))
       = 144 * (k : ℤ) ^ 3 + 232 * (k : ℤ) ^ 2 + 124 * (k : ℤ) + 19 := by
-  sorry
+  have hs : shoelace (trace (perfectSides (wordF k)))
+      = -(144 * (k : ℤ) ^ 3 + 232 * (k : ℤ) ^ 2 + 124 * (k : ℤ) + 19) := by
+    rw [shoelace_trace_perfectSides, wordF_length]
+    simp only [wordF, csum_append, csum_rep_bdfd, csum_rep_afab, csum_cons,
+      csum_nil, wsum_append, wsum_rep_quad, wsum_cons, wsum_nil, rep_length,
+      List.length_append, List.length_cons, List.length_nil, Dir.vec, cross,
+      Prod.smul_mk, smul_eq_mul, Prod.mk_add_mk, Prod.fst_add, Prod.snd_add,
+      Prod.fst_zero, Prod.snd_zero, add_zero, zero_add]
+    push_cast
+    ring
+  have hP : (0 : ℤ)
+      ≤ 144 * (k : ℤ) ^ 3 + 232 * (k : ℤ) ^ 2 + 124 * (k : ℤ) + 19 := by
+    positivity
+  rw [area, hs, abs_neg, abs_of_nonneg hP]
 
 /-! ### Sanity checks -/
 

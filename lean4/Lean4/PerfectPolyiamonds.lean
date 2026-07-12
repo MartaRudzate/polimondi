@@ -477,6 +477,147 @@ open Dir in
 /-- The area of a single unit triangle is `1`. -/
 example : area [(1, a), (1, c), (1, e)] = 1 := by decide
 
+/-! #### Shoelace sums of perfect boundaries
+
+`crossSum`/`csum` are the area counterparts of the `wsum` machinery above:
+they evaluate the shoelace sum of a boundary walk side by side, so that sums
+over subwords compose (`csum_append`), a translation of the starting point
+enters only through `cross` and the boundary vector sum
+(`csum_eq_cross_wsum_add_csum`), and periodic subwords get polynomial closed
+forms (see `Lean4.Perfect8k_5`, where this machinery proves the area
+polynomial `area_wordF` for every `k`). -/
+
+@[simp] lemma cross_zero_left (q : Pt) : cross 0 q = 0 := by
+  simp [cross]
+
+@[simp] lemma cross_zero_right (p : Pt) : cross p 0 = 0 := by
+  simp [cross]
+
+@[simp] lemma cross_self (p : Pt) : cross p p = 0 := by
+  simp [cross]
+
+lemma cross_add_left (p q r : Pt) : cross (p + q) r = cross p r + cross q r := by
+  simp only [cross, Prod.fst_add, Prod.snd_add]; ring
+
+lemma cross_add_right (p q r : Pt) : cross p (q + r) = cross p q + cross p r := by
+  simp only [cross, Prod.fst_add, Prod.snd_add]; ring
+
+lemma cross_zsmul_left (n : ℤ) (p q : Pt) : cross (n • p) q = n * cross p q := by
+  simp only [cross, Prod.smul_fst, Prod.smul_snd, smul_eq_mul]; ring
+
+lemma cross_zsmul_right (n : ℤ) (p q : Pt) : cross p (n • q) = n * cross p q := by
+  simp only [cross, Prod.smul_fst, Prod.smul_snd, smul_eq_mul]; ring
+
+/-- The shoelace sum of the unit-step walk that starts at `p` and follows the
+directions `ds`: the step from `q` in direction `d` contributes
+`cross q (q + vec d) = cross q (vec d)`. -/
+def crossSum : Pt → List Dir → ℤ
+  | _, [] => 0
+  | p, d :: ds => cross p d.vec + crossSum (p + d.vec) ds
+
+@[simp] lemma crossSum_nil (p : Pt) : crossSum p [] = 0 := rfl
+
+@[simp] lemma crossSum_cons (p : Pt) (d : Dir) (ds : List Dir) :
+    crossSum p (d :: ds) = cross p d.vec + crossSum (p + d.vec) ds := rfl
+
+/-- Prepending a point to a unit-step walk adds one shoelace term
+(`scanl` is never empty, so `shoelace` always sees the first edge). -/
+private lemma shoelace_cons_scanl (p q : Pt) (ds : List Dir) :
+    shoelace (p :: ds.scanl (fun r d => r + d.vec) q)
+      = cross p q + shoelace (ds.scanl (fun r d => r + d.vec) q) := by
+  cases ds <;> simp only [List.scanl_nil, List.scanl_cons, shoelace]
+
+/-- The shoelace sum of the unit-step walk from `p` along `ds` is
+`crossSum p ds`. -/
+lemma shoelace_scanl (ds : List Dir) (p : Pt) :
+    shoelace (ds.scanl (fun q d => q + d.vec) p) = crossSum p ds := by
+  induction ds generalizing p with
+  | nil => rfl
+  | cons d ds ih =>
+    simp only [List.scanl_cons]
+    rw [shoelace_cons_scanl, ih, crossSum_cons, cross_add_right, cross_self,
+      zero_add]
+
+/-- The shoelace sum of the trace of a boundary, one unit step at a time. -/
+lemma shoelace_trace (s : Sides) :
+    shoelace (trace s) = crossSum 0 (unitSteps s) :=
+  shoelace_scanl _ _
+
+lemma crossSum_append (u v : List Dir) (p : Pt) :
+    crossSum p (u ++ v)
+      = crossSum p u + crossSum (p + (u.map Dir.vec).sum) v := by
+  induction u generalizing p with
+  | nil => simp
+  | cons d u ih => simp [ih, add_assoc]
+
+/-- A straight run of `ℓ` unit steps in direction `d` — one side of length
+`ℓ` — contributes `ℓ · cross p (vec d)` to the shoelace sum. -/
+lemma crossSum_replicate (ℓ : ℕ) (d : Dir) (p : Pt) :
+    crossSum p (List.replicate ℓ d) = ℓ * cross p d.vec := by
+  induction ℓ generalizing p with
+  | zero => simp
+  | succ ℓ ih =>
+    rw [List.replicate_succ, crossSum_cons, ih, cross_add_left, cross_self]
+    push_cast
+    ring
+
+/-- `csum n p w`: the shoelace sum of the boundary walk that starts at `p` and
+traces consecutive sides of lengths `n, n − 1, …` in directions `w₀, w₁, …`
+(the side from `q` of length `ℓ` in direction `d` contributes
+`ℓ · cross q (vec d)` and moves the current point to `q + ℓ • vec d`).
+This is the area counterpart of `wsum`. -/
+def csum : ℤ → Pt → List Dir → ℤ
+  | _, _, [] => 0
+  | n, p, d :: w => n * cross p d.vec + csum (n - 1) (p + n • d.vec) w
+
+@[simp] lemma csum_nil (n : ℤ) (p : Pt) : csum n p [] = 0 := rfl
+
+@[simp] lemma csum_cons (n : ℤ) (p : Pt) (d : Dir) (w : List Dir) :
+    csum n p (d :: w) = n * cross p d.vec + csum (n - 1) (p + n • d.vec) w := rfl
+
+lemma csum_append (u v : List Dir) (n : ℤ) (p : Pt) :
+    csum n p (u ++ v)
+      = csum n p u + csum (n - u.length) (p + wsum n u) v := by
+  induction u generalizing n p with
+  | nil => simp
+  | cons d u ih =>
+    have h : n - 1 - (u.length : ℤ) = n - ((u.length : ℤ) + 1) := by ring
+    simp [ih, h, add_assoc]
+
+/-- Translating the starting point of a boundary walk changes its shoelace
+sum by the cross product with the total boundary vector: the `p`-dependence
+of `csum` is entirely captured by `cross p (wsum n w)`. -/
+lemma csum_eq_cross_wsum_add_csum (w : List Dir) (n : ℤ) (p : Pt) :
+    csum n p w = cross p (wsum n w) + csum n 0 w := by
+  induction w generalizing n p with
+  | nil => simp
+  | cons d w ih =>
+    have h1 := ih (n - 1) (p + n • d.vec)
+    have h2 := ih (n - 1) ((0 : Pt) + n • d.vec)
+    rw [csum_cons, csum_cons, wsum_cons, h1, h2]
+    simp only [cross_add_right, cross_add_left, cross_zsmul_left,
+      cross_zsmul_right, cross_zero_left, zero_add]
+    ring
+
+/-- The shoelace sum of the boundary of a perfect polyiamond, in `csum` form
+(the area counterpart of `sum_map_vec_unitSteps_eq_wsum`). -/
+lemma crossSum_unitSteps_perfectSides (w : List Dir) (p : Pt) :
+    crossSum p (unitSteps (perfectSides w)) = csum w.length p w := by
+  induction w generalizing p with
+  | nil => rfl
+  | cons d w ih =>
+    simp only [perfectSides, unitSteps]
+    rw [crossSum_append, crossSum_replicate, ih]
+    simp only [List.map_replicate, List.sum_replicate, List.length_cons,
+      csum_cons, Nat.cast_add, Nat.cast_one, add_sub_cancel_right,
+      ← natCast_zsmul]
+
+/-- The shoelace sum of the trace of a perfect polyiamond: `area` reduces to
+the weighted shoelace sum `csum` of its direction word. -/
+lemma shoelace_trace_perfectSides (w : List Dir) :
+    shoelace (trace (perfectSides w)) = csum w.length 0 w := by
+  rw [shoelace_trace, crossSum_unitSteps_perfectSides]
+
 /-! ### Sanity checks
 
 All predicates above are decidable, so concrete instances can be certified by
