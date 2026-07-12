@@ -54,7 +54,10 @@
     characterization statements built from them;
   * `Lean4.Perfect8k_8`  — the perfect (but *not* obtuse: it has two `60°`
     angles) family `wordE k` (`n = 8k + 8`),
-    `E(k) = ab(ab)^k dede(dede)^k ab(ab)^k`.
+    `E(k) = ab(ab)^k dede(dede)^k ab(ab)^k`;
+  * `Lean4.Perfect8k_5`  — the perfect family `wordF k` (`n = 8k + 5`),
+    `E(k) = ac(bdfd)^k edf(afab)^k`, together with the claim that its area
+    in unit triangles is the cubic polynomial `144k³ + 232k² + 124k + 19`.
 -/
 import Mathlib
 
@@ -384,6 +387,22 @@ lemma wsum_rep_pair (x y : Dir) (k : ℕ) (n : ℤ) :
     push_cast
     module
 
+/-- The four-letter analogue of `wsum_rep_pair`: in `(xyzw)^k` traced with
+weights `n, n − 1, …, n − 4k + 1`, the letter `x` collects the weights
+`n, n − 4, …` summing to `k(n − 2k + 2)`, and `y`, `z`, `w` likewise the
+sums `k(n − 2k + 1)`, `k(n − 2k)`, `k(n − 2k − 1)`. -/
+lemma wsum_rep_quad (x y z w : Dir) (k : ℕ) (n : ℤ) :
+    wsum n (rep [x, y, z, w] k)
+      = ((k : ℤ) * (n - 2 * k + 2)) • x.vec + ((k : ℤ) * (n - 2 * k + 1)) • y.vec
+        + ((k : ℤ) * (n - 2 * k)) • z.vec + ((k : ℤ) * (n - 2 * k - 1)) • w.vec := by
+  induction k generalizing n with
+  | zero => simp [rep]
+  | succ k ih =>
+    have h : rep [x, y, z, w] (k + 1) = x :: y :: z :: w :: rep [x, y, z, w] k := rfl
+    rw [h, wsum_cons, wsum_cons, wsum_cons, wsum_cons, ih]
+    push_cast
+    module
+
 /-- No word of length 6 is both cyclically obtuse and closed: a finite check
 over the `6^6` candidates, certified by the kernel.  (Simplicity is not needed
 for the contradiction: *no* hexagonal boundary with only `120°`/`240°` angles
@@ -426,6 +445,37 @@ the workable formalization. -/
 `vec b ↦ (1/2, √3/2)`. -/
 noncomputable def toPlane (p : Pt) : ℝ × ℝ :=
   ((p.1 : ℝ) + (p.2.1 : ℝ) / 2, -(Real.sqrt 3 / 2) * (p.2.1 : ℝ))
+
+/-! ### Area
+
+The area of a polyiamond, measured in *unit triangles* (not the Euclidean
+area).  Under the embedding `toPlane`, `u = x + y/2` and `v = −(√3/2)·y`,
+so each term of the Euclidean shoelace formula transforms as
+`uᵢ·vⱼ − uⱼ·vᵢ = (√3/2)·(xⱼ·yᵢ − xᵢ·yⱼ)`, giving Euclidean area
+`½·|Σᵢ (uᵢ·vᵢ₊₁ − uᵢ₊₁·vᵢ)| = (√3/4)·|Σᵢ (xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|`.
+A unit grid triangle has Euclidean area exactly `√3/4`, so the integer
+`|Σᵢ (xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|`, computed from the cube coordinates of the
+boundary vertices, *is* the number of unit triangles enclosed. -/
+
+/-- The cross-product term `x_p·y_q − x_q·y_p` of the shoelace formula, in
+the first two cube coordinates. -/
+def cross (p q : Pt) : ℤ := p.1 * q.2.1 - q.1 * p.2.1
+
+/-- The shoelace sum `Σᵢ cross Pᵢ Pᵢ₊₁` over consecutive points of a list. -/
+def shoelace : List Pt → ℤ
+  | p :: q :: l => cross p q + shoelace (q :: l)
+  | _ => 0
+
+/-- The area of the region enclosed by the boundary `s`, measured in unit
+triangles.  (`trace s` of a closed boundary begins *and ends* at the origin,
+so the shoelace sum over its consecutive points is already the full cyclic
+sum.)  For a genuine polyiamond this is a positive integer; the absolute
+value makes the definition independent of the traversal orientation. -/
+def area (s : Sides) : ℤ := |shoelace (trace s)|
+
+open Dir in
+/-- The area of a single unit triangle is `1`. -/
+example : area [(1, a), (1, c), (1, e)] = 1 := by decide
 
 /-! ### Sanity checks
 
