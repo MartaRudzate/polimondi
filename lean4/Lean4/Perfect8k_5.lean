@@ -15,8 +15,14 @@
   directions `a, b, c, d, e, f` collect the weights `4k² + 10k + 5`,
   `8k² + 4k`, `8k + 4`, `12k² + 10k + 2`, `4k + 3`, `8k² + 8k + 1`, whose
   vector sum cancels), and the `k = 0` instance is certified by `decide`.
-  The full family theorem `isPerfect_wordF` (simplicity being the open
-  part, as for the other families) is left as `sorry`.
+  The family theorem `isPerfect_wordF` is assembled from `closes_wordF`,
+  the positivity of the side lengths (`pos_perfectSides`), the cyclic
+  corner condition (`cyclicChain_dirStep_wordF`, proved for every `k` by
+  induction over the periodic blocks), and the simplicity of the boundary —
+  the one remaining open condition, isolated as `nodup_trace_wordF`
+  (`sorry`, with a documented geometric proof plan).  From it,
+  `exists_isPerfectPolyiamond_of_mod_eight` derives a perfect
+  `n`-polyiamond for every `n ≡ 5 (mod 8)`.
 
   The area of these polyiamonds, measured in unit triangles (`area` in
   `Lean4.PerfectPolyiamonds`), is the cubic polynomial
@@ -68,14 +74,112 @@ theorem closes_wordF (k : ℕ) :
   push_cast
   refine ⟨by ring, by ring, by ring⟩
 
+/-! ### The corner condition -/
+
+open Dir in
+/-- Chains through the block `(bdfd)^k`: whenever `e :: l` is a
+`DirStep`-chain and `x` may precede both `b` and `e`, the word
+`x · (bdfd)^k · e · l` is a `DirStep`-chain.  (The quantifier over `x` feeds
+the induction: inside the block each period is preceded by the letter `d`.) -/
+lemma isChain_dirStep_rep_bdfd (k : ℕ) {l : List Dir}
+    (h : List.IsChain DirStep (e :: l)) :
+    ∀ x : Dir, DirStep x b → DirStep x e →
+      List.IsChain DirStep (x :: (rep [b, d, f, d] k ++ e :: l)) := by
+  induction k with
+  | zero =>
+    intro x _ hxe
+    simpa [rep] using List.isChain_cons_cons.mpr ⟨hxe, h⟩
+  | succ k ih =>
+    intro x hxb _
+    simp only [rep, List.cons_append, List.nil_append, List.append_assoc]
+    refine List.isChain_cons_cons.mpr ⟨hxb, ?_⟩
+    refine List.isChain_cons_cons.mpr ⟨by decide, ?_⟩
+    refine List.isChain_cons_cons.mpr ⟨by decide, ?_⟩
+    refine List.isChain_cons_cons.mpr ⟨by decide, ?_⟩
+    exact ih d (by decide) (by decide)
+
+open Dir in
+/-- Chains through the block `(afab)^k`: whenever `a :: l` is a
+`DirStep`-chain and `x` may precede `a`, the word `x · (afab)^k · a · l` is a
+`DirStep`-chain.  (Inside the block each period is preceded by `b`.) -/
+lemma isChain_dirStep_rep_afab (k : ℕ) {l : List Dir}
+    (h : List.IsChain DirStep (a :: l)) :
+    ∀ x : Dir, DirStep x a →
+      List.IsChain DirStep (x :: (rep [a, f, a, b] k ++ a :: l)) := by
+  induction k with
+  | zero =>
+    intro x hxa
+    simpa [rep] using List.isChain_cons_cons.mpr ⟨hxa, h⟩
+  | succ k ih =>
+    intro x hxa
+    simp only [rep, List.cons_append, List.nil_append, List.append_assoc]
+    refine List.isChain_cons_cons.mpr ⟨hxa, ?_⟩
+    refine List.isChain_cons_cons.mpr ⟨by decide, ?_⟩
+    refine List.isChain_cons_cons.mpr ⟨by decide, ?_⟩
+    refine List.isChain_cons_cons.mpr ⟨by decide, ?_⟩
+    exact ih b (by decide)
+
+open Dir in
+/-- The corner condition of `wordF k`, at the level of the direction word:
+cyclically consecutive letters never repeat and never reverse. -/
+lemma cyclicChain_dirStep_wordF (k : ℕ) : CyclicChain' DirStep (wordF k) := by
+  have htake : (wordF k).take 1 = [a] := rfl
+  unfold CyclicChain'
+  rw [htake]
+  simp only [wordF, List.append_assoc, List.cons_append, List.nil_append]
+  refine List.isChain_cons_cons.mpr ⟨by decide, ?_⟩
+  refine isChain_dirStep_rep_bdfd k ?_ c (by decide) (by decide)
+  refine List.isChain_cons_cons.mpr ⟨by decide, ?_⟩
+  refine List.isChain_cons_cons.mpr ⟨by decide, ?_⟩
+  exact isChain_dirStep_rep_afab k (List.isChain_singleton a) f (by decide)
+
 /-! ### The family theorems -/
 
-/-- The infinite family: every `wordF k` encodes a perfect
-`(8k + 5)`-polyiamond.  (Closure is `closes_wordF`; the positivity and
-corner conditions are routine; simplicity is the open part, as for the
-families of `Lean4.Perfect12k` and `Lean4.Perfect8k_8`.) -/
-theorem isPerfect_wordF (k : ℕ) : IsPerfectPolyiamond (wordF k) := by
+/-- Simplicity of the family boundary (the one open condition): the walk
+along `perfectSides (wordF k)` visits no grid point twice.
+
+Geometric picture (planar coordinates `(x, y) := (p.1, p.2.1)`, `n = 8k+5`):
+the boundary consists of five chains —
+* side `a` of length `n` along `y = 0`, `0 ≤ x ≤ n`;
+* side `c` down the right edge `x = n`, `-(n−1) ≤ y ≤ 0`;
+* the comb `(bdfd)^k`: `k` downward teeth in the band `-16k−7 ≤ y ≤ -8k−4`,
+  tooth `j` lying between the diagonals `x + y = u_{j+1}` and `x + y = u_j`,
+  where `u_j` is strictly decreasing in `j` with gaps `≥ 4k+1` (adjacent
+  teeth overlap only in a width-2 diagonal strip, where they are separated
+  by `y`);
+* the connector `edf` with `x ≤ -6k²+3k+2`, `-10k−4 ≤ y ≤ -2k`;
+* the comb `(afab)^k` in the band `-2k ≤ y ≤ 2k−1`, with `x < 0` except at
+  its final point `(0,0)` (the closing vertex, dropped by `dropLast`);
+  along this chain `(x + y, x)` increases lexicographically at every unit
+  step, which yields its simplicity at once.
+The five chains lie in pairwise disjoint regions (up to the junction
+vertices, each visited once), and each chain is itself simple.  A
+formalization can split the walk into the five chunks, prove per-chain
+`Nodup` and region containment by induction on the number of periods
+(tracking positions by recursively defined coordinates, so that every
+induction step is linear integer arithmetic), and discharge the pairwise
+region checks; this remains to be done. -/
+theorem nodup_trace_wordF (k : ℕ) :
+    (trace (perfectSides (wordF k))).dropLast.Nodup := by
   sorry
+
+/-- The infinite family: every `wordF k` encodes a perfect
+`(8k + 5)`-polyiamond.  Closure is `closes_wordF`, positivity of the side
+lengths is `pos_perfectSides`, the corner condition is
+`cyclicChain_dirStep_wordF` (via the transfer lemma
+`cyclicChain_cornerStep_iff`), and simplicity is `nodup_trace_wordF` —
+the one remaining `sorry`. -/
+theorem isPerfect_wordF (k : ℕ) : IsPerfectPolyiamond (wordF k) := by
+  refine ⟨?_, pos_perfectSides _, ?_, closes_wordF k, nodup_trace_wordF k⟩
+  · rw [perfectSides_length, wordF_length]; omega
+  · exact (cyclicChain_cornerStep_iff _).mpr (cyclicChain_dirStep_wordF k)
+
+/-- **Existence**: for every `n ≡ 5 (mod 8)` there is a perfect
+`n`-polyiamond, namely `wordF (n / 8)`.  (With `n = 5` the smallest length
+for which perfect polyiamonds exist at all.) -/
+theorem exists_isPerfectPolyiamond_of_mod_eight {n : ℕ} (h : n % 8 = 5) :
+    ∃ w : List Dir, w.length = n ∧ IsPerfectPolyiamond w :=
+  ⟨wordF (n / 8), by rw [wordF_length]; omega, isPerfect_wordF _⟩
 
 /-! ### The area polynomial
 

@@ -1,8 +1,4 @@
-# lean4
-
-The log of decisions when proving results from PerfectPolyiamonds.lean. 
-Please record the date, the result achieved and methods/decisions taken 
-to prove something.
+# lean4 Activity
 
 ## Entry 1: `wordA 0` is a perfect obtuse polyiamond; weighted-sum form of closure
 
@@ -105,3 +101,115 @@ theorems `isPerfectObtuse_wordA` / `isPerfectObtuse_wordB` (corner, obtuse
 and positivity fields are routine; **simplicity** of the boundary for
 symbolic `k` is the substantial open part), and the two combination results
 `exists_obtuse_of_six_dvd` / `exists_obtuse_iff`.
+
+## Entry 3: the area polynomial of the `8k + 5` family, for every `k`
+
+**Date:** 2026-07-12
+
+**Results.**
+
+* `area_wordF` (previously a `sorry`): the area of the perfect polyiamond
+  `wordF k`, measured in unit triangles, is
+  `P(k) = 144k³ + 232k² + 124k + 19`, for **every** `k` with `k` symbolic.
+  Axiom check: only `propext`, `Classical.choice`, `Quot.sound` — no
+  `sorry` anywhere in its proof.
+* New shoelace machinery in `Lean4.PerfectPolyiamonds`, the area counterpart
+  of the `wsum` closure machinery: bilinearity lemmas for `cross`;
+  `crossSum p ds` (the shoelace sum of a unit-step walk) with
+  `shoelace_scanl` / `shoelace_trace` / `crossSum_append` /
+  `crossSum_replicate`; the weighted, side-by-side shoelace sum
+  `csum : ℤ → Pt → List Dir → ℤ` with the bridge
+  `shoelace_trace_perfectSides : shoelace (trace (perfectSides w)) =
+  csum w.length 0 w`, the splitting lemma `csum_append`, and the
+  translation lemma `csum_eq_cross_wsum_add_csum : csum n p w =
+  cross p (wsum n w) + csum n 0 w` (the start-point dependence of a
+  shoelace sum enters only through the boundary vector sum).
+* Family closed forms `csum_rep_bdfd` / `csum_rep_afab` in
+  `Lean4.Perfect8k_5`: cubic polynomials (in `k`, the start weight `n` and
+  the start point `p`, all symbolic) for the shoelace sums along the
+  periodic blocks `(bdfd)^k` and `(afab)^k`.
+
+**Methods / decisions.**
+
+* `csum` mirrors the design of `wsum` (integer weights, evaluation side by
+  side), so subword sums compose and inductions over `k` need no side
+  conditions.  A side of length `ℓ` from `q` in direction `d` contributes
+  `ℓ · cross q (vec d)` because `cross` kills the direction of motion —
+  this is `crossSum_replicate`.
+* The closed forms were first derived numerically (sympy: exact
+  interpolation in `k` from `k = 0..5`, validated at `k = 6..9` and against
+  a direct shoelace-over-trace computation), then certified in Lean by
+  induction on `k` (generalizing `n` and `p`): the step peels one period
+  off the front and closes with `push_cast; ring`.
+* `area_wordF` assembles the four blocks of `wordF k` with `csum_append`,
+  substitutes the closed forms and `wsum_rep_quad`, and reduces to one
+  `ring` identity.  The boundary is traced **clockwise**, so the shoelace
+  sum is `−P(k)`; the absolute value in `area` is removed by `abs_neg` and
+  `positivity` (`P(k) ≥ 19 > 0`).
+* Pitfall: `shoelace` recurses on `p :: q :: l` and is not `rfl`-reducible
+  through `List.scanl`, so `shoelace_scanl` unfolds via equation lemmas
+  (`simp only [..., shoelace]`) rather than `rfl`.
+* The instances `P(0) = 19` and `P(1) = 519` remain as independent
+  `decide` spot-checks of the polynomial.
+
+Remaining `sorry`s: unchanged except that `Lean4.Perfect8k_5` now has only
+`isPerfect_wordF` open (see Entry 4).
+
+## Entry 4: `isPerfect_wordF` reduced to simplicity; existence for `n ≡ 5 (mod 8)`
+
+**Date:** 2026-07-12
+
+**Results.**
+
+* `isPerfect_wordF` is no longer a monolithic `sorry`: four of its five
+  fields are now proved for every `k` —
+  side count (`8k + 5 ≥ 3`), positive side lengths (new general lemma
+  `pos_perfectSides`), the cyclic corner condition
+  (`cyclicChain_dirStep_wordF`, axiom check: `propext` only), and closure
+  (`closes_wordF`, Entry for the family).  The one remaining open field is
+  **simplicity**, isolated as `nodup_trace_wordF` (the only `sorry` in
+  `Lean4.Perfect8k_5`).
+* New word-level corner machinery: the relation `DirStep p q :=
+  q ≠ p ∧ q ≠ p.opp` in `Lean4.PerfectPolyiamonds`, the transfer lemma
+  `cyclicChain_cornerStep_iff : CyclicChain' CornerStep (perfectSides w) ↔
+  CyclicChain' DirStep w` (via `map_snd_perfectSides` and
+  `List.isChain_map`), and the block lemmas `isChain_dirStep_rep_bdfd` /
+  `isChain_dirStep_rep_afab` in `Lean4.Perfect8k_5`.
+* `exists_isPerfectPolyiamond_of_mod_eight`: for every `n ≡ 5 (mod 8)`
+  there is a perfect `n`-polyiamond, namely `wordF (n / 8)` — with `n = 5`
+  the smallest length for which perfect polyiamonds exist at all.  (The
+  statement inherits the `sorry` of `nodup_trace_wordF` and becomes
+  axiom-clean the moment simplicity lands.)
+
+**Methods / decisions.**
+
+* The corner condition is proved at the level of the direction word and
+  transferred to the sides: `CornerStep` only inspects the second
+  components, so `(perfectSides w).map Prod.snd = w` plus
+  `List.isChain_map` gives the equivalence.
+* The block lemmas quantify over the **preceding letter** `x` (with the
+  hypotheses `DirStep x b` / `DirStep x e`, resp. `DirStep x a`): the first
+  period of `(bdfd)^k` is preceded by `c` but later periods by `d`
+  (resp. `f` and then `b` for `(afab)^k`), and the `∀ x` form feeds the
+  induction directly.  Individual letter pairs are discharged by `decide`.
+* Simplicity is not proved, but the geometric analysis is done and recorded
+  in the docstring of `nodup_trace_wordF` (planar coordinates
+  `(x, y) = (p.1, p.2.1)`, `u := x + y`): the boundary splits into five
+  chains in essentially disjoint regions — side `a` on `y = 0`; side `c` on
+  `x = n`; the comb `(bdfd)^k` in the band `−16k−7 ≤ y ≤ −8k−4` with tooth
+  `j` confined between the diagonals `u_{j+1}` and `u_j`; the connector
+  `edf`; and the comb `(afab)^k` in the band `−2k ≤ y ≤ 2k−1`.  Two
+  findings make a formalization tractable: along `(afab)^k` the pair
+  `(x + y, x)` increases lexicographically at **every** unit step (letters
+  `a, f, b` all lex-increase), so that chain's simplicity is a pure
+  monotonicity argument; and tracking chain positions by recursively
+  defined start points (instead of the closed forms, which are quadratic in
+  `j`) keeps every induction step inside `omega`-friendly linear
+  arithmetic.  Estimated effort: walk-splitting `Nodup` infrastructure,
+  a five-conjunct band invariant for the `bdfd` comb, and ten pairwise
+  region checks — roughly 900 lines.
+
+Remaining `sorry`s: `nodup_trace_wordF` (simplicity of the `8k + 5`
+family), the necessity direction (`6 ∣ n`) with its colouring scaffolding,
+the `Perfect12k` family theorems and combination results, and the
+`Perfect8k_8` family theorem.

@@ -145,6 +145,13 @@ def CornerStep (p q : ℕ × Dir) : Prop := q.2 ≠ p.2 ∧ q.2 ≠ p.2.opp
 instance : DecidableRel CornerStep := fun p q =>
   inferInstanceAs (Decidable (q.2 ≠ p.2 ∧ q.2 ≠ p.2.opp))
 
+/-- The word-level corner condition: the next direction differs from the
+previous one and is not its opposite (`CornerStep` on the directions alone). -/
+def DirStep (p q : Dir) : Prop := q ≠ p ∧ q ≠ p.opp
+
+instance : DecidableRel DirStep := fun p q =>
+  inferInstanceAs (Decidable (q ≠ p ∧ q ≠ p.opp))
+
 /-- `IsPolyiamond s`: the side list `s` traces the boundary of a polyiamond,
 i.e. of a simple polygon whose sides run along the triangular grid.
 (The region bounded by such a curve is automatically a union of unit
@@ -194,6 +201,31 @@ def IsPerfectPolyiamond (w : List Dir) : Prop :=
 
 instance (w : List Dir) : Decidable (IsPerfectPolyiamond w) :=
   inferInstanceAs (Decidable (IsPolyiamond (perfectSides w)))
+
+/-- Every side of a perfect polyiamond has positive length. -/
+lemma pos_perfectSides (w : List Dir) : ∀ p ∈ perfectSides w, 0 < p.1 := by
+  induction w with
+  | nil => simp [perfectSides]
+  | cons d w ih =>
+    intro p hp
+    simp only [perfectSides, List.mem_cons] at hp
+    rcases hp with h | h
+    · subst h; simp
+    · exact ih p h
+
+lemma map_snd_perfectSides (w : List Dir) : (perfectSides w).map Prod.snd = w := by
+  induction w with
+  | nil => rfl
+  | cons d w ih => simp [perfectSides, ih]
+
+/-- The corner condition of a perfect polyiamond depends only on its
+direction word. -/
+lemma cyclicChain_cornerStep_iff (w : List Dir) :
+    CyclicChain' CornerStep (perfectSides w) ↔ CyclicChain' DirStep w := by
+  unfold CyclicChain'
+  conv_rhs => rw [← map_snd_perfectSides w]
+  rw [← List.map_take, ← List.map_append, List.isChain_map]
+  rfl
 
 /-- The unit-step form of the boundary vector sum of a perfect polyiamond
 equals its weighted form: side `i` (of length `n − i`, where `n = w.length`)
